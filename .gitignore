@@ -1,6 +1,9 @@
 # Compiled ACS
 *.o
 
+# Output files
+out/
+
 # Doom Builder stuff
 *.bak
 *.dbs

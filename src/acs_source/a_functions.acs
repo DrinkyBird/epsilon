@@ -20,31 +20,6 @@ function int msqr (int n) {
 	return n * n;
 }
 
-// ============================================================================
-// [SP] This came from the ZDoom wiki
-function int sqrt(int number)
-{
-	if(number <= 3)
-	{
-		if(number > 0)
-		{
-			return 1;
-		}
-		return 0;
-	}
-
-	int oldAns = number >> 1,                     // initial guess
-	    newAns = (oldAns + number / oldAns) >> 1; // first iteration
-
-	// main iterative method
-	while(newAns < oldAns) {
-		oldAns = newAns;
-		newAns = (oldAns + number / oldAns) >> 1;
-	}
-
-	return oldAns;
-}
-
 // Check functions
 
 // ============================================================================
@@ -611,11 +586,11 @@ function void IntelMessageNoLog (str text, bool bold) {
 
 // ============================================================================
 // [Dusk] {9/10/12}
-function void CallEvent (int event, int team) {
+function void CallEvent (int ev, int team) {
 	if (!CheckMapFlags (MAPF_EVENTSCRIPTS))
 		return;
 	
-	ACS_ExecuteAlways (960, 0, event, team);
+	ACS_ExecuteAlways (960, 0, ev, team);
 }
 
 // [Dusk] {10/1/12} Shortcuts..
