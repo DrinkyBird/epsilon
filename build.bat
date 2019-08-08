@@ -8,7 +8,7 @@ IF NOT EXIST "%OUTDIR%" MKDIR "%OUTDIR%"
 
 
 :: Get Git informatiuon
-git symbolic-ref --short HEAD > %TEMP%/Epbranch
+git rev-parse --abbrev-ref HEAD > %TEMP%/Epbranch
 SET /P GIT_BRANCH=<%TEMP%/Epbranch
 
 git rev-list --count %GIT_BRANCH% > %TEMP%/Epver
