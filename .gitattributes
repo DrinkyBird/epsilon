@@ -1,0 +1,25 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Images
+*.png binary
+*.jpg binary
+*.raw binary
+
+# Sounds
+*.ogg binary
+*.spc binary
+*.wav binary
+*.vgm binary
+*.nsf binary
+
+# Doom stuff
+*.lmp binary
+*.wad binary
+TEXTURE1* binary
+PNAMES* binary
+*.acs linguist-language=C
+
+# JM build stuff
+utilities/*.exe binary
+utilities/*.acs linguist-vendored

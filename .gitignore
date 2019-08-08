@@ -1,0 +1,9 @@
+# Compiled ACS
+*.o
+
+# Doom Builder stuff
+*.bak
+*.dbs
+*.backup1
+*.backup2
+*.backup3

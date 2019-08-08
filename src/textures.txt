@@ -1,0 +1,1534 @@
+// ============================================================================
+sprite TIBXA0, 128, 128
+{
+XScale 2.0
+YScale 2.0
+Offset 64, 64
+WorldPanning
+Patch Chem01, 0, 0
+}
+
+sprite TIBXB0, 128, 128
+{
+XScale 1.9
+YScale 1.9
+Offset 64, 64
+WorldPanning
+Patch Chem02, 0, 0
+}
+
+sprite TIBXC0, 128, 128
+{
+XScale 1.8
+YScale 1.8
+Offset 64, 64
+WorldPanning
+Patch Chem03, 0, 0
+}
+
+sprite TIBXD0, 128, 128
+{
+XScale 1.7
+YScale 1.7
+Offset 64, 64
+WorldPanning
+Patch Chem04, 0, 0
+}
+
+sprite TIBXE0, 128, 128
+{
+XScale 1.6
+YScale 1.6
+Offset 64, 64
+WorldPanning
+Patch Chem05, 0, 0
+}
+
+sprite TIBXF0, 128, 128
+{
+XScale 1.5
+YScale 1.5
+Offset 64, 64
+WorldPanning
+Patch Chem06, 0, 0
+}
+
+sprite TIBXG0, 128, 128
+{
+XScale 1.4
+YScale 1.4
+Offset 64, 64
+WorldPanning
+Patch Chem07, 0, 0
+}
+
+sprite TIBXH0, 128, 128
+{
+XScale 1.3
+YScale 1.3
+Offset 64, 64
+WorldPanning
+Patch Chem08, 0, 0
+}
+
+sprite TIBXI0, 128, 128
+{
+XScale 1.2
+YScale 1.2
+Offset 64, 64
+WorldPanning
+Patch Chem09, 0, 0
+}
+
+sprite TIBXJ0, 128, 128
+{
+XScale 1.1
+YScale 1.1
+Offset 64, 64
+WorldPanning
+Patch Chem10, 0, 0
+}
+
+sprite TIBXK0, 128, 128
+{
+XScale 1.0
+YScale 1.0
+Offset 64, 64
+WorldPanning
+Patch Chem11, 0, 0
+}
+
+sprite TIBXL0, 128, 128
+{
+XScale 0.9
+YScale 0.9
+Offset 64, 64
+WorldPanning
+Patch Chem12, 0, 0
+}
+
+sprite TIBXM0, 128, 128
+{
+XScale 0.8
+YScale 0.8
+Offset 64, 64
+WorldPanning
+Patch Chem13, 0, 0
+}
+
+sprite TIBXN0, 128, 128
+{
+XScale 0.7
+YScale 0.7
+Offset 64, 64
+WorldPanning
+Patch Chem14, 0, 0
+}
+
+sprite TIBXO0, 128, 128
+{
+XScale 0.6
+YScale 0.6
+Offset 64, 64
+WorldPanning
+Patch Chem15, 0, 0
+}
+
+sprite TIBXP0, 128, 128
+{
+XScale 0.5
+YScale 0.5
+Offset 64, 64
+WorldPanning
+Patch Chem16, 0, 0
+}
+
+sprite TIBXQ0, 128, 128
+{
+XScale 0.4
+YScale 0.4
+Offset 64, 64
+WorldPanning
+Patch Chem16, 0, 0
+}
+
+
+sprite MREFA1, 480, 288
+{
+YScale 1.1
+XScale 0.9
+Offset 240, 288
+WorldPanning
+Patch MREF1, 0, 0
+}
+
+sprite MREFA2, 480, 288
+{
+YScale 1.1
+XScale 0.9
+Offset 240, 288
+WorldPanning
+Patch MREF3, 0, 0
+}
+
+sprite MREFA3, 480, 288
+{
+YScale 1.1
+XScale 0.9
+Offset 240, 288
+WorldPanning
+Patch MREF1, 0, 0
+}
+
+sprite MREFA4, 480, 288
+{
+YScale 1.1
+XScale 0.9
+Offset 240, 288
+WorldPanning
+Patch MREF3, 0, 0
+}
+
+sprite MREFA5, 480, 288
+{
+YScale 1.1
+XScale 0.9
+Offset 240, 288
+WorldPanning
+Patch MREF1, 0, 0
+}
+
+sprite MREFA6, 480, 288
+{
+YScale 1.1
+XScale 0.9
+Offset 240, 288
+WorldPanning
+Patch MREF3, 0, 0
+}
+
+sprite MREFA7, 480, 288
+{
+YScale 1.1
+XScale 0.9
+Offset 240, 288
+WorldPanning
+Patch MREF1, 0, 0
+}
+
+sprite MREFA8, 480, 288
+{
+YScale 1.1
+XScale 0.9
+Offset 240, 288
+WorldPanning
+Patch MREF3, 0, 0
+}
+
+sprite MREFA9, 480, 288
+{
+YScale 1.1
+XScale 0.9
+Offset 240, 288
+WorldPanning
+Patch MREF2, 0, 0
+}
+
+sprite MREFAA, 480, 288
+{
+YScale 1.1
+XScale 0.9
+Offset 240, 288
+WorldPanning
+Patch MREF4, 0, 0
+}
+
+sprite MREFAB, 480, 288
+{
+YScale 1.1
+XScale 0.9
+Offset 240, 288
+WorldPanning
+Patch MREF2, 0, 0
+}
+
+sprite MREFAC, 480, 288
+{
+YScale 1.1
+XScale 0.9
+Offset 240, 288
+WorldPanning
+Patch MREF4, 0, 0
+}
+
+sprite MREFAD, 480, 288
+{
+YScale 1.1
+XScale 0.9
+Offset 240, 288
+WorldPanning
+Patch MREF2, 0, 0
+}
+
+sprite MREFAE, 480, 288
+{
+YScale 1.1
+XScale 0.9
+Offset 240, 288
+WorldPanning
+Patch MREF4, 0, 0
+}
+
+sprite MREFAF, 480, 288
+{
+YScale 1.1
+XScale 0.9
+Offset 240, 288
+WorldPanning
+Patch MREF2, 0, 0
+}
+
+sprite MREFAG, 480, 288
+{
+YScale 1.1
+XScale 0.9
+Offset 240, 288
+WorldPanning
+Patch MREF4, 0, 0
+}
+
+// ============================================================================
+texture SPWLAVA, 64, 64 {
+	//XScale 0.125
+	//YScale 0.125
+	XScale 0.03125
+	YScale 0.03125
+	Patch SPWLAVA, 0, 0
+}
+
+// ============================================================================
+// Skyboxes - these statements flip the ceiling texture.
+texture mp_mer_u, 512, 512
+{
+	patch mp_mer_u,0,0
+	{
+		flipy
+	}
+}
+
+texture GLACR_U, 512, 512 {
+	Patch GLACR_U, 0, 0
+	{
+		FlipX
+	}
+}
+
+texture DECPT_T, 512, 512 {
+	Patch DECPT_T, 0, 0
+	{
+		FlipY
+	}
+}
+
+texture SORBIN_U, 512, 512 {
+	Patch SORBIN_U, 0, 0
+	{
+		FlipY
+	}
+}
+
+texture HELL_UP, 512, 512 {
+	Patch HELL_UP, 0, 0
+	{
+		FlipY
+	}
+}
+
+// ============================================================================
+texture MCT1, 64, 128 {
+	patch MCT1, 0, 0
+	patch MCT1, 0, 80
+}
+
+texture MCT2, 64, 128 {
+	patch MCT2, 0, 0
+	patch MCT2, 0, 80
+}
+
+texture MCT4, 64, 128 {
+	patch MCT4, 0, 0
+	patch MCT4, 0, 80
+}
+
+texture TIBREFTV, 128, 256 {
+	patch TIBREFTV, 0, 0
+	patch TIBREFTV, 0, 184
+}
+
+texture RESIGN, 128, 256 {
+	patch RESIGN, 0, 0
+	patch RESIGN, 0, 184
+}
+
+texture TELEBACK, 128, 256 {
+	patch TELEBACK, 0, 0
+	patch TELEBACK, 0, 184
+}
+
+texture PLASCANN, 128, 256 {
+	patch PLASCANN, 0, 0
+	patch PLASCANN, 0, 184
+}
+
+texture BEACNUKE, 128, 256 {
+	patch BEACNUKE, 0, 0
+	patch BEACNUKE, 0, 184
+}
+
+texture SURRTV, 128, 256 {
+	patch SURRTV, 0, 0
+	patch SURRTV, 0, 184
+}
+
+texture BEACION, 128, 256 {
+	patch BEACION, 0, 0
+	patch BEACION, 0, 184
+}
+
+texture PTERM, 128, 256 {
+	patch PTERM, 0, 0
+	patch PTERM, 0, 184
+}
+
+texture RESRCHTV, 128, 256 {
+	patch RESRCHTV, 0, 0
+	patch RESRCHTV, 0, 184
+}
+
+texture PTERM2, 128, 256 {
+	patch PTERM2, 0, 0
+	patch PTERM2, 0, 184
+}
+
+texture MCT3, 128, 256 {
+	patch MCT3, 0, 0
+	patch MCT3, 0, 184
+}
+
+texture REFILL, 128, 256 {
+	patch REFILL, 0, 0
+	patch REFILL, 0, 184
+}
+
+// ============================================================================
+// Purchase sprites
+// [Dusk] Delete these after purhcase terminal menu is put in place in maps!
+sprite clssa0, 200, 200 {
+	patch clssa0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clssb0, 200, 200 {
+	patch clssb0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clssc0, 200, 200 {
+	patch clssc0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clssd0, 200, 200 {
+	patch clssd0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clsse0, 200, 200 {
+	patch clsse0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clssf0, 200, 200 {
+	patch clssf0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clssg0, 200, 200 {
+	patch clssg0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clssh0, 200, 200 {
+	patch clssh0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clssi0, 200, 200 {
+	patch clssi0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clssj0, 200, 200 {
+	patch clssj0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clssk0, 200, 200 {
+	patch clssk0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clssl0, 200, 200 {
+	patch clssl0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clssm0, 200, 200 {
+	patch clssm0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clssn0, 200, 200 {
+	patch clssn0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clsso0, 200, 200 {
+	patch clsso0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clssp0, 200, 200 {
+	patch clssp0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clssq0, 200, 200 {
+	patch clssq0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clssr0, 200, 200 {
+	patch clssr0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clsss0, 200, 200 {
+	patch clsss0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clsst0, 200, 200 {
+	patch clsst0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clssu0, 200, 200 {
+	patch clssu0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clssw0, 200, 200 {
+	patch clssw0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clssx0, 200, 200 {
+	patch clssx0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clssy0, 200, 200 {
+	patch clssy0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite clssz0, 200, 200 {
+	patch clssz0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite cls2a0, 200, 200 {
+	patch cls2a0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite cls2b0, 200, 200 {
+	patch cls2b0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite cls2c0, 200, 200 {
+	patch cls2c0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite cls2d0, 200, 200 {
+	patch cls2d0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite mchsa0, 200, 200 {
+	patch mchsa0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite mchsb0, 200, 200 {
+	patch mchsb0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite mchsc0, 200, 200 {
+	patch mchsc0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite mchsd0, 200, 200 {
+	patch mchsd0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite mchse0, 200, 200 {
+	patch mchse0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite mchsf0, 200, 200 {
+	patch mchsf0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite upgra0, 200, 200 {
+	patch upgra0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite upgrb0, 200, 200 {
+	patch upgrb0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite upgrc0, 200, 200 {
+	patch upgrc0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite upgrd0, 200, 200 {
+	patch upgrd0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite upgre0, 200, 200 {
+	patch upgre0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite upgrf0, 200, 200 {
+	patch upgrf0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite upgrg0, 200, 200 {
+	patch upgrg0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite upgrh0, 200, 200 {
+	patch upgrh0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite upgri0, 200, 200 {
+	patch upgri0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite upgrj0, 200, 200 {
+	patch upgrj0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite upgrk0, 200, 200 {
+	patch upgrk0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite upgrl0, 200, 200 {
+	patch upgrl0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite upgrm0, 200, 200 {
+	patch upgrm0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+// ============================================================================
+texture wnukage, 64, 64 {
+	patch nukage1, 0, 0 {}
+}
+
+texture compred, 64, 64 {
+	patch compred, 0, 0 {}
+}
+
+// ============================================================================
+// [Dusk] Rid these too.
+sprite upgrn0, 200, 200 {
+	patch upgrn0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite upgro0, 200, 200 {
+	patch upgro0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+sprite upgrp0, 200, 200 {
+	patch upgrp0, 0, 0
+	xscale 2
+	yscale 2.5
+	offset 100, 450
+}
+
+// ============================================================================
+// Tiberium SBARINFO icons
+graphic "tibe-yes", 48, 61 {
+	xscale 4
+	yscale 4
+	patch "tibeyesh", 0, 0
+}
+
+graphic "tibe-no", 48, 61 {
+	xscale 4
+	yscale 4
+	patch "tibenoh", 0, 0
+}
+
+// ============================================================================
+// Friend info stuff...
+graphic "fi_ion", 74, 67 {
+	xscale 3
+	yscale 3
+	patch "beacd0", 0, 0
+}
+
+graphic "fi_nuke", 48, 104 {
+	xscale 3
+	yscale 3
+	patch "beacc0", 0, 0
+}
+
+graphic "fi_bfg", 61, 36 {
+	xscale 2
+	yscale 2
+	patch "bfuga0", 0, 0
+}
+
+// ============================================================================
+// Inventory icons
+graphic "tmc4icon", 61, 99 {
+	xscale 6
+	yscale 6
+	offset -28, -12
+	patch "tc4ta0", 0, 0
+}
+
+graphic "ico_ejct", 49, 34 {
+	xscale 2.8
+	yscale 2.8
+	offset -4, -12
+	patch "ico_ejct", 0, 0
+}
+
+graphic "ico_mech", 49, 34 {
+	xscale 2.8
+	yscale 2.8
+	offset -4, -12
+	patch "ico_mech", 0, 0
+}
+
+graphic "tibeicon", 256, 256 {
+	xscale 16
+	yscale 16
+	patch "tibea0h", 0, 0
+	offset -96, 0
+}
+
+graphic "detoicon", 24, 62 {
+	xscale 5.1
+	yscale 5.1
+	patch "detoicon", 0, 0
+	offset -40, -22
+}
+
+
+graphic "mineicon", 64, 66 {
+	xscale 5.5
+	yscale 5.5
+	patch "pc4tb0", 0, 0
+	offset -22, -22
+}
+
+graphic "ionicon", 74, 67 {
+	xscale 4.188
+	yscale 4.188
+	patch "beacd0", 0, 0
+	offset -8, -12
+}
+
+graphic "nukeicon", 48, 104 {
+	xscale 5.2
+	yscale 5.2
+	patch "beacc0", 0, 0
+	offset -32, 2
+}
+
+graphic "rmc4icon", 75, 83 {
+	xscale 4.5
+	yscale 4.5
+	patch "rc4ta0", 0, 0
+	offset -13, 1
+}
+
+graphic "hradicon", 32, 32 {
+	xscale 3.0
+	yscale 3.0
+	patch "plusa0", 0, 0
+	offset -16, -16
+}
+
+graphic "mbcnicon", 19, 32 {
+	xscale 2.5
+	yscale 2.5
+	patch "mbcnb0", 0, 0
+	offset -15, -12
+}
+
+graphic syriicon, 29, 63 {
+	xscale 3.5
+	yscale 3.5
+	patch syriicon, 0, 0
+	offset -16, -8
+}
+
+graphic arm1icon, 31, 17 {
+	xscale 2.0
+	yscale 2.25
+	patch "arm1a0", 0, 0
+	offset -6, -16
+}
+
+graphic arm2icon, 31, 17 {
+	xscale 2.0
+	yscale 2.25
+	patch "arm2a0", 0, 0
+	offset -6, -16
+}
+
+graphic arm3icon, 31, 17 {
+	xscale 2.0
+	yscale 2.25
+	patch "arm3a0", 0, 0
+	offset -6, -16
+}
+
+graphic arm4icon, 31, 17 {
+	xscale 2.0
+	yscale 2.25
+	patch "arm4a0", 0, 0
+	offset -6, -16
+}
+
+graphic arm5icon, 31, 17 {
+	xscale 2.0
+	yscale 2.25
+	patch "arm5a0", 0, 0
+	offset -6, -16
+}
+
+Graphic jeticon, 25, 29
+{
+	XScale 2.0
+	YScale 2.0
+	Offset -7, -8
+	Patch jeticon, 0, 0
+}
+
+graphic fuelicon, 19, 28 {
+	xscale 2.2
+	yscale 2.2
+	offset 8, 20
+	patch fuelicon, 0, 0
+}
+
+graphic odekicon, 24, 21 {
+	xscale 2
+	yscale 2
+	offset -10, -9
+	patch ucrta0, 0, 0
+}
+
+graphic sbomicon, 32, 32 {
+	xscale 2.5
+	yscale 2.5
+	offset -16, -16
+	patch sbomicon, 0, 0
+}
+
+// =============================================================================
+graphic artibox, 32, 32 {
+	xscale 1.5
+	yscale 1.5
+	patch "artibox", 0, 0
+}
+
+graphic selectbo, 64, 64 {
+	xscale 3
+	yscale 3
+	patch "selectbo", 0, 0
+}
+
+graphic invgemr1, 24, 32 {
+	xscale 2
+	yscale 2
+	offset 92, -4
+	patch invgemr1, 0, 0
+}
+
+graphic invgemr2, 24, 32 {
+	xscale 2
+	yscale 2
+	offset 92, -4
+	patch invgemr2, 0, 0
+}
+
+graphic invgeml1, 24, 32 {
+	xscale 2
+	yscale 2
+	offset 4, -4
+	patch invgeml1, 0, 0
+}
+
+graphic invgeml2, 24, 32 {
+	xscale 2
+	yscale 2
+	offset 4, -4
+	patch invgeml2, 0, 0
+}
+
+// ============================================================================
+// remote c4 stuff
+Sprite RC4DA0, 160, 145
+{
+	Offset 0, -25
+	Patch RC4GA0, 32, 55
+	Patch DETOA0, 118, 133
+}
+
+Sprite RC4DB0, 202, 145
+{
+	Offset 0, -25
+	Patch RC4GA0, 30, 57
+	Patch DETOA0, 139, 111
+}
+
+Sprite RC4DC0, 254, 145
+{
+	Offset 0, -25
+	Patch RC4GA0, 28, 58
+	Patch DETOA0, 159, 87
+}
+
+Sprite RC4DD0, 324, 145
+{
+	Offset 0, -25
+	Patch RC4GA0, 26, 61
+	Patch DETOA0, 181, 57
+}
+
+Sprite RC4DE0, 346, 145
+{
+	Offset 0, -25
+	Patch RC4GA0, 25, 63
+	Patch DETOA0, 184, 46
+}
+
+Sprite RC4DF0, 354, 145
+{
+	Offset 0, -25
+	Patch RC4GA0, 26, 62
+	Patch DETOB0, 194, 57
+}
+
+Sprite RC4DG0, 352, 145
+{
+	Offset 0, -25
+	Patch RC4GA0, 27, 59
+	Patch DETOB0, 205, 70
+}
+
+Sprite RC4DH0, 330, 145
+{
+	Offset 0, -25
+	Patch RC4GA0, 29, 58
+	Patch DETOB0, 216, 87
+}
+
+Sprite RC4DI0, 320, 145
+{
+	Offset 0, -25
+	Patch RC4GA0, 28, 56
+	Patch DETOB0, 229, 106
+}
+
+Sprite RC4DJ0, 320, 145
+{
+	Offset 0, -25
+	Patch RC4GA0, 28, 55
+	Patch DETOB0, 241, 134
+}
+// ======= empty version
+Sprite RC4EA0, 160, 145
+{
+	Offset 0, -25
+	Patch RC4GB0, 32, 55
+	Patch DETOA0, 118, 133
+}
+
+Sprite RC4EB0, 202, 145
+{
+	Offset 0, -25
+	Patch RC4GB0, 30, 57
+	Patch DETOA0, 139, 111
+}
+
+Sprite RC4EC0, 254, 145
+{
+	Offset 0, -25
+	Patch RC4GB0, 28, 58
+	Patch DETOA0, 159, 87
+}
+
+Sprite RC4ED0, 324, 145
+{
+	Offset 0, -25
+	Patch RC4GB0, 26, 61
+	Patch DETOA0, 181, 57
+}
+
+Sprite RC4EE0, 346, 145
+{
+	Offset 0, -25
+	Patch RC4GB0, 25, 63
+	Patch DETOA0, 184, 46
+}
+
+Sprite RC4EF0, 354, 145
+{
+	Offset 0, -25
+	Patch RC4GB0, 26, 62
+	Patch DETOB0, 194, 57
+}
+
+Sprite RC4EG0, 352, 145
+{
+	Offset 0, -25
+	Patch RC4GB0, 27, 59
+	Patch DETOB0, 205, 70
+}
+
+Sprite RC4EH0, 330, 145
+{
+	Offset 0, -25
+	Patch RC4GB0, 29, 58
+	Patch DETOB0, 216, 87
+}
+
+Sprite RC4EI0, 320, 145
+{
+	Offset 0, -25
+	Patch RC4GB0, 28, 56
+	Patch DETOB0, 229, 106
+}
+
+Sprite RC4EJ0, 320, 145
+{
+	Offset 0, -25
+	Patch RC4GB0, 28, 55
+	Patch DETOB0, 241, 134
+}
+
+// ======== Fist stuff
+
+Sprite PUNGA0, 231, 51
+{
+	Offset -40, -120
+	Patch PUNGB0, 0, 17
+	Patch PUNGB0, 146, 20
+	{
+		FlipX
+	}
+}
+
+Sprite PUNGE0, 85, 31
+{
+	Offset -243, -137
+	Patch PUNGB0, 0, 0
+	{
+		FlipX
+	}
+}
+
+Sprite PUNGF0, 112, 54
+{
+	Offset -187, -114
+	Patch PUNGC0, 0, 0
+	{
+		FlipX
+	}
+}
+
+Sprite PUNGG0, 149, 74
+{
+	Offset -148, -94
+	Patch PUNGD0, 0, 0
+	{
+		FlipX
+	}
+}
+
+// ======== HUD elements
+graphic is2_ammo, 211, 36 {
+	xscale 2.0 yscale 2.2
+	patch is2_ammo, 0, 0
+}
+
+graphic is2_hpi, 202, 24 {
+	xscale 2.0 yscale 2.2
+	patch is2_hpi, 0, 0
+}
+
+graphic is2_rank, 220, 38 {
+	xscale 2.0 yscale 2.2
+	patch is2_rank, 0, 0
+}
+
+graphic is2rammo, 211, 36 {
+	xscale 2.0 yscale 2.2
+	patch is2rammo, 0, 0
+}
+
+graphic is2rhpi, 202, 24 {
+	xscale 2.0 yscale 2.2
+	patch is2rhpi, 0, 0
+}
+
+graphic is2rrank, 220, 38 {
+	xscale 2.0 yscale 2.2
+	patch is2rrank, 0, 0
+}
+
+graphic "is2-intf", 235, 45 {
+	xscale 2.0 yscale 2.2
+	patch "is2-intf", 0, 0
+}
+
+graphic is2rintf, 235, 45 {
+	xscale 2.0 yscale 2.2
+	patch is2rintf, 0, 0
+}
+
+// Armor elements
+graphic a_bullet, 31, 17 {
+	xscale 2.0 yscale 2.2
+	patch a_bullet, 0, 0
+}
+
+graphic a_chem, 31, 17 {
+	xscale 2.0 yscale 2.2
+	patch a_chem, 0, 0
+}
+
+graphic a_explo, 31, 17 {
+	xscale 2.0 yscale 2.2
+	patch a_explo, 0, 0
+}
+
+graphic a_fire, 31, 17 {
+	xscale 2.0 yscale 2.2
+	patch a_fire, 0, 0
+}
+
+graphic a_grade1, 31, 17 {
+	xscale 2.0 yscale 2.2
+	patch a_grade1, 0, 0
+}
+
+graphic a_grade2, 31, 17 {
+	xscale 2.0 yscale 2.2
+	patch a_grade2, 0, 0
+}
+
+graphic a_grade3, 31, 17 {
+	xscale 2.0 yscale 2.2
+	patch a_grade3, 0, 0
+}
+
+graphic a_grade4, 31, 17 {
+	xscale 2.0 yscale 2.2
+	patch a_grade4, 0, 0
+}
+
+graphic a_grade5, 31, 17 {
+	xscale 2.0 yscale 2.2
+	patch a_grade5, 0, 0
+}
+
+graphic a_graden, 31, 17 {
+	xscale 2.0 yscale 2.2
+	patch a_graden, 0, 0
+}
+
+graphic a_energy, 31, 17 {
+	xscale 2.0 yscale 2.2
+	patch a_energy, 0, 0
+}
+
+graphic a_nomod, 31, 17 {
+	xscale 2.0 yscale 2.2
+	patch a_nomod, 0, 0
+}
+
+// ============================================================================
+// Progress bars
+graphic progbar1, 128, 16 {
+	xscale 3.0 yscale 3.0
+	patch progbar1, 0, 0
+}
+
+graphic progbr1o, 128, 16 {
+	xscale 3.0 yscale 3.0
+	patch progbr1o, 0, 0
+}
+
+graphic progbar2, 128, 16 {
+	xscale 3.0 yscale 3.0
+	patch progbar2, 0, 0
+}
+
+// ============================================================================
+// Powerup HUD
+graphic prh_back, 60, 80 {
+	xscale 2.5 yscale 2.5
+	patch prh_back, 0, 0
+}
+
+graphic prh_barg, 14, 70 {
+	xscale 2.5 yscale 2.5
+	patch prh_barg, 0, 0
+}
+
+graphic prh_baro, 14, 70 {
+	xscale 2.5 yscale 2.5
+	patch prh_baro, 0, 0
+}
+
+graphic prh_barr, 14, 70 {
+	xscale 2.5 yscale 2.5
+	patch prh_barr, 0, 0
+}
+
+graphic prh_barx, 14, 70 {
+	xscale 2.5 yscale 2.5
+	patch prh_barx, 0, 0
+}
+
+graphic prh_blur, 60, 80 {
+	xscale 2.5 yscale 2.5
+	patch prh_blur, 0, 0
+}
+
+graphic prh_fati, 60, 80 {
+	xscale 2.5 yscale 2.5
+	patch prh_fati, 0, 0
+}
+
+graphic prh_pstr, 60, 80 {
+	xscale 2.5 yscale 2.5
+	patch prh_pstr, 0, 0
+}
+
+graphic prh_sped, 60, 80 {
+	xscale 2.5 yscale 2.5
+	patch prh_sped, 0, 0
+}
+
+graphic prh_thrb, 60, 80 {
+	xscale 2.5 yscale 2.5
+	patch prh_thrb, 0, 0
+}
+
+graphic prh_thrr, 60, 80 {
+	xscale 2.5 yscale 2.5
+	patch prh_thrr, 0, 0
+}
+
+graphic prh_timf, 60, 80 {
+	xscale 2.5 yscale 2.5
+	patch prh_timf, 0, 0
+}
+
+graphic prh_tims, 60, 80 {
+	xscale 2.5 yscale 2.5
+	patch prh_tims, 0, 0
+}
+
+
+texture a14nuke, 64, 64 {patch nukage1, 0, 0}
+
+// ============================================================================
+// FLAT22 fix aliases
+texture flat21,    64,  64 {patch flat22, 0, 0}
+texture flat22r,   64,  64 {patch flat22rd, 0, 0}
+texture flat24,    64,  64 {patch flat22rd, 0, 0}
+texture flat30,    64,  64 {patch flat22gn, 0, 0}
+texture nfft22rd,  64,  64 {patch flat22rd, 0, 0}
+
+// ============================================================================
+texture justblak,  64,  64 {patch black, 0, 0}
+texture hynuke,    64,  64 {patch nukage1, 0, 0}
+texture hywater,   64,  64 {patch fwater1, 0, 0}
+
+// ============================================================================
+// Aliases to Cage's crates
+// Should someday figure which ones of these are used and remove the rest.
+texture n_cttnlt,  64, 128 {patch cratelt2, 0, 0}
+texture n_cttn02,  64, 128 {patch cratiny2, 0, 0}
+texture n_cttn03,  64, 128 {patch cratiny3, 0, 0}
+texture n_ctbrlt,  64, 128 {patch cratelt5, 0, 0}
+texture n_ctbrtn,  64, 128 {patch cratiny4, 0, 0}
+texture n_ctgntn,  64, 128 {patch cratiny3, 0, 0}
+texture n_crttn2,  64, 128 {patch cratiny4, 0, 0}
+texture n_crttn3,  64, 128 {patch cratiny3, 0, 0}
+texture n_crate4,  64, 128 {patch crate4, 0, 0}
+texture n_ct04,    64, 128 {patch crate4, 0, 0}
+texture n_ct05,    64, 128 {
+	patch crate1, 0, 0
+	patch crate4, 0, 64
+}
+
+texture n_crate5, 64, 128 {
+	patch crate1, 0, 0
+	patch crate4, 0, 64
+}
+
+texture n_ct06, 64, 128 {
+	patch crate4, 0, 0
+	patch crate2, 0, 64
+}
+
+texture n_crate6, 64, 128 {
+	patch crate4, 0, 0
+	patch crate2, 0, 64
+}
+
+texture n_ctlt02, 64, 128 {
+	patch cratelt2, 0, 0
+	patch crate4, 0, 64
+}
+
+texture n_ctlt03, 64, 128 {
+	patch cratelt4, 0, 0
+	patch crate2, 0, 64
+}
+
+texture n_crtlt2, 64, 128 {
+	patch cratelt2, 0, 0
+	patch crate4, 0, 64
+}
+
+texture n_crtlt3, 64, 128 {
+	patch cratelt4, 0, 0
+	patch crate2, 0, 64
+}
+
+texture n_ctwd02, 128, 128 {
+	patch cratewd2, 0, 0
+	patch cratewd4, 0, 64
+}
+
+texture n_ctwd03, 128, 128 {
+	patch cratewd4, 0, 0
+	patch cratewd3, 0, 64
+}
+
+texture n_crtwd2, 128, 128 {
+	patch cratewd2, 0, 0
+	patch cratewd4, 0, 64
+}
+
+texture n_crtwd3, 128, 128 {
+	patch cratewd4, 0, 0
+	patch cratewd3, 0, 64
+}
+
+texture crateli2, 64, 128 {
+	patch cratelit, 0, 0 {}
+	patch crate2, 0, 64 {}
+}
+
+texture cratop1,   64,  64 {patch floor2_2, 0, 0}
+texture cratop2,   64,  64 {patch floor2_3, 0, 0}
+texture cratop3,   64,  64 {patch floor2_4, 0, 0}
+texture cratop4,   64,  64 {patch floor2_5, 0, 0}
+
+// Skulltag red crate aliases to the bronze one
+texture fbox1   ,  64, 128 {patch crate5, 0, 0}
+texture fbox1_5 ,  64,  64 {patch floor2_4, 0, 0}
+
+// =============================================================================
+// Radar blips
+graphic radrblue,  13,  13 {
+	patch radrblue, 0, 0
+	offset 6, 6
+}
+
+graphic radrred,  13,  13 {
+	patch radrred, 0, 0
+	offset 6, 6
+}
+
+graphic radryelo,  13,  13 {
+	patch radryelo, 0, 0
+	offset 6, 6
+}
+
+graphic radrbblu,  13,  13 {
+	xscale 0.67
+	yscale 0.67
+	patch radrblue, 0, 0
+	offset 9, 9
+}
+
+graphic radrbred,  13,  13 {
+	xscale 0.67
+	yscale 0.67
+	patch radrbred, 0, 0
+	offset 9, 9
+}
+
+// Temporary fixes
+texture ceil5_2b,  64,  64 {patch ceil5_3 , 0, 0}
+texture n_brik05,  64, 128 {patch brickn5 , 0, 0}
+texture n_brik08,  64, 128 {patch brickn8 , 0, 0}
+texture n_brik37,  64, 128 {patch brickn37, 0, 0}
+texture step1bz ,  64,  64 {patch stepf1bz, 0, 0}
+
+// Compile step textures from patches/. Argh.
+walltexture step1   ,  32,  16 {patch step1   , 0, 0}
+walltexture step2   ,  32,  16 {patch step2   , 0, 0}
+walltexture step3   ,  32,  16 {patch step3   , 0, 0}
+walltexture step4   ,  64,  16 {patch step4   , 0, 0}
+walltexture step5   ,  32,  16 {patch step5   , 0, 0}
+walltexture step6   , 128,  16 {patch step6   , 0, 0}

@@ -1,0 +1,274 @@
+// =============================================================================
+function int CountPassengers (int mech) {
+	int count, i;
+	
+	for (i = 0; i < MAXPLAYERS; i++)
+		if (PlayerInGame (i) && CheckActorInventory (3800 + i, "IsPassenger") == mech)
+			count++;
+	
+	return count;
+}
+
+// =============================================================================
+int LastTortoiseEject[MAXPLAYERS];
+function bool AddPassenger (int player, int mech) {
+	g_Error = "";
+	
+	if (CheckActorInventory (player, "IsPassenger") != 0)
+		return false; // Already a passenger of something
+	
+	if (!SetActivator (player))
+		return false; // .. huh
+	
+	if (!GetCVar ("aow_sillythings")) {
+		if (CountPassengers (mech) >= TORTOISE_PASSENGERS)
+			return false;
+		
+		if (Timer() - LastTortoiseEject[player - 3800] < 3 * TICRATE)
+			return false; // Too quick to hop back in
+		
+		if (CheckInventory ("IsMech"))
+			return false;
+		
+		if (GetPlayerInfo (player - 3800, PLAYERINFO_TEAM) !=
+			GetPlayerInfo (mech - 3800, PLAYERINFO_TEAM))
+		{
+			return false;
+		}
+	}
+	
+	SetPlayerProperty (false, true, PROP_TOTALLYFROZEN);
+	GiveActorInventory (player, "MakePassenger", 1);
+	SpawnSpotForced ("TeleportFog", player, 0, 0);
+	ChangeCamera (mech, 0, 0);
+	SetInventory ("IsPassenger", mech);
+	
+	ACS_Execute (SC_CL_TortoiseHUD, 0);
+	ACS_ExecuteAlways (SC_TortoisePassenger, 0);
+	return true;
+}
+
+// =============================================================================
+function bool EjectPassenger (int player) {
+	g_Error = "";
+	
+	if (!SetActivator (player))
+		return false;
+	
+	int i, x, y, z, ang;
+	int mech = CheckInventory ("IsPassenger");
+	int temp = TemporaryTID ();
+	
+	if (!mech)
+		return false; // Not a passenger
+	
+	if (!SpawnSpot ("TortoiseEjectSpaceCheck2", 0, 0, 0)) {
+		g_Error = "Not enough space to eject!";
+		return false;
+	}
+	
+	// Try to spawn him in all 8 directions, starting at the back of the mech
+	z = GetActorZ (mech);
+	for (i = 0; i < 8; i++) {
+		ang = (GetActorAngle (mech) + (i * 0.125) + 0.5) % 1.0;
+		
+		// Doom hitboxes are squares so we need to put the spawn spot
+		// onto the edges of said square.
+		x = GetActorX (mech);
+		y = GetActorY (mech);
+		if (i >= 1 && i <= 3)
+			x += 96.0;
+		if (i >= 3 && i <= 5)
+			y -= 96.0;
+		if (i >= 5 && i <= 7)
+			x -= 96.0;
+		if (i >= 7 && i <= 1)
+			y += 96.0;
+		
+		if (Spawn ("TortoiseEjectSpaceCheck", x, y, z, temp)) {
+			Thing_Remove (temp);
+			
+			SetActorPosition (player, x, y, z, false);
+			SetActorAngle (player, ang);
+			SetPlayerProperty (false, false, PROP_TOTALLYFROZEN);
+			GiveActorInventory (player, "UnmakePassenger", 1);
+			SpawnSpotForced ("TeleportFog", player, 0, 0);
+			ChangeCamera (0, 0, 0);
+			SetInventory ("IsPassenger", 0);
+			
+			LastTortoiseEject[PlayerNumber ()] = Timer ();
+			return true;
+		}
+	}
+	
+	g_Error = "Ejection failed";
+	return false;
+}
+
+// =============================================================================
+// test script
+script 500 (int p, int d) {
+	switch (d) {
+	case 0:
+		GiveActorInventory (3800 + p, "TortoiseSwitch", 1);
+		break;
+	
+	case 1:
+		if (!AddPassenger (3800 + p, ActivatorTID ()))
+			GenericError (g_Error);
+		break;
+	
+	case 2:
+		if (!EjectPassenger (3800 + p))
+			GenericError (g_Error);
+		break;
+	}
+}
+
+// =============================================================================
+script SC_TortoiseSpecial (int tid) {
+	int i, force;
+	
+	if (GetActorHealth (tid) > 0) {
+		// Tortoise is still alive so this is a player pressing +use on the
+		// mech, trying to hop into it.
+		if (!AddPassenger (ActivatorTID (), tid))
+			GenericError (g_Error);
+	} else {
+		// Tortoise died, eject all passengers and kill all of them.
+		// The killer gets a frag for each passenger. If the player suicided,
+		// the world gets the kills for the passengers.
+		if (PlayerNumber() != -1 && PlayerTeam() == GetPlayerInfo (tid - 3800, PLAYERINFO_TEAM))
+			SetActivator (-1);
+		
+		// First round, go through all players and kill them as the second
+		// round meddles with the activator.
+		for (i = 0; i < MAXPLAYERS; i++) {
+			if (!PlayerInGame (i) || CheckActorInventory (3800 + i, "IsPassenger") != tid)
+				continue; // not a passenger of this mech
+			
+			// Need to unmake him passenger first so that he becomes vulnerable
+			GiveActorInventory (3800 + i, "UnmakePassenger", 1);
+			Thing_Destroy (3800 + i, true, 0);
+		}
+		
+		// Now move the players onto the passenger and thrust them away
+		for (i = 0; i < MAXPLAYERS; i++) {
+			if (!PlayerInGame (i) || CheckInventory ("IsPassenger") != tid)
+				continue;
+			
+			SetActivator (3800 + i);
+			ChangeCamera (0, 0, 0);
+			SetPlayerProperty (false, false, PROP_TOTALLYFROZEN);
+			force = random (15, 45);
+			ThrustThing (random (0, 255), force, (force >= 30), 0);
+			SetInventory ("IsPassenger", 0);
+		}
+	}
+}
+
+// =============================================================================
+script SC_TortoisePassenger (void) {
+	delay (35);
+	int mech = CheckInventory ("IsPassenger");
+	
+	while (CheckInventory ("IsPassenger") && GetHealth () > 0) {
+		if (GetPlayerInput (-1, INPUT_BUTTONS) & BT_USE) {
+			if (!EjectPassenger (ActivatorTID ()))
+				GenericError (g_Error);
+			else
+				break;
+		}
+		
+		if (!CheckPlayerCamera (PlayerNumber()) != mech)
+			ChangeCamera (mech, 0, 0);
+		
+		delay (1);
+	}
+	
+	ChangeCamera (0, 0, 0);
+}
+
+// =============================================================================
+// Tortoise HUD - passenger list
+script SC_CL_TortoiseHUD (void) NET CLIENTSIDE {
+	if (!SetActivator (3800 + consoleplayer))
+		terminate;
+	
+	int mech = -1;
+	
+	if (CheckWeapon ("TortoiseWeapons"))
+		mech = ActivatorTID ();
+	else if (CheckInventory ("IsPassenger"))
+		mech = CheckInventory ("IsPassenger");
+	
+	if (mech == -1)
+		terminate; // consoleplayer is in a tortoise
+	
+	while (CheckWeapon ("TortoiseWeapons") || CheckInventory ("IsPassenger")) {
+		DrawTortoiseHUD (mech, 0.5);
+		delay (5);
+	}
+	
+	// Draw the HUD one more time to fade it out
+	DrawTortoiseHUD (mech, 0.0);
+}
+
+// =============================================================================
+function void DrawTortoiseHUD (int mech, int holdtime) {
+	int hid = 9500;
+	int y = -0.3;
+	int i, count;
+	
+	// Header
+	SetFont ("BIGFONT");
+	HudMessage (s:"\cGTORTOISE";
+		HUDMSG_FadeOut, hid++, CR_WHITE, -0.75, y, holdtime, 0.5);
+	y -= SMALLSPACE * 2;
+	
+	// Draw the name of the pilot
+	SetHUDFont ();
+	HudMessage (s:"Pilot: ", s:TeamColors[ConsoleTeam()], n:mech - 3799;
+		HUDMSG_FadeOut, hid++, CR_WHITE, -0.75, y, holdtime, 0.5);
+	y -= SMALLSPACE;
+	
+	// Draw the health of the mech
+	HudMessage (s:"Health: ",
+		s:FractionColor (GetActorHealth (mech), GetActorSpawnHealth (mech)),
+		d:GetActorHealth (mech), s:"\c-HP";
+		HUDMSG_FadeOut, hid++, CR_WHITE, -0.75, y, holdtime, 0.5);
+	y -= SMALLSPACE;
+	
+	// Draw the list of passengers
+	for (i = 0; i < MAXPLAYERS; i++) {
+		if (!PlayerInGame (i) || CheckActorInventory (3800 + i, "IsPassenger") != mech)
+			continue;
+		
+		HudMessage (s:"- ", s:TeamColors[ConsoleTeam()], n:i + 1, s:"\cC, ", s:DisplayName (i);
+			HUDMSG_FadeOut, hid++, CR_WHITE, -0.75, y, holdtime, 0.5);
+		y -= SMALLSPACE;
+		count++;
+	}
+	
+	// Draw blank slots for empty seats
+	while (count < TORTOISE_PASSENGERS) {
+		HudMessage (s:"---";
+			HUDMSG_FadeOut, hid++, CR_WHITE, -0.75, y, holdtime, 0.5);
+		y -= SMALLSPACE;
+		count++;
+	}
+	y -= SMALLSPACE;
+	
+	// If we're a passenger, draw which key to eject with.
+	if (CheckInventory ("IsPassenger")) {
+		HudMessage (s:"Press ", k:"+use", s:" to eject";
+			HUDMSG_FadeOut, hid++, CR_WHITE, -0.75, y, holdtime, 0.5);
+		y -= SMALLSPACE;
+		count++;
+	} else if (!CheckInventory ("IsMech")) {
+		HudMessage (s:"Press ", k:"+use", s:" to enter";
+			HUDMSG_FadeOut, hid++, CR_WHITE, -0.75, y, holdtime, 0.5);
+		y -= SMALLSPACE;
+		count++;
+	}
+}

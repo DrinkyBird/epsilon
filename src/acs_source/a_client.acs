@@ -1,0 +1,456 @@
+// ************************************************
+// [Dusk] Clientside code hub
+script SC_CLIENT OPEN CLIENTSIDE {
+	// Store the local player number
+	consoleplayer = ConsolePlayerNumber ();
+	
+	NetState |= NETSTATE_Client;
+	
+	delay (5);
+	
+	// Get outside the spawn room.
+	Puke (-SC_CL_SPECTATORTELEPORT);
+	
+	delay (5);
+	
+	ACS_ExecuteAlways (SC_CL_EFFECTS, 0);
+	ACS_ExecuteAlways (SC_CL_HUDINIT, 0);
+	
+	// nothing to see here, folks
+	FixFuckedUpArrays ();
+	
+	// Initialize stuff unless we did so already.
+	if (!(NetState & NETSTATE_Server)) {
+		InitClasses();
+		
+		BuildMenuClasses ();
+		BuildMenuResearches ();
+		BuildMenuMechs ();
+		InitParticleFuserData ();
+		CR_InitCrateList ();
+	}
+	
+	PR_InitPreferences ();
+	
+	// [Dusk] Use consolecommand to make client-side CVARs show up properly
+	// Use CONFONT for HUD elements
+	if (GetCVar ("aow_cl_confonthud") <= 0)
+		ConsoleCommand ("set aow_cl_confonthud 0");
+	
+	// Request information about the killer's health when we get fragged
+	if (GetCVar ("aow_cl_killerhealth") <= 0)
+		ConsoleCommand ("set aow_cl_killerhealth 0");
+	
+	// Desired effect level (negative means less, positive means more, 0 means normal)
+	if (GetCVar ("aow_cl_fx") == 0)
+		ConsoleCommand ("set aow_cl_fx 0");
+	
+	// Don't draw any HUD elements
+	if (GetCVar ("aow_cl_nohud") <= 0)
+		ConsoleCommand ("set aow_cl_nohud 0");
+	
+	// Always use the radar (but it will only show teammates)
+	if (GetCVar ("aow_cl_alwaysradar") <= 0)
+		ConsoleCommand ("set aow_cl_alwaysradar 0");
+	
+	// [Dusk] {9/15/12} Disables team log completely.
+	if (GetCVar ("aow_cl_noteamlog") <= 0)
+		ConsoleCommand ("set aow_cl_noteamlog 0");
+	
+	// [Dusk] {10/4/12} CVAR to show team log on the screen.
+	// It takes a lot of screen space so I'm disabling it by default
+	if (GetCVAR ("aow_cl_fullteamlog") <= 0)
+		ConsoleCommand ("set aow_cl_fullteamlog 0");
+	
+	// [Dusk] {10/27/12} How much to donate?
+	if (GetCVAR ("aow_cl_donateamount") <= 0)
+		ConsoleCommand ("set aow_cl_donateamount 100");
+	
+	// [Dusk] Also archive them.
+	ArchiveCVAR ("aow_cl_confonthud");
+	ArchiveCVAR ("aow_cl_killerhealth");
+	ArchiveCVAR ("aow_cl_fx");
+	ArchiveCVAR ("aow_cl_nohud");
+	ArchiveCVAR ("aow_cl_alwaysradar");
+	ArchiveCVAR ("aow_noteamintel");
+	ArchiveCVAR ("aow_cl_fullteamlog");
+	ArchiveCVAR ("aow_cl_donateamount");
+	
+	// [Dusk] {9/10/12} Activate the radar
+	ACS_Execute (SC_CL_RADAR, 0);
+}
+
+// =============================================================================
+script SC_WHOAMI (void) NET CLIENTSIDE {
+	Log (s:"I am player ", d:consoleplayer, s:" named ", n:consoleplayer+1);
+}
+
+// =============================================================================
+script SC_CL_EFFECTS (void) NET CLIENTSIDE {
+	int last_nohud = GetCVAR ("aow_cl_nohud");
+	int last_confonthud = GetCVAR ("aow_cl_confonthud");
+	int tid, targ;
+	int tick = 0;
+	
+	while (1) {
+		// [Dusk] If HUD preferences have changed, refresh the HUD.
+		if (GetCVar ("aow_cl_nohud") != last_nohud ||
+			GetCVar ("aow_cl_confonthud") != last_confonthud)
+		{
+			last_nohud = GetCVar ("aow_cl_nohud");
+			last_nohud = GetCVar ("aow_cl_confonthud");
+			UpdateHUD ();
+		}
+		
+		for (int i = 0; i < MAXPLAYERS; i++) {
+			tid = 3800+i;
+			
+			// Display smoke on tib-carrying players
+			if (CheckActorInventory (tid, "TiberiumCrystal"))
+				SpawnSpotForced ("TiberiumChemSmokePlayer", tid, 0, GetActorAngle(tid)>>8);
+			
+			// Flicker friendly stealths
+			int teammate = (GetPlayerInfo (i, PLAYERINFO_TEAM) == ConsoleTeam ()) || !PlayerInGame (consoleplayer);
+			if (teammate && i != consoleplayer && (CheckActorInventory (tid, "StealthMode") == 2)) {
+				SetActorProperty (tid, APROP_RenderStyle, STYLE_Translucent);
+				SetActorProperty (tid, APROP_Alpha, 0.6);
+			}
+			
+			// Jetpack fire
+			if (CheckActorInventory (tid, "JetpackActive"))
+				SpawnSpotForced ("JumpjetFire", tid, 0, GetActorAngle (tid)>>8);
+			
+			// Spawn invulnerability particles
+			if (CheckActorInventory (tid, "PowerSpawnInvulnerability") && i != consoleplayer)
+				ACS_ExecuteAlways (977, 0, 0, tid);
+			
+			// Time gun boost particles
+			if ((CheckActorInventory (tid, "PowerTimeGunBoost") ||
+				CheckActorInventory (tid, "PowerTimeGunFloat") ||
+				CheckActorInventory (tid, "PowerTimeGunSpeed")) &&
+				i != consoleplayer)
+				ACS_ExecuteAlways (977, 0, 1, tid);
+			
+			// negative effects
+			if ((CheckActorInventory (tid, "PowerTimeGunSlow") ||
+				CheckActorInventory (tid, "PowerTimeGunWeaken")) &&
+				i != consoleplayer)
+				ACS_ExecuteAlways (977, 0, 2, tid);
+		}
+		
+		// If we're targeting a teammate tortoise, draw its passenger list
+		if (tick % 3 == 0) {
+			if (SetActivator (3800 + consoleplayer) && !CheckInventory ("IsMech")) {
+				targ = GetTargetInfo (TARGETINFO_TID);
+				teammate = (GetPlayerInfo (targ - 3800, PLAYERINFO_TEAM) == ConsoleTeam ()) || !PlayerInGame (consoleplayer);
+				if (targ != ActivatorTID() && CheckActorInventory (targ, "TortoiseWeapons") && teammate)
+					DrawTortoiseHUD (targ, 1.0);
+			}
+		}
+		
+		tick++;
+		delay (5);
+	}
+}
+
+// =============================================================================
+// Secondary script for client-side effects. All case-statements should last
+// for *five tics* and five tics exact.
+script SC_CL_EFFECTS2 (int a, int b) {
+	int i;
+	
+	switch (a) {
+	case 0:
+	case 1:
+	case 2:
+		// Spawn invul particles
+		for (i = 0; i < 5; i++) {
+			switch (a) {
+			case 0:
+				SpawnSpotForced ("SpawnInvulnerabilityFX", b, 0, 0);
+				break;
+			case 1:
+				SpawnSpotForced ("TimeGunBoostFX", b, 0, 0);
+				break;
+			case 2:
+				SpawnSpotForced ("TimeGunSlowFX", b, 0, 0);
+				break;
+			}
+			
+			delay (1);
+		}
+	}
+}
+
+// =============================================================================
+// trail -> player
+script SC_CL_EFFECTTRAIL (int type, int target) CLIENTSIDE {
+	switch (type) {
+	case 0:
+		// Shock rifle trail
+		SpawnTrail (0, target, "VoltageTrailFX", 32, 12, 0, 0, 0, -6.0, 6.0, 36.0);
+		break;
+	case 1:
+		// Bomb-squad gun (yellow)
+		SpawnTrail (0, target, "DisarmTrail", 8, 0, 0, 0, 0, 0, 5.0, 36.0);
+		break;
+	case 2:
+		// Heal gun (red)
+		SpawnTrail (0, target, "HealTrail", 8, 0, 0, 0, 0, 0, 5.0, 36.0);
+		break;
+	case 3:
+		// Repair gun (blue)
+		SpawnTrail (0, target, "RepairTrail", 8, 0, 0, 0, 0, 0, 5.0, 36.0);
+		break;
+	case 4:
+		// Upgraded repair gun (purple)
+		SpawnTrail (0, target, "UpgradedRepairTrail", 14, 0, 0, 0, 0, 0, 5.0, 36.0);
+		break;
+	}
+}
+
+// =============================================================================
+// [Dusk] Spawns a trail of type actors from src to dest, with interval units
+// in between (with a cap of 128 trail actors at most).
+function bool SpawnTrail (int src, int dest, str type, int interval, int rand,
+				  int xoff0, int yoff0, int zoff0, int xoff1, int yoff1, int zoff1)
+{
+	// The server may not do this
+	if (consoleplayer == -1)
+		return false;
+	
+	int x, y, z;
+	
+	// 0 means self
+	if (!src) src = ActivatorTID ();
+	if (!dest) dest = ActivatorTID ();
+	
+	if (src == dest) {
+		Log (s:"SpawnTrail: Can't trail to ourselves!");
+		return false;
+	}
+	
+	// From where to where?
+	int x0 = GetActorX (src);
+	int y0 = GetActorY (src);
+	int z0 = GetActorZ (src);
+	int a0 = GetActorAngle (src);
+	int x1 = GetActorX (dest);
+	int y1 = GetActorY (dest);
+	int z1 = GetActorZ (dest);
+	int a1 = GetActorAngle (dest);
+	
+	// Apply offsets
+	x0 += FixedMul (cos (a0+0.25), xoff0) + FixedMul (cos (a0), yoff0);
+	y0 += FixedMul (sin (a0+0.25), xoff0) + FixedMul (sin (a0), yoff0);
+	z0 += zoff0;
+	x1 += FixedMul (cos (a1+0.25), xoff1) + FixedMul (cos (a1), yoff1);
+	y1 += FixedMul (sin (a1+0.25), xoff1) + FixedMul (sin (a1), yoff1);
+	z1 += zoff1;
+	
+	int d = AproxDistance (src, dest);
+	
+	// How many trail actors to spawn?
+	if (interval <= 32)
+		interval = 32;
+	
+	int n = (d>>16) / interval;
+	int cap = 128;
+	
+	if (GetCVar ("aow_cl_fx") > 0) {
+		n *= 2;
+		cap *= 2;
+	} else if (GetCVar ("aow_cl_fx") < 0) {
+		n /= 2;
+		cap /= 2;
+	}
+	
+	if (n > cap)
+		n = cap;
+	
+	// Nothing to spawn!
+	if (n <= 0)
+		return false;
+	
+	// Distance between current point and first flare
+	int dx0 = (x1 - x0) / n;
+	int dy0 = (y1 - y0) / n;
+	int dz0 = (z1 - z0) / n;
+	
+	// Randomize initial distance so particles won't take the same spots
+	// on continuous beams. That just looks awkward.
+	int r = random (-5, 5) * 0.1;
+	x0 += FixedMul (r, dx0);
+	y0 += FixedMul (r, dy0);
+	z0 += FixedMul (r, dz0);
+	
+	// Randomize the distance a bit
+	if (rand > 7)
+		n += random (-1, 1);
+	
+	// Information gathered, actually spawn the flares now
+	for (int i = 0; i < n; i++) {
+		x = x0 + i*dx0;
+		y = y0 + i*dy0;
+		z = z0 + i*dz0;
+		
+		if (rand > 0) {
+			x += random (-rand, rand) * 0.5;
+			y += random (-rand, rand) * 0.5;
+			z += random (-rand, rand) * 0.5;
+		}
+		
+		Spawn (type, x, y, z);
+		// Log (d:i, s:": ", f:x,s:", ", f:y,s:", ",f:z);
+	}
+	
+	return true;
+}
+
+// =============================================================================
+// [Dusk] Get aow_cl_fx value
+script SC_CL_FXCVAR (void) CLIENTSIDE {
+	SetResultValue (GetCVar ("aow_cl_fx"));
+}
+
+// =============================================================================
+// [Dusk] Missile launcher targeter
+script SC_CL_MISSILETARGETER (void) CLIENTSIDE {
+	if (ActivatorTID () != 3800 + ConsolePlayer) terminate;
+	int mytid = 3800 + ConsolePlayer;
+	int t;
+	int team = PlayerTeam ();
+	
+	while (CheckWeapon ("MissileLauncher") && GetActorProperty (0, APROP_Health) > 0) {
+		SetActivatorToTarget (0);
+		t = ActivatorTID ();
+		
+		// Only display the targeter if aiming at a non-stealthing enemy player.
+		if (t != mytid && t >= 3800 && t <= (3800+MAXPLAYERS) &&
+			CheckActorInventory (t, "StealthMode") != 2 &&
+			GetPlayerInfo (t-3800, PLAYERINFO_TEAM) != team) {
+			
+			// Display the targeter circle
+			SetFont ("TARGHAIR");
+			HudMessageBold (s:"a";
+				HUDMSG_FADEOUT, 0, CR_UNTRANSLATED, -0.5, -0.5, HM_2TICS, HM_3TICS);
+			
+			// Play beep sound
+			AmbientSound ("missilelauncher/see", 127);
+			delay (4);
+		}
+		
+		SetActivator (mytid);
+		delay (1);
+	}
+}
+
+// =============================================================================
+// [Dusk] Sniper rifle zoom effect
+script SC_CL_SNIPERZOOM (void) CLIENTSIDE {
+	// Fade in
+	FadeTo (0, 0, 0, 1.0, 0.1);
+	delay ((0.1 * 35) >> 16);
+	
+	delay (5);
+	
+	// Fade out
+	if (CheckInventory ("IsZoomed"))
+		FadeTo (255, 0, 0, 0.2, 0.3);
+	else
+		FadeTo (0, 0, 0, 0, 0.3);
+}
+
+// =============================================================================
+// [Dusk] {9/10/12} Radar that displays teammates and things of interest
+#define RADAR_SIZE 0.15
+#define RADAR_FOV 7000
+
+// =============================================================================
+function void DrawRadarBlip (int tid, str blipname) {
+	int d = AproxDistance (3800 + consoleplayer, tid) / RADAR_FOV;
+	
+	if (d >= RADAR_SIZE)
+		return; // Too far away
+	
+	int va = VectorAngle (GetActorX (tid) - GetActorX (3800+consoleplayer),
+		GetActorY (tid) - GetActorY (3800+consoleplayer));
+	int a = (va - GetActorAngle (3800+consoleplayer) + 1.5) % 1.0;
+	int x = FixedMul (sin(a), d);
+	int y = FixedMul (cos(a), d);
+	
+	SetFont (blipname);
+	HudMessage (s:"a";
+		HUDMSG_FADEOUT, 0, CR_UNTRANSLATED, RADAR_SIZE + x, RADAR_SIZE + y, 3*HM_1TIC, 6*HM_1TIC);
+}
+
+// =============================================================================
+script SC_CL_RADAR (void) NET CLIENTSIDE {
+	int cratespots = CountCrateSpots ();
+	int i;
+	
+	while (1) {
+		delay (6);
+		
+		if (GetConfig (CONFIG_NORADAR) || // server disabled the radar
+			!PlayerInGame (consoleplayer) || // consoleplayer is spectating
+			(
+				!GetCVar ("aow_cl_alwaysradar") && // player has no radar and cvar is disabled
+				!CheckActorInventory (3800+consoleplayer, "PowerRadar")
+			))
+		{
+			continue;
+		}
+		
+		// Draw players
+		for (i = 0; i < MAXPLAYERS; i++) {
+			if (!PlayerInGame (i))
+				continue; // not in game
+			
+			// Thermal cloak cloaks you from the radar, too
+			if (GetPlayerInfo (i, PLAYERINFO_TEAM) != ConsoleTeam() &&
+				(!CheckActorInventory (3800+consoleplayer, "PowerRadar") ||
+				CheckActorInventory (3800+i, "ThermalCloakingTime")))
+			{
+				continue; // not on our team
+			}
+			
+			if (CheckActorInventory (3800+i, "IsMech")) {
+				// Draw mechs with big blips
+				if (GetPlayerInfo (i, PLAYERINFO_TEAM) == TEAM_BLUE)
+					DrawRadarBlip (3800+i, "radrbblu");
+				else
+					DrawRadarBlip (3800+i, "radrbred");
+			} else {
+				if (GetPlayerInfo (i, PLAYERINFO_TEAM) == TEAM_BLUE)
+					DrawRadarBlip (3800+i, "radrblue");
+				else
+					DrawRadarBlip (3800+i, "radrred");
+			}
+		}
+		
+		// Draw AI marines
+		for (i = 0; i < MAX_MARINES; i++) {
+			if (!Bots[i])
+				continue; // doesn't exist
+			
+			if (CheckActorInventory (TID_MARINE+i, "IsBlue"))
+				DrawRadarBlip (TID_MARINE+i, "radrblue");
+			else
+				DrawRadarBlip (TID_MARINE+i, "radrred");
+		}
+		
+		// Powerup crate spots
+		for (i = 0; i < cratespots; i++)
+			DrawRadarBlip (TID_CRATESPOT_START + i, "radryelo");
+	}
+}
+
+// ============================================================================
+// [Dusk] Set desired font for HUD display
+function void SetHUDFont (void) {
+	if (GetCVar ("aow_cl_confonthud"))
+		SetFont ("CONFONT");
+	else
+		SetFont ("SMALLFONT");
+}
