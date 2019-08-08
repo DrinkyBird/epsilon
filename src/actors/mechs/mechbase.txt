@@ -21,6 +21,7 @@ actor MechPlayer_Base : PlayerPawn {
 	player.jumpz 0
 	player.damagescreencolor "00 00 00"
 	player.soundclass "mech"
+	Player.ColorRange 112, 127
 	painchance 0
 	mass 0x7FFFFFFF
 	-TELESTOMP

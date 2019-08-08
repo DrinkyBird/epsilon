@@ -13,6 +13,7 @@ actor Raven : MechPlayer_Base {
 	player.viewheight 132
 	player.attackzoffset 36
 	player.morphweapon "RavenWeapons"
+	Player.ColorRange 112, 127
 	scale 0.65
 	states {
 	Spawn2:

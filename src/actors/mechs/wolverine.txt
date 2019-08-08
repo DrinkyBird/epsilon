@@ -13,6 +13,7 @@ actor Wolverine : MechPlayer_Base {
 	Player.ViewHeight 96
 	Player.AttackZOffset 13
 	Player.MorphWeapon "WolverineWeapons"
+	Player.ColorRange 112, 127
 	scale 1.75
 	states {
 	Spawn:

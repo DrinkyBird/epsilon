@@ -21,6 +21,7 @@ actor Juggernaut : MechPlayer_Base {
 	Player.ViewHeight 96
 	Player.AttackZOffset 24
 	Player.MorphWeapon "JuggernautWeapons"
+	Player.ColorRange 112, 127
 	States {
 	Spawn:
 		TERM A 0

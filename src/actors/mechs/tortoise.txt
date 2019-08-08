@@ -10,6 +10,7 @@ actor Tortoise : MechPlayer_Base {
 	Player.ViewHeight 48
 	Player.AttackZOffset 13
 	Player.MorphWeapon "TortoiseWeapons"
+	Player.ColorRange 112, 127
 	States {
 	Spawn:
 		ROB2 Q 0

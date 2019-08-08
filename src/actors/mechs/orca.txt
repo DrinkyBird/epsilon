@@ -12,6 +12,7 @@ actor Orca : MechPlayer_Base {
 	Player.ViewHeight 64
 	Player.AttackZOffset 0
 	Player.MorphWeapon "OrcaWeapons"
+	Player.ColorRange 112, 127
 	damagefactor "Falling", 4.0
 	scale 0.5
 	+NOSKIN

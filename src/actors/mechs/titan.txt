@@ -10,6 +10,7 @@ actor Titan : MechPlayer_Base {
 	Player.ViewHeight 96
 	Player.AttackZOffset 13
 	Player.MorphWeapon "TitanWeapons"
+	Player.ColorRange 112, 127
 	scale 1.1
 	States {
 	Spawn:

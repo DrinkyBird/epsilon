@@ -13,6 +13,7 @@ actor Scavenger : MechPlayer_Base {
 	player.attackzoffset 13
 	player.colorrange 112, 127
 	player.morphweapon "ScavengerWeapons"
+	Player.ColorRange 112, 127
 	scale 1.1
 	+NOSKIN
 	-NOBLOCKMONST
