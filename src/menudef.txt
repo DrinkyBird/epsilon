@@ -1,0 +1,58 @@
+OptionMenu "AOWMain"
+{
+	Title           "ALL OUT WAR"
+    
+	StaticText      "Controls"
+	Control         "Donation: Open/close menu",    "donationmenu"
+	Control         "Donation: Change name",        "donationname"
+	Control         "Donation: Donate $100",        "donationgive"
+	Control         "Surrender",                    "surrender"
+	Control         "Switch to weaker team",        "teamswitch"
+	Control         "Sell Current Weapon",          "sellweapon"
+	Control         "Use self-heal",                "useselfheal"
+	Control         "Use timed C4",                 "usec4"
+	Control         "Open preferences",             "aow_preferences"
+	StaticText      " "
+    
+	StaticText      "Client Settings"
+	Option          "Use console font HUD",         "aow_cl_confonthud",        "OnOff"
+	Option          "Always enable radar",          "aow_cl_alwaysradar",       "OnOff"
+	Option          "Full team log",                "aow_cl_fullteamlog",       "OnOff"
+	Option          "Disable team log",             "aow_cl_noteamlog",         "OnOff"
+	Option          "Disable AOW HUD",              "aow_cl_nohud",             "OnOff"
+}
+
+// Override engine main menu
+ListMenu "MainMenu" {
+    StaticPatch     94,                 2,                          "M_DOOM"
+    Position        97,                 72
+
+    TextItem        "Play Offline",     "n",                        "AOWPlayOffline"
+    TextItem        "All Out War 2",    "a",                        "AOWMain"
+    TextItem        "Options",          "o",                        "OptionsMenu"
+    TextItem        "Quit",             "q",                        "QuitMenu"
+}
+
+OptionValue "AOWMaps" {
+    0,              "AOW01 - Red Zone"
+    1,              "AOW02 - Barrens"
+    2,              "AOW03 - Oasis"
+    3,              "AOW04 - Glacier"
+    4,              "AOW05 - Valley"
+    5,              "AOW06 - Floating City"
+    6,              "AOW07 - Canyon"
+    7,              "AOW08 - Renegade 2030"
+    8,              "AOW09 - Infected"
+    9,              "AOW10 - Renegade 2032"
+    10,             "AOW11 - Waste Plant"
+    11,             "AOW12 - Missile Site"
+}
+
+OptionMenu "AOWPlayOffline" {
+    Title           "Play Offline"
+
+    StaticText      " "
+    Option          "Map",              "__aow_cl_menutomap",           "AOWMaps",          1
+    StaticText      " "
+    SafeCommand     "Play",             "__aow_menudef_playoffline"
+}

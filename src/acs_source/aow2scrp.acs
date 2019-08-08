@@ -669,6 +669,7 @@ global int 63:deathtoll;
 #include "a_jetpack.acs"
 #include "a_mechs.acs"
 #include "a_menu.acs"
+#include "a_menudef.acs"
 #include "a_menu_util.acs"
 #include "a_menu_purchase.acs"
 #include "a_menu_research.acs"

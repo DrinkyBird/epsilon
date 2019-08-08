@@ -97,3 +97,7 @@ alias a_notarget "puke 945 15"
 alias a_exit "puke 945 16"
 alias a_health "puke 945 17 %1"
 alias a_fly "puke 945 18"
+
+// =============================================================================
+// MENUDEF COMMANDS
+alias __aow_menudef_playoffline "pukename AOW_Menudef_PlayOffline;closemenu"
