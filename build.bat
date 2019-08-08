@@ -20,6 +20,10 @@ IF NOT "%GIT_BRANCH%" == "master" (
 )
 
 
+:: Generate gitcommit.py
+python "tools\gitcommit.py" "src\acs_source\a_gitcommit.acs"
+
+
 :: Compile ACS
 IF NOT EXIST "src\acs" MKDIR "src\acs"
 acc "src\acs_source\aow2scrp.acs" "src\acs\aow2scrp.o"

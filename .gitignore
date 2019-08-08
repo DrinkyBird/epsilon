@@ -10,3 +10,6 @@ out/
 *.backup1
 *.backup2
 *.backup3
+
+# Generated files
+a_gitcommit.acs

@@ -660,18 +660,7 @@ function str GetActorClass (int tid) {
 // ============================================================================
 // [Dusk] Build the version string
 function str VersionString (void) {
-	// Major version
-	str msg = strparam (s:"v", d:VERSION_MAJOR);
-	
-	// Patch version or beta
-	if (VERSION_MINOR > 50)
-		msg = strparam (s:msg, s:" beta ", d:(100 - VERSION_MINOR));
-	else if (VERSION_MINOR >= 1)
-		msg = strparam (s:msg, s:".", d:VERSION_MINOR);
-	
-	// SVN revision. SVN_REVISION is defined in a_svnrevision.acs which is
-	// automatically generated on build time.
-	msg = strparam (s:msg, s:" (r", s:SVN_REVISION, s:")");
+	str msg = strparam (s: "r", d: GIT_REVISION);
 	return msg;
 }
 

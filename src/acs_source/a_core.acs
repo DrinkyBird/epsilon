@@ -427,7 +427,7 @@ script SC_CL_PLAYERENTER ENTER CLIENTSIDE {
 	
 	SetHUDFont ();
 	
-	HUDMessage (s:"You are running version ", s:VersionString ();
+	HUDMessage (s:"You are playing \cfThe Epsilon Project\cj ", s:VersionString ();
 		HUDMSG_FADEINOUT|HUDMSG_LOG, 0, CR_WHITE, 0.5, y, 7.0, 0.5, 1.0);
 	y += SMALLSPACE;
 	
