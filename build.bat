@@ -21,6 +21,7 @@ IF NOT "%GIT_BRANCH%" == "master" (
 
 
 :: Compile ACS
+IF NOT EXIST "src\acs" MKDIR "src\acs"
 acc "src\acs_source\aow2scrp.acs" "src\acs\aow2scrp.o"
 
 :: Create the actual PK3
