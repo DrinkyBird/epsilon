@@ -275,9 +275,6 @@ actor FirepowerUpgrade : PermanentPowerup {
 }
 
 // =============================================================================
-actor HasArmorUpgrade : Inventory {}
-
-// =============================================================================
 actor PowerGrade2ArmorFactoryPower : PowerProtection {
 	DamageFactor "Fist",			0.9
 	DamageFactor "Bullet",			0.9

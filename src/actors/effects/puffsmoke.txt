@@ -48,4 +48,3 @@ actor MechStepSmokePuffLarge : PuffSmoke	{Scale 6.0}
 actor OrcaSmokePuff : PuffSmoke		{Scale 2.0}
 actor RocketSmoke : PuffSmoke			{Scale 1.0}
 actor GrenadeSmoke : PuffSmoke		{Scale 1.0}
-actor LavaSmoke : PuffSmoke			{Scale 1.0}

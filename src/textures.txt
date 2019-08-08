@@ -1514,7 +1514,7 @@ graphic radrbblu,  13,  13 {
 graphic radrbred,  13,  13 {
 	xscale 0.67
 	yscale 0.67
-	patch radrbred, 0, 0
+	patch radrred, 0, 0
 	offset 9, 9
 }
 

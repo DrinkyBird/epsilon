@@ -22,13 +22,6 @@ actor MedicationFieldItem : InventoryItem 29017 {
 }
 
 // ==================================================================================
-// How many "slots" of med fields does the player have?
-// This amount of med fields are restored by full refills.
-actor MedicationFieldCount : Inventory {
-	Inventory.MaxAmount 3
-}
-
-// ==================================================================================
 // Medication field pad being casted to the field
 actor MedicationFieldThrown {
 	PROJECTILE

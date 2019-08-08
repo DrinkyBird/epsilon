@@ -48,7 +48,7 @@ actor ChronoBow : AOWWeapon {
 		BOWG A 0 A_JumpIfInventory ("ChronoBowPower", 60, "Fire4")
 		BOWG A 0 A_JumpIfInventory ("ChronoBowPower", 40, "Fire3")
 		BOWG A 0 A_JumpIfInventory ("ChronoBowPower", 20, "Fire2")
-		BOWF A 0 A_FireCustomMissile ("ChronoBolt", 0, 1)
+		BOWF A 0 A_FireCustomMissile ("ChronoBolt1", 0, 1)
 		goto FireEnd
 	Fire2:
 		BOWF A 0 A_FireCustomMissile ("ChronoBolt2", 0, 1)
@@ -140,7 +140,7 @@ actor ChronoBowPower : Ammo {
 	ammo.backpackmaxamount 100
 }
 
-actor ChronoBolt  : ChronoBoltBase {
+actor ChronoBolt1  : ChronoBoltBase {
 	Speed 27
 	Health 6
 }
