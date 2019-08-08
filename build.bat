@@ -29,7 +29,7 @@ IF NOT EXIST "src\acs" MKDIR "src\acs"
 acc "src\acs_source\aow2scrp.acs" "src\acs\aow2scrp.o"
 
 :: Create the actual PK3
+IF "%1" == "/norev" SET GIT_NUMBER=dev
+
 CD src
 7za a -tzip "%OUTDIR%\aow2_epsilon%PK3BRANCH%-r%GIT_NUMBER%.pk3" *.* -r
-
-pause
