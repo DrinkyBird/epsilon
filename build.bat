@@ -34,5 +34,5 @@ SET OUTFILE=%OUTDIR%\aow2_epsilon%PK3BRANCH%-r%GIT_NUMBER%.pk3
 IF EXIST "%OUTFILE%" DEL "%OUTFILE%"
 
 PUSHD src
-7za a -tzip "%OUTFILE%" *.* -r
+7za a -tzip "%OUTFILE%" *.* -r -xr!*.dbs -xr!*.backup1 -xr!*.backup2 -xr!*.backup3 -xr!*.bak
 POPD
