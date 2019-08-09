@@ -69,7 +69,7 @@ Actor ProxyMineRed {
 	DamageFactor "Deconstruction",	1.0
 	DamageFactor "Mechstomp",		0.0
 	DamageFactor "Monster",			0.0
-	Translation "112:127=228:246"
+	Translation "112:127=176:191"
 	
 	States {
 	Spawn:

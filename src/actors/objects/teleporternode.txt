@@ -184,7 +184,7 @@ actor TeleporterNodeSphereRed : TeleporterNodeSphereBlue {
 // Effect cluster, designates active portal
 actor TeleporterNodeFX {
 	gravity 10000
-	translation "144:159=226:242"
+	translation "112:127=176:191", "160:167=191:176"
 	states {
 	Spawn:
 	Active:
@@ -199,7 +199,7 @@ actor TeleporterNodeFX {
 }
 
 actor TeleporterNodeFXBlue : TeleporterNodeFX {
-	translation "144:159=193:207"
+	translation "112:127=193:207", "160:167=207:193"
 }
 
 actor TeleporterNodeTelefogCluster {

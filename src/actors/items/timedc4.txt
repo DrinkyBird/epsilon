@@ -37,7 +37,7 @@ actor TimedC4Thrown {
 	Damage 0
 	Gravity 0.5
 	Scale 0.114
-	Translation "112:127=224:246"
+	Translation "112:127=176:191"
 	States {
 	Spawn:
 		TC4T R 2 A_JumpIf (waterlevel > 1, "Water")
@@ -154,7 +154,7 @@ actor TimedC4Count : Inventory {inventory.maxamount 4}
 actor EnhancedTimedC4 : Inventory {}
 
 actor TimedC4ThrownE : TimedC4Thrown {
-	Translation "1:32=16:32", "112:127=224:246"
+	Translation "1:32=16:32", "112:127=176:191"
 	health 500
 	states {
 	Death:
