@@ -54,5 +54,5 @@ OptionMenu "AOWPlayOffline" {
     StaticText      " "
     Option          "Map",              "__aow_cl_menutomap",           "AOWMaps",          1
     StaticText      " "
-    SafeCommand     "Play",             "__aow_menudef_playoffline"
+    SafeCommand     "Play",             "__aow_menudef_playoffline"//,    "Are you sure you want to start an offline game?"
 }
