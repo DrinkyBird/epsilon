@@ -84,8 +84,13 @@ map aow12 "Missile Site" {
 }
 
 map aow13 "Disk Defrag" {
-	next = "aow01"
+	next = "aow14"
 	music = "d_aow13"
+}
+
+map aow14 "Sand Canyon" {
+	next = "aow01"
+	music = "d_aow14"
 }
 
 skill Normal {
