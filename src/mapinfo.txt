@@ -82,6 +82,12 @@ map aow12 "Hell March" {
 	music = "d_aow12"
 }
 
+map aow13 "Lava Giant" {
+	next = "aow14"
+	sky1 = "stars"
+	music = "d_aow13"
+}
+
 map aow14 "Waste Plant" {
 	next = "aow15"
 	music = "d_aow14"
