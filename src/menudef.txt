@@ -1,21 +1,37 @@
+// Override engine main menu
+ListMenu "MainMenu" {
+    StaticPatch     94,                 2,                          "M_DOOM"
+    Position        97,                 72
+
+    TextItem        "Play Offline",     "n",                        "AOWPlayOffline"
+    TextItem        "All Out War 2",    "a",                        "AOWMain"
+    TextItem        "Options",          "o",                        "OptionsMenu"
+    TextItem        "Quit",             "q",                        "AOWQuitMenu"
+}
+
+// AOW settings menu
 OptionValue "AOWClientFXLevel"
 {
-    -3,             "Low"
-    0,              "Medium"
-    3,              "High"
+    -3,             "\cDLow"
+    0,              "\cFMedium"
+    3,              "\cGHigh"
 }
 
 OptionMenu "AOWMain"
 {
 	Title           "ALL OUT WAR"
     
+    Command         "Open donation menu",           "__aow_menudef_donationmenu"
+    Command         "Switch to weaker team",        "__aow_menudef_teamswitch"
+	StaticText      " "
+    
 	StaticText      "Controls"
 	Control         "Donation: Open/close menu",    "donationmenu"
-	Control         "Donation: Change name",        "donationname"
+	Control         "Donation: Change target",      "donationname"
 	Control         "Donation: Donate $100",        "donationgive"
 	Control         "Surrender",                    "surrender"
 	Control         "Switch to weaker team",        "teamswitch"
-	Control         "Sell Current Weapon",          "sellweapon"
+	Control         "Sell current weapon",          "sellweapon"
 	Control         "Use self-heal",                "useselfheal"
 	Control         "Use timed C4",                 "usec4"
 	StaticText      " "
@@ -29,15 +45,14 @@ OptionMenu "AOWMain"
 	Option          "Show AOW HUD",                 "aow_cl_nohud",             "OffOn"
 }
 
-// Override engine main menu
-ListMenu "MainMenu" {
-    StaticPatch     94,                 2,                          "M_DOOM"
-    Position        97,                 72
+// Custom quit menu
+OptionMenu "AOWQuitMenu" {
+    Title           "Quit"
 
-    TextItem        "Play Offline",     "n",                        "AOWPlayOffline"
-    TextItem        "All Out War 2",    "a",                        "AOWMain"
-    TextItem        "Options",          "o",                        "OptionsMenu"
-    TextItem        "Quit",             "q",                        "QuitMenu"
+    StaticText      "Are you sure you want to quit?"
+    StaticText      " "
+    Command         "Disconnect from server",       "disconnect"
+    Command         "Exit Game",                    "exit"
 }
 
 // The AOW play offline menu

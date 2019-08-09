@@ -18,11 +18,11 @@ addplayerclass Player
 // Key section
 addkeysection "All Out War 2" AOW2Keybinds
 addmenukey "Donation: Open/close menu" donationmenu
-addmenukey "Donation: Change name" donationname
+addmenukey "Donation: Change target" donationname
 addmenukey "Donation: Donate $100" donationgive
 addmenukey "Surrender" surrender
 addmenukey "Switch to weaker team" teamswitch
-addmenukey "Sell Current Weapon" sellweapon
+addmenukey "Sell current weapon" sellweapon
 addmenukey "Use self-heal" useselfheal
 addmenukey "Use timed C4" usec4
 
@@ -97,3 +97,5 @@ alias a_fly "puke 945 18"
 // =============================================================================
 // MENUDEF COMMANDS
 alias __aow_menudef_playoffline "pukename AOW_Menudef_PlayOffline always;closemenu"
+alias __aow_menudef_donationmenu "donationmenu;closemenu"
+alias __aow_menudef_teamswitch "teamswitch;closemenu"
