@@ -40,54 +40,19 @@
  */
 
 // BEGIN ITEM DEFINITION TABLE
-int Items[MAX_ITEMS][MAX_ITEMKEYS] = {
-	{"", "", "", "", 0, 0, 0}, // Mandatory empty entry for no item
-	{"Handgun", "Handgun", "NewClipAmmo", "", 1, 400, 0, 5},
-	{"Sub-Machine Gun", "SubMachineGun", "NewClipAmmo", "", 1, 400, 0, 25},
-	{"Shotgun", "Boomstick", "ShotgunAmmo", "", 1, 50, 0, 25},
-	{"Double Shotgun", "DoubleShotgun", "ShotgunAmmo", "", 1, 50, 0, 50},
-	{"Machine Gun", "MachineGun", "MachineGunAmmo", "", 1, 400, 0, 25},
-	{"Gatling Gun", "GatlingGun", "MachineGunAmmo", "", 1, 400, 0, 100},
-	{"Rifle", "Rifle", "RifleAmmo", "RifleGrenadeAmmo", 1, 30, 4, 25},
-	{"Gauss Rifle", "GaussRifle",  "GaussRifleAmmo", "", 1, 50, 0, 150},
-	{"Grenade Launcher", "GrenadeLauncher", "GrenadeAmmo", "", 1, 40, 0, 125},
-	{"Stealth Laser Rifle", "StealthLaserRifle", "LaserRifleAmmo", "StealthCharge", 1, 200, 100, 0},
-	{"Laser Rifle", "LaserRifle", "LaserRifleAmmo", "", 1, 200, 0, 25},
-	{"Time Gun", "TimeGun", "TimeGunAmmo", "", 1, 175, 0, 0},
-	{"Artillery Cannon", "ArtilleryCannon", "ArtilleryShellAmmo", "", 1, 40, 0, 125},
-	{"Laser Chaingun", "LaserChaingun", "LaserChaingunAmmo", "", 1, 400, 0, 175},
-	{"Utility Gun", "UtilityGun", "", "", 1, 0, 0, 0},
-	{"Plasma Cannon", "PlasmaCannon", "PlasmaCannonAmmo", "", 1, 10, 0, 500},
-	{"Chemical Sprayer", "ChemicalSprayer", "ChemicalAmmo", "ChemicalGrenadeAmmo", 1, 200, 4, 125},
-	{"Tiberium Autorifle", "TiberiumAutorifle", "TE21CalAmmo", "", 1, 120, 0, 125},
-	{"Tiberium Autorifle (weak)", "TiberiumAutorifleWeak", "TE21CalAmmo", "", 1, 120, 0, 75},
-	{"Upgraded Repair Gun", "RepairGun", "RepairGunUpgrade", "", 1, 1, 0, 0},
-	{"Repair Gun", "RepairGun", "", "", 1, 0, 0, 0},
-	{"Deconstruction Gun", "RemoverGun", "", "", 1, 0, 0, 0},
-	{"Bomb-Squad Gun", "BombSquadGun", "", "", 1, 0, 0, 0},
-	{"Heal Gun", "HealGun", "", "", 1, 0, 0, 0},
-	{"Missile Launcher", "MissileLauncher", "MissileAmmo", "", 1, 15, 0, 125},
-	{"Flamethrower", "Flamer", "FlamerAmmo", "PhosphorusGrenadeAmmo", 1, 400, 4, 125},
-	{"Shock Rifle", "ShockRifle", "GeneporiumCharge", "", 1, 200, 0, 150},
-	{"Sniper Rifle", "SniperRifle", "SniperAmmo", "", 1, 40, 0, 125},
-	{"Plasma Rifle", "PlasmaGun", "PlasmaRifleAmmo", "", 1, 200, 0, 200},
-	{"Stealth Knife", "Knife", "StealthCharge", "", 1, 100, 0, 0},
-	{"Chainsaw", "EagerBeaver", "", "", 1, 0, 0, 125},
-	{"Bomb Pack", "BombPack", "", "", 1, 0, 0, 0},
-	{"Remote C4", "RemoteC4", "RemoteC4Ammo", "", 1, 4, 0, 75},
-	
-	{"Jetpack", "Jetpack", "JetpackFuel", "", 1, 40, 0, 0},
-	{"Mines (x4)", "ProxyMine", "ProxyMineCount", "", 4, 4, 0, 0},
-	{"Mines (x6)", "ProxyMine", "ProxyMineCount", "", 6, 6, 0, 0},
-	{"Medication Field", "MedicationFieldItem", "MedicationFieldCount", 1, 1, 0, 0},
-	{"+1 Armor Upgrade", "HasArmorUpgrade", "ArmorUpgrade", "CantMech", 1, 1, 1, 0},
-	{"Superweapon Beacon", "BeaconItem", "", "", 1, 0, 0, 0},
-	
-	{"Combustion Autorifle", "CombustionAutorifle", "FA21CalAmmo", "", 1, 120, 0, 125},
-	{"Combustion Autorifle (weak)", "CombustionAutorifleWeak", "FA21CalAmmo", "", 1, 120, 0, 75},
-	{"Sniper Rifle (weak)", "SniperRifleWeak", "SniperAmmo", "", 1, 40, 0, 125},
-	{"Chrono Bow", "ChronoBow", "ChronoBolt", "", 1, 25, 0, 400},
-};
+int Items[MAX_ITEMS][MAX_ITEMKEYS];
+
+function void AddItem(int id, str name, str item0, str item1, str item2, int count0, int count1, int count2, int value)
+{
+    Items[id][IK_NAME] = name;
+    Items[id][IK_ITEM0] = item0;
+    Items[id][IK_ITEM1] = item1;
+    Items[id][IK_ITEM2] = item2;
+    Items[id][IK_COUNT0] = count0;
+    Items[id][IK_COUNT1] = count1;
+    Items[id][IK_COUNT2] = count2;
+    Items[id][IK_VALUE] = value;
+}
 
 #define RESEARCH_ENHANCEDREFINING 0
 #define RESEARCH_ADVANCEDMECHS 1
@@ -483,6 +448,54 @@ function void InitClasses (void) {
 		2, ARMOD_NOCHANGE,
 		4, 2, true, CF_Warning|CF_CantPilot,
 		ITEM_CRYOBOW, 0, 0, 0, 0, 0);
+        
+    AddItem(ITEM_None, "", "", "", "", 0, 0, 0, 0); // Mandatory empty entry for no item
+	AddItem(ITEM_Handgun, "Handgun", "Handgun", "NewClipAmmo", "", 1, 400, 0, 5);
+	AddItem(ITEM_SMG, "Sub-Machine Gun", "SubMachineGun", "NewClipAmmo", "", 1, 400, 0, 25);
+	AddItem(ITEM_Shotgun, "Shotgun", "Boomstick", "ShotgunAmmo", "", 1, 50, 0, 25);
+	AddItem(ITEM_SSG, "Double Shotgun", "DoubleShotgun", "ShotgunAmmo", "", 1, 50, 0, 50);
+	AddItem(ITEM_Machinegun, "Machine Gun", "MachineGun", "MachineGunAmmo", "", 1, 400, 0, 25);
+	AddItem(ITEM_Gatling, "Gatling Gun", "GatlingGun", "MachineGunAmmo", "", 1, 400, 0, 100);
+	AddItem(ITEM_Rifle, "Rifle", "Rifle", "RifleAmmo", "RifleGrenadeAmmo", 1, 30, 4, 25);
+	AddItem(ITEM_Gauss, "Gauss Rifle", "GaussRifle",  "GaussRifleAmmo", "", 1, 50, 0, 150);
+	AddItem(ITEM_Grenade, "Grenade Launcher", "GrenadeLauncher", "GrenadeAmmo", "", 1, 40, 0, 125);
+	AddItem(ITEM_Stealth, "Stealth Laser Rifle", "StealthLaserRifle", "LaserRifleAmmo", "StealthCharge", 1, 200, 100, 0);
+    
+	AddItem(ITEM_LaserRifle, "Laser Rifle", "LaserRifle", "LaserRifleAmmo", "", 1, 200, 0, 25);
+	AddItem(ITEM_TimeGun, "Time Gun", "TimeGun", "TimeGunAmmo", "", 1, 175, 0, 0);
+	AddItem(ITEM_Artillery, "Artillery Cannon", "ArtilleryCannon", "ArtilleryShellAmmo", "", 1, 40, 0, 125);
+	AddItem(ITEM_LaserChain, "Laser Chaingun", "LaserChaingun", "LaserChaingunAmmo", "", 1, 400, 0, 175);
+	AddItem(ITEM_Utility, "Utility Gun", "UtilityGun", "", "", 1, 0, 0, 0);
+	AddItem(ITEM_PlasmaCannon, "Plasma Cannon", "PlasmaCannon", "PlasmaCannonAmmo", "", 1, 10, 0, 500);
+	AddItem(ITEM_ChemSpray, "Chemical Sprayer", "ChemicalSprayer", "ChemicalAmmo", "ChemicalGrenadeAmmo", 1, 200, 4, 125);
+	AddItem(ITEM_TibRifle, "Tiberium Autorifle", "TiberiumAutorifle", "TE21CalAmmo", "", 1, 120, 0, 125);
+	AddItem(ITEM_TibRifleWeak, "Tiberium Autorifle (weak)", "TiberiumAutorifleWeak", "TE21CalAmmo", "", 1, 120, 0, 75);
+	AddItem(ITEM_AdvRepair, "Upgraded Repair Gun", "RepairGun", "RepairGunUpgrade", "", 1, 1, 0, 0);
+    
+	AddItem(ITEM_Repair, "Repair Gun", "RepairGun", "", "", 1, 0, 0, 0);
+	AddItem(ITEM_Decon, "Deconstruction Gun", "RemoverGun", "", "", 1, 0, 0, 0);
+	AddItem(ITEM_Decon, "Bomb-Squad Gun", "BombSquadGun", "", "", 1, 0, 0, 0);
+	AddItem(ITEM_HealGun, "Heal Gun", "HealGun", "", "", 1, 0, 0, 0);
+	AddItem(ITEM_Missile, "Missile Launcher", "MissileLauncher", "MissileAmmo", "", 1, 15, 0, 125);
+	AddItem(ITEM_Flamer, "Flamethrower", "Flamer", "FlamerAmmo", "PhosphorusGrenadeAmmo", 1, 400, 4, 125);
+	AddItem(ITEM_ShockRifle, "Shock Rifle", "ShockRifle", "GeneporiumCharge", "", 1, 200, 0, 150);
+	AddItem(ITEM_Sniper, "Sniper Rifle", "SniperRifle", "SniperAmmo", "", 1, 40, 0, 125);
+	AddItem(ITEM_Plasma, "Plasma Rifle", "PlasmaGun", "PlasmaRifleAmmo", "", 1, 200, 0, 200);
+	AddItem(ITEM_Knife, "Stealth Knife", "Knife", "StealthCharge", "", 1, 100, 0, 0);
+	AddItem(ITEM_Chainsaw, "Chainsaw", "EagerBeaver", "", "", 1, 0, 0, 125);
+    
+	AddItem(ITEM_BombPack, "Bomb Pack", "BombPack", "", "", 1, 0, 0, 0);
+	AddItem(ITEM_RemoteC4, "Remote C4", "RemoteC4", "RemoteC4Ammo", "", 1, 4, 0, 75);
+	AddItem(ITEM_Jetpack, "Jetpack", "Jetpack", "JetpackFuel", "", 1, 40, 0, 0);
+	AddItem(ITEM_Mine_x4, "Mines (x4)", "ProxyMine", "ProxyMineCount", "", 4, 4, 0, 0);
+	AddItem(ITEM_Mine_x6, "Mines (x6)", "ProxyMine", "ProxyMineCount", "", 6, 6, 0, 0);
+	AddItem(ITEM_MedField, "Medication Field", "MedicationFieldItem", "MedicationFieldCount", "", 1, 1, 0, 0);
+	AddItem(ITEM_ArmorUp, "+1 Armor Upgrade", "HasArmorUpgrade", "ArmorUpgrade", "CantMech", 1, 1, 1, 0);
+	AddItem(ITEM_Beacon, "Superweapon Beacon", "BeaconItem", "", "", 1, 0, 0, 0);
+	AddItem(ITEM_CombustRifle, "Combustion Autorifle", "CombustionAutorifle", "FA21CalAmmo", "", 1, 120, 0, 125);
+	AddItem(ITEM_CombustRifleWeak, "Combustion Autorifle (weak)", "CombustionAutorifleWeak", "FA21CalAmmo", "", 1, 120, 0, 75);
+	AddItem(ITEM_SniperRifleWeak, "Sniper Rifle (weak)", "SniperRifleWeak", "SniperAmmo", "", 1, 40, 0, 125);
+	AddItem(ITEM_CryoBow, "Chrono Bow", "ChronoBow", "ChronoBolt", "", 1, 25, 0, 400);
         
     // For some reason, mech and research ints get broken, so we have to define them here
     // Research upgrades
