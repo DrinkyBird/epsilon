@@ -117,6 +117,12 @@ map aow18 "Mining Site" {
 	music = "d_aow18"
 }
 
+map aow19 "Volcanicity" {
+	next = "aow20"
+	sky1 = "stsky1"
+	music = "d_aow19"
+}
+
 map aow20 "Renegade 2030" {
 	next = "aow21"
 	music = "d_aow20"

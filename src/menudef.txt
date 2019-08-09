@@ -78,7 +78,7 @@ OptionValue "AOWMaps"
     15,             "AOW16 - Missile Site"
     16,             "AOW17 - Sand Canyon"
     17,             "AOW18 - Mining Site"
- // 18,             "AOW19 - "
+    18,             "AOW19 - Volcanicity"
     19,             "AOW20 - Renegade 2030"
     20,             "AOW21 - Renegade 2032"
 }

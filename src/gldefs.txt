@@ -1,3 +1,10 @@
+glow {
+	flats {
+		lava1
+		wqlava
+	}
+}
+
 Pointlight FLASH1
 {
 Color 0.8 0.8 0.0
