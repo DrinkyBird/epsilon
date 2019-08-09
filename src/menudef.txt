@@ -1,5 +1,6 @@
 // Override engine main menu
-ListMenu "MainMenu" {
+ListMenu "MainMenu"
+{
     StaticPatch     94,                 2,                          "M_DOOM"
     Position        97,                 72
 
@@ -46,7 +47,8 @@ OptionMenu "AOWMain"
 }
 
 // Custom quit menu
-OptionMenu "AOWQuitMenu" {
+OptionMenu "AOWQuitMenu"
+{
     Title           "Quit"
 
     StaticText      "Are you sure you want to quit?"
@@ -56,7 +58,8 @@ OptionMenu "AOWQuitMenu" {
 }
 
 // The AOW play offline menu
-OptionValue "AOWMaps" {
+OptionValue "AOWMaps"
+{
     0,              "AOW01 - Red Zone"
     1,              "AOW02 - Barrens"
     2,              "AOW03 - Oasis"
@@ -73,11 +76,12 @@ OptionValue "AOWMaps" {
     13,             "AOW12 - Sand Canyon"
 }
 
-OptionMenu "AOWPlayOffline" {
+OptionMenu "AOWPlayOffline"
+{
     Title           "Play Offline"
 
     StaticText      " "
     Option          "Map",              "__aow_cl_menutomap",           "AOWMaps",          1
     StaticText      " "
-    Command     "Play",             "__aow_menudef_playoffline"//,    "Are you sure you want to start an offline game?"
+    Command         "Play",             "__aow_menudef_playoffline"//,    "Are you sure you want to start an offline game?"
 }
