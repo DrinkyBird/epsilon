@@ -4,6 +4,12 @@
 SET PATH=%CD%\tools;%PATH%
 SET OUTDIR=%CD%\out
 
+IF "%1" == "/norev" (
+    SET COMPRESSION=-mx=0
+) ELSE (
+    SET COMPRESSION=-mx=5
+)
+
 IF NOT EXIST "%OUTDIR%" MKDIR "%OUTDIR%"
 
 
@@ -34,5 +40,5 @@ SET OUTFILE=%OUTDIR%\aow2_epsilon%PK3BRANCH%-r%GIT_NUMBER%.pk3
 IF EXIST "%OUTFILE%" DEL "%OUTFILE%"
 
 PUSHD src
-7za a -tzip "%OUTFILE%" *.* -r -xr!*.dbs -xr!*.backup1 -xr!*.backup2 -xr!*.backup3 -xr!*.bak
+7za a -tzip "%OUTFILE%" %COMPRESSION% *.* -r -xr!*.dbs -xr!*.backup1 -xr!*.backup2 -xr!*.backup3 -xr!*.bak
 POPD
