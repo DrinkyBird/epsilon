@@ -75,6 +75,7 @@ OptionValue "AOWMaps"
     12,             "AOW13 - Disk Defrag"
     13,             "AOW14 - Sand Canyon"
     14,             "AOW15 - Space Camp"
+    15,             "AOW16 - Mining Site"
 }
 
 OptionMenu "AOWPlayOffline"

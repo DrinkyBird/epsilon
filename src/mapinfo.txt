@@ -94,9 +94,15 @@ map aow14 "Sand Canyon" {
 }
 
 map aow15 "Space Camp" {
-	next = "aow01"
+	next = "aow16"
 	sky1 = "stars"
 	music = "d_aow15"
+}
+
+map aow16 "Mining Site" {
+	next = "aow01"
+	sky1 = "sky1"
+	music = "d_aow16"
 }
 
 skill Normal {
