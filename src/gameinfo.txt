@@ -1,0 +1,4 @@
+iwad = "doom2.wad"
+startuptitle = "All Out War 2: The Epsilon Project"
+
+startupcolors = "FF0000", "000000"
