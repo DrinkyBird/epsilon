@@ -76,6 +76,12 @@ map aow11 "Disk Defrag" {
 	music = "d_aow11"
 }
 
+map aow12 "Hell March" {
+	next = "aow13"
+	sky1 = "stsky5"
+	music = "d_aow12"
+}
+
 map aow14 "Waste Plant" {
 	next = "aow15"
 	music = "d_aow14"
