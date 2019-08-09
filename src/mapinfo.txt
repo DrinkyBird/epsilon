@@ -23,9 +23,9 @@ map aow02 "Barrens" {
 	music = "d_aow02"
 }
 
-map aow03 "Oasis" {
+map aow03 "All Out War" {
 	next = "aow04"
-	sky1 = "sky04", 0.1
+	sky1 = "stsky14"
 	music = "d_aow03"
 }
 
@@ -53,63 +53,64 @@ map aow07 "Canyon" {
 	music = "d_aow07"
 }
 
-map aow08 "Renegade 2030" {
-	next = "aow09"
-	music = "d_aow08"
-	sky1 = "stars"
-}
-
 map aow09 "Infected" {
 	next = "aow10"
 	sky1 = "sky7", 0.1
 	music = "d_aow09"
 }
 
-map aow10 "Renegade 2032" {
+map aow10 "Space Camp" {
 	next = "aow11"
-	music = "d_aow10"
 	sky1 = "stars"
+	music = "d_aow10"
 }
 
-map aow11 "Waste Plant" {
+map aow11 "Disk Defrag" {
 	next = "aow12"
 	music = "d_aow11"
-	sky1 = "sky14"
 }
 
-map aow12 "Missile Site" {
-	next = "aow13"
-	music = "d_aow12"
-	sky1 = "sky14"
-}
-
-map aow13 "Disk Defrag" {
-	next = "aow14"
-	music = "d_aow13"
-}
-
-map aow14 "Sand Canyon" {
+map aow14 "Waste Plant" {
 	next = "aow15"
 	music = "d_aow14"
+	sky1 = "sky14"
 }
 
-map aow15 "Space Camp" {
+map aow15 "Oasis" {
 	next = "aow16"
-	sky1 = "stars"
+	sky1 = "sky04", 0.1
 	music = "d_aow15"
 }
 
-map aow16 "Mining Site" {
+map aow16 "Missile Site" {
 	next = "aow17"
-	sky1 = "sky1"
 	music = "d_aow16"
+	sky1 = "sky14"
 }
 
-map aow17 "All Out War" {
-	next = "aow01"
-	sky1 = "stsky14"
+map aow17 "Sand Canyon" {
+	next = "aow18"
 	music = "d_aow17"
 }
+
+map aow18 "Mining Site" {
+	next = "aow19"
+	sky1 = "sky1"
+	music = "d_aow18"
+}
+
+map aow20 "Renegade 2030" {
+	next = "aow21"
+	music = "d_aow20"
+	sky1 = "stars"
+}
+
+map aow21 "Renegade 2032" {
+	next = "aow01"
+	music = "d_aow21"
+	sky1 = "stars"
+}
+
 
 skill Normal {
 	name = "Normal"
