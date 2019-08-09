@@ -53,6 +53,12 @@ map aow07 "Canyon" {
 	music = "d_aow07"
 }
 
+map aow08 "Island" {
+	next = "aow09"
+	sky1 = "stsky2"
+	music = "d_aow08"
+}
+
 map aow09 "Infected" {
 	next = "aow10"
 	sky1 = "sky7", 0.1
