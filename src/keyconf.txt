@@ -25,7 +25,6 @@ addmenukey "Switch to weaker team" teamswitch
 addmenukey "Sell Current Weapon" sellweapon
 addmenukey "Use self-heal" useselfheal
 addmenukey "Use timed C4" usec4
-addmenukey "Open preferences" aow_preferences
 
 // =============================================================================
 // ALIAS CCMDS
@@ -63,9 +62,6 @@ alias updatehud "puke -931"
 // with credits syncing...
 alias getsnapshot "puke -932"
 
-// Open preferences
-alias aow_preferences "puke -803"
-
 // Version information
 alias aow_versioninfo "puke -813"
 
@@ -100,4 +96,4 @@ alias a_fly "puke 945 18"
 
 // =============================================================================
 // MENUDEF COMMANDS
-alias __aow_menudef_playoffline "pukename AOW_Menudef_PlayOffline;closemenu"
+alias __aow_menudef_playoffline "pukename AOW_Menudef_PlayOffline always;closemenu"

@@ -1,3 +1,10 @@
+OptionValue "AOWClientFXLevel"
+{
+    -3,             "Low"
+    0,              "Medium"
+    3,              "High"
+}
+
 OptionMenu "AOWMain"
 {
 	Title           "ALL OUT WAR"
@@ -11,15 +18,15 @@ OptionMenu "AOWMain"
 	Control         "Sell Current Weapon",          "sellweapon"
 	Control         "Use self-heal",                "useselfheal"
 	Control         "Use timed C4",                 "usec4"
-	Control         "Open preferences",             "aow_preferences"
 	StaticText      " "
     
 	StaticText      "Client Settings"
+	Option          "Graphics level",               "aow_cl_fx",                "AOWClientFXLevel"
+	Option          "Show killer's health",         "aow_cl_killerhealth",      "OnOff"
 	Option          "Use console font HUD",         "aow_cl_confonthud",        "OnOff"
-	Option          "Always enable radar",          "aow_cl_alwaysradar",       "OnOff"
-	Option          "Full team log",                "aow_cl_fullteamlog",       "OnOff"
-	Option          "Disable team log",             "aow_cl_noteamlog",         "OnOff"
-	Option          "Disable AOW HUD",              "aow_cl_nohud",             "OnOff"
+	Option          "Enable team radar",            "aow_cl_alwaysradar",       "OnOff"
+	Option          "Enable team log",              "aow_cl_noteamlog",         "OffOn"
+	Option          "Show AOW HUD",                 "aow_cl_nohud",             "OffOn"
 }
 
 // Override engine main menu
@@ -33,6 +40,7 @@ ListMenu "MainMenu" {
     TextItem        "Quit",             "q",                        "QuitMenu"
 }
 
+// The AOW play offline menu
 OptionValue "AOWMaps" {
     0,              "AOW01 - Red Zone"
     1,              "AOW02 - Barrens"

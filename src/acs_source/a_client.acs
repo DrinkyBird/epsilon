@@ -30,8 +30,6 @@ script SC_CLIENT OPEN CLIENTSIDE {
 		CR_InitCrateList ();
 	}
 	
-	PR_InitPreferences ();
-	
 	// [Dusk] Use consolecommand to make client-side CVARs show up properly
 	// Use CONFONT for HUD elements
 	if (GetCVar ("aow_cl_confonthud") <= 0)

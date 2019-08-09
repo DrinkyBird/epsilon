@@ -30,6 +30,9 @@ acc "src\acs_source\aow2scrp.acs" "src\acs\aow2scrp.o"
 
 :: Create the actual PK3
 IF "%1" == "/norev" SET GIT_NUMBER=dev
+SET OUTFILE=%OUTDIR%\aow2_epsilon%PK3BRANCH%-r%GIT_NUMBER%.pk3
+IF EXIST "%OUTFILE%" DEL "%OUTFILE%"
 
-CD src
-7za a -tzip "%OUTDIR%\aow2_epsilon%PK3BRANCH%-r%GIT_NUMBER%.pk3" *.* -r
+PUSHD src
+7za a -tzip "%OUTFILE%" *.* -r
+POPD

@@ -54,7 +54,6 @@ int MenuScripts[MAX_MENU][NUM_MenuScripts] = {
 	{702, 703, 709, 713,   0}, // Purchase
 	{704, 705, 710, 714,   0}, // Research
 	{706, 707, 711, 715,   0}, // Factory
-	{  0,   0,   0,   0,   0}, // Preferences (managed elsewhere)
 	{716, 717, 718, 719, 720}, // Open Deck
 };
 
@@ -121,10 +120,6 @@ function void ActivateMenu (int menu) {
 script SC_MENU_SERVERINIT (int menu) {
 	// Sanity checks
 	if (menu < 0 || menu > MAX_MENU || !PlayerInGame (PlayerNumber ()) || CheckInventory ("InMenu"))
-		terminate;
-	
-	// Preferences are handled elsewhere
-	if (menu == MENU_PREFERENCES)
 		terminate;
 	
 	// Menu-specific stuff
@@ -499,7 +494,7 @@ function void BuildMenuMechs (void) {
 #define MENU_SPACING 0.03
 #define MENU_BIGSPACING 0.03
 function void DrawMenu (void) {
-	if (!CheckInventory ("InMenu") || CheckInventory ("InMenu") == MENU_PREFERENCES)
+	if (!CheckInventory ("InMenu"))
 		return;
 	
 	int i;
