@@ -93,8 +93,8 @@ int MechGetter[2]; // which player is in the hanger?
 int PlasmaCooldownTime; // plasma cannon cooldown time (CVar)
 int PlasmaCooldown[MAXPLAYERS]; // same for plasma cannon (individual counters)
 
-int RepairBonus[32];
-int MedicBonus[32];
+int RepairBonus[MAXPLAYERS];
+int MedicBonus[MAXPLAYERS];
 int MedicBonusNeed;
 int AIMarines[2]; // compensation-spawned only
 
