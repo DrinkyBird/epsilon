@@ -78,9 +78,14 @@ map aow11 "Waste Plant" {
 }
 
 map aow12 "Missile Site" {
-	next = "aow01"
+	next = "aow12"
 	music = "d_aow12"
 	sky1 = "sky14"
+}
+
+map aow13 "Disk Defrag" {
+	next = "aow01"
+	music = "d_aow13"
 }
 
 skill Normal {
