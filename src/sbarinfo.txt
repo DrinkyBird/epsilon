@@ -70,7 +70,7 @@ statusbar fullscreen, forcescaled, fullscreenoffsets {
 	IsSelected Not "JuggernautWeapons" { IsSelected Not "WolverineWeapons", "TitanWeapons" {
 	IsSelected Not "MadCatWeapons" { IsSelected Not "GatlingGun", "SubMachineGun" {
 	IsSelected Not "Handgun" { IsSelected Not "MachineGun", "GaussRifle" {
-	IsSelected Not "GrenadeLauncher" {
+	IsSelected Not "AowGrenadeLauncher" {
 		drawnumber 3, INDEXFONT, White, ammo2, -17, -13, 0;
 	}}}}}
 		drawnumber 3, INDEXFONT, White, ammo1, -45, -13, 0;

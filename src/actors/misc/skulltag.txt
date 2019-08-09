@@ -4,7 +4,7 @@
 //
 //=================================================================================================
 
-ACTOR RedCandleStick 5156
+ACTOR AowRedCandleStick 5156
 {
 	Game Doom
 	Game Heretic
@@ -25,7 +25,7 @@ ACTOR RedCandleStick 5156
 //
 //=================================================================================================
 
-ACTOR BlueCandleStick 5157
+ACTOR AowBlueCandleStick 5157
 {
 	Game Doom
 	Game Heretic
@@ -46,7 +46,7 @@ ACTOR BlueCandleStick 5157
 //
 //=================================================================================================
 
-ACTOR RedColumn 5158
+ACTOR AowRedColumn 5158
 {
 	Game Doom
 	Game Heretic
@@ -69,7 +69,7 @@ ACTOR RedColumn 5158
 //
 //=================================================================================================
 
-ACTOR BlueColumn 5159
+ACTOR AowBlueColumn 5159
 {
 	Game Doom
 	Game Heretic

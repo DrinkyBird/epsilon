@@ -458,7 +458,7 @@ function void InitClasses (void) {
 	AddItem(ITEM_Gatling, "Gatling Gun", "GatlingGun", "MachineGunAmmo", "", 1, 400, 0, 100);
 	AddItem(ITEM_Rifle, "Rifle", "Rifle", "RifleAmmo", "RifleGrenadeAmmo", 1, 30, 4, 25);
 	AddItem(ITEM_Gauss, "Gauss Rifle", "GaussRifle",  "GaussRifleAmmo", "", 1, 50, 0, 150);
-	AddItem(ITEM_Grenade, "Grenade Launcher", "GrenadeLauncher", "GrenadeAmmo", "", 1, 40, 0, 125);
+	AddItem(ITEM_Grenade, "Grenade Launcher", "AowGrenadeLauncher", "GrenadeAmmo", "", 1, 40, 0, 125);
 	AddItem(ITEM_Stealth, "Stealth Laser Rifle", "StealthLaserRifle", "LaserRifleAmmo", "StealthCharge", 1, 200, 100, 0);
     
 	AddItem(ITEM_LaserRifle, "Laser Rifle", "LaserRifle", "LaserRifleAmmo", "", 1, 200, 0, 25);

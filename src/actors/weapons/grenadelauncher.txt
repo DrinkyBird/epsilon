@@ -1,5 +1,5 @@
 // Grenade launcher
-actor GrenadeLauncher : AOWWeapon 21046 {
+actor AowGrenadeLauncher : AOWWeapon 21046 {
 	+WEAPON.NOAUTOAIM
 	Obituary "$OB_GRENADE"
 	Inventory.PickupMessage "You got the grenade launcher!"

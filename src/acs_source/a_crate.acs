@@ -609,7 +609,7 @@ script 309 (int c) {
 		CheckAndRemove ("DoubleShotgun");
 		CheckAndRemove ("Rifle");
 		CheckAndRemove ("GaussRifle");
-		CheckAndRemove ("GrenadeLauncher");
+		CheckAndRemove ("AowGrenadeLauncher");
 		CheckAndRemove ("StealthLaserRifle");
 		CheckAndRemove ("LaserRifle");
 		CheckAndRemove ("TimeGun");
