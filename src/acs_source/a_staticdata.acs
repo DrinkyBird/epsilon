@@ -237,7 +237,3 @@ str LocationNames[NUM_LOCATIONS] = {
 str g_Error = 0;
 
 int g_CreditDelta = 0;
-
-// ============================================================================
-// [Dusk] MapConfig[] - map-specific configuration
-int MapConfig[512];
