@@ -100,9 +100,15 @@ map aow15 "Space Camp" {
 }
 
 map aow16 "Mining Site" {
-	next = "aow01"
+	next = "aow17"
 	sky1 = "sky1"
 	music = "d_aow16"
+}
+
+map aow17 "All Out War" {
+	next = "aow01"
+	sky1 = "stsky14"
+	music = "d_aow17"
 }
 
 skill Normal {

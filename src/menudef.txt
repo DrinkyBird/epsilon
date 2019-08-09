@@ -76,6 +76,7 @@ OptionValue "AOWMaps"
     13,             "AOW14 - Sand Canyon"
     14,             "AOW15 - Space Camp"
     15,             "AOW16 - Mining Site"
+    16,             "AOW17 - All Out War"
 }
 
 OptionMenu "AOWPlayOffline"
