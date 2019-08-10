@@ -22,6 +22,7 @@ MAP LIST
   * AOW21 - Renegade 2032
   * AOW22 - Mercury
   * AOW23 - Emerald Wasteland
+  * AOW24 - Unending Pain
     
 CHANGELOG
     Latest:
