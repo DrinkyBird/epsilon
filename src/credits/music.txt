@@ -44,7 +44,7 @@ AOW13 - Lava Giant
 AOW14 - Waste Plant
   * D_AOW14: Frank Klepacki - Hard Rock (Command and Conquer: Red Alert 2)
   
-AOW15 - Waste Plant
+AOW15 - Oasis
   * D_AOW15: Unreal Tournament 2004 - Level 15
   
 AOW16 - Missile Site
