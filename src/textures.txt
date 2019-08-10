@@ -1554,3 +1554,94 @@ walltexture step3   ,  32,  16 {patch step3   , 0, 0}
 walltexture step4   ,  64,  16 {patch step4   , 0, 0}
 walltexture step5   ,  32,  16 {patch step5   , 0, 0}
 walltexture step6   , 128,  16 {patch step6   , 0, 0}
+
+// Emerald Wasteland research centre stuff
+texture drestv01, 128, 64 {
+	xscale 2.0 yscale 2.0
+	patch dreshibk, 0, 0
+	patch drestx01, 8, 8
+}
+
+texture drestv02, 128, 64 {
+	xscale 2.0 yscale 2.0
+	patch dreshibk, 0, 0
+	patch drestx02, 8, 8
+}
+
+texture drestv03, 128, 64 {
+	xscale 2.0 yscale 2.0
+	patch dreshibk, 0, 0
+	patch drestx03, 8, 8
+}
+
+texture drestv04, 128, 64 {
+	xscale 2.0 yscale 2.0
+	patch dreshibk, 0, 0
+	patch drestx04, 8, 8
+}
+
+texture drestv05, 128, 64 {
+	xscale 2.0 yscale 2.0
+	patch dreshibk, 0, 0
+	patch drestx05, 8, 8
+}
+
+texture drestv06, 128, 64 {
+	xscale 2.0 yscale 2.0
+	patch dreshibk, 0, 0
+	patch drestx06, 8, 8
+}
+
+texture drestv07, 128, 64 {
+	xscale 2.0 yscale 2.0
+	patch dreshibk, 0, 0
+	patch drestx07, 8, 8
+}
+
+texture drestv08, 128, 64 {
+	xscale 2.0 yscale 2.0
+	patch dreshibk, 0, 0
+	patch drestx08, 8, 8
+}
+
+texture drestv09, 128, 64 {
+	xscale 2.0 yscale 2.0
+	patch dreshibk, 0, 0
+	patch drestx09, 8, 8
+}
+
+texture dwftv01, 128, 64 {
+	xscale 2.0 yscale 2.0
+	patch dreshibk, 0, 0
+	patch dwftx01, 8, 8
+}
+
+texture dwftv02, 128, 64 {
+	xscale 2.0 yscale 2.0
+	patch dreshibk, 0, 0
+	patch dwftx02, 8, 8
+}
+
+texture dwftv03, 128, 64 {
+	xscale 2.0 yscale 2.0
+	patch dreshibk, 0, 0
+	patch dwftx03, 8, 8
+}
+
+texture dwftv04, 128, 64 {
+	xscale 2.0 yscale 2.0
+	patch dreshibk, 0, 0
+	patch dwftx04, 8, 8
+}
+
+texture dwftv05, 128, 64 {
+	xscale 2.0 yscale 2.0
+	patch dreshibk, 0, 0
+	patch dwftx05, 8, 8
+}
+
+texture dwftv06, 128, 64 {
+	xscale 2.0 yscale 2.0
+	patch dreshibk, 0, 0
+	patch dwftx06, 8, 8
+}

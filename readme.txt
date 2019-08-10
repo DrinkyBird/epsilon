@@ -21,6 +21,7 @@ MAP LIST
   * AOW20 - Renegade 2030
   * AOW21 - Renegade 2032
   * AOW22 - Mercury
+  * AOW23 - Emerald Wasteland
     
 CHANGELOG
     Latest:

@@ -136,12 +136,16 @@ map aow21 "Renegade 2032" {
 }
 
 map aow22 "Mercury" {
-	next = "aow01"
+	next = "aow23"
 	sky1 = "stsky1"
 	music = "d_aow22"
 }
 
-
+map aow23 "Emerald Wasteland" {
+	next = "aow01"
+	sky1 = "stsky14"
+	music = "d_aow23"
+}
 
 skill Normal {
 	name = "Normal"

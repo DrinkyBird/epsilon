@@ -696,3 +696,21 @@ function bool AowIsBot(int player)
 {
     return Bots[player];
 }
+
+// ============================================================================
+// Function needed to replicate some functionality in older maps
+function bool TeamHasBuilding(int team, int building)
+{
+    switch (building)
+    {
+        case BUILDING_BARRACKS: return GotBarracks[team];
+        case BUILDING_REFINERY: return GotRefinery[team];
+        case BUILDING_RESCENTRE: return GotPlant[team];
+        case BUILDING_FACTORY: return GotFactory[team];
+        case BUILDING_REPAIR: return GotRepair[team];
+        case BUILDING_OBELISK: return GotObelisk[team];
+        case BUILDING_MINIREF: return MiniRefinery[team];
+    }
+    
+    return false;
+}

@@ -70,20 +70,20 @@
 
 // ============================================================================
 // Building identifiers
-#define BUILDING_ALL -1
-#define BUILDING_BARRACKS 0
-#define BUILDING_REFINERY 1
-#define BUILDING_RESCENTRE 2
-#define BUILDING_FACTORY 3
-#define BUILDING_REPAIR 4
-#define BUILDING_OBELISK 5
-#define BUILDING_MINIREF 6
-#define BUILDING_HEALTHREGEN 7
-#define BUILDING_AMMOREGEN 8
-#define BUILDING_PORTAL1 9
-#define BUILDING_PORTAL2 10
+#libdefine BUILDING_ALL -1
+#libdefine BUILDING_BARRACKS 0
+#libdefine BUILDING_REFINERY 1
+#libdefine BUILDING_RESCENTRE 2
+#libdefine BUILDING_FACTORY 3
+#libdefine BUILDING_REPAIR 4
+#libdefine BUILDING_OBELISK 5
+#libdefine BUILDING_MINIREF 6
+#libdefine BUILDING_HEALTHREGEN 7
+#libdefine BUILDING_AMMOREGEN 8
+#libdefine BUILDING_PORTAL1 9
+#libdefine BUILDING_PORTAL2 10
 // ----
-#define MAX_BUILDINGS 11
+#libdefine MAX_BUILDINGS 11
 
 // ============================================================================
 // Thing IDs
