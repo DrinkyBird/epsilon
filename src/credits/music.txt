@@ -71,10 +71,10 @@ AOW22 - Mercury
 AOW23 - Emerald Wasteland
   * D_AOW23: Frank Klepacki - 200 Meters (Command and Conquer: Red Alert 2)
   
-AOW24 - Emerald Wasteland
+AOW24 - Unending Pain
   * D_AOW24: Bobby Prince - Sign of Evil, cover by Per Kristian Risvik
   
-AOW25 - Emerald Wasteland
+AOW25 - Defunct Commission
   * D_AOW25: 
   
 Sudden Death:
