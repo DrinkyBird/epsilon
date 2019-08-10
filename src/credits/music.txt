@@ -1,0 +1,88 @@
+Full list of music for AOW2 Epsilon:
+
+AOW01 - Red Zone
+  * D_AOW01: Frank Klepacki - Face the Enemy (Command and Conquer: Red Alert)
+  
+AOW02 - Barrens
+  * D_AOW02: Frank Klepacki - Ammo Clip (Command and Conquer: Renegade)
+  
+AOW03 - All Out War
+  * D_AOW03: Frank Klepacki - Big Foot (Command and Conquer: Red Alert)
+  
+AOW04 - Glacier
+  * D_AOW04: Frank Klepacki - Beach (Command and Conquer: Renegade)
+  
+AOW05 - Valley
+  * D_AOW05: ZENON - Nuclear Arsenal (http://www.newgrounds.com/audio/listen/179394)
+  
+AOW06 - Floating City
+  * D_AOW06: Unreal Tournament - Nether Animal
+  
+AOW07 - Canyon
+  * D_AOW07: Frank Klepacki - Move It (Command and Conquer: Renegade)
+  
+AOW08 - Island
+  * D_AOW08: Frank Klepacki - Got a Present for Ya (Command and Conquer: Renegade)
+  
+AOW09 - Infected
+  * D_AOW09: Evil Dog - The Last Stand (http://www.newgrounds.com/audio/listen/85057)
+  
+AOW10 - Space Camp
+  * D_AOW10: 
+  
+AOW11 - Disk Defrag
+  * D_AOW11: Frank Klepacki - Drill (Command and Conquer)
+  
+AOW12 - Hell March
+  * D_AOW12: Frank Klepacki - Hell March (Command and Conquer: Red Alert)
+  * D_AOW12e: Frank Klepacki - We Will Stop Them (Command and Conquer)
+  
+AOW13 - Lava Giant
+  * D_AOW13: Unreal Tournament - Skyward Fire
+  * D_AOW13e: Erasure - Always
+  
+AOW14 - Waste Plant
+  * D_AOW14: Frank Klepacki - Hard Rock (Command and Conquer: Red Alert 2)
+  
+AOW15 - Waste Plant
+  * D_AOW15: Unreal Tournament 2004 - Level 15
+  
+AOW16 - Missile Site
+  * D_AOW16: Frank Klepacki - C&C In The House (Command and Conquer: Red Alert 2)
+  
+AOW17 - Sand Canyon
+  * D_AOW17: Frank Klepacki - Workmen (Command and Conquer: Red Alert)
+  
+AOW18 - Mining Site
+  * D_AOW18: Frank Klepacki - No Mercy 2 (Command and Conquer: Renegade)
+  
+AOW19 - Volcanicity
+  * D_AOW19: Frank Klepacki - March To Doom (Command and Conquer)
+  
+AOW20 - Renegade 2030
+  * D_AOW20: Unreal Tournament - Organic
+  
+AOW21 - Renegade 2032
+  * D_AOW21: 
+  
+AOW22 - Mercury
+  * D_AOW22: Frank Klepacki - On Your Feet (Command and Conquer: Renegade)
+  
+AOW23 - Emerald Wasteland
+  * D_AOW23: Frank Klepacki - 200 Meters (Command and Conquer: Red Alert 2)
+  
+AOW24 - Emerald Wasteland
+  * D_AOW24: Bobby Prince - Sign of Evil, cover by Per Kristian Risvik
+  
+AOW25 - Emerald Wasteland
+  * D_AOW25: 
+  
+Sudden Death:
+  * RAZOR-UB: Frank Klepacki - Stomp (Command and Conquer: Renegade)
+  * RAZORUB2: Frank Klepacki - In the Line of Fire (Command and Conquer: Renegade)
+  
+Intermission:
+  * D_DM2INT: Frank Klepacki - Militant Force (Command and Conquer: Red Alert)
+  
+Title screen:
+  * D_DM2INT: Frank Klepacki - Face The Enemy 1 (Command and Conquer: Red Alert)
