@@ -306,6 +306,28 @@ texture SPWLAVA, 64, 64 {
 	Patch SPWLAVA, 0, 0
 }
 
+texture SW1CBLU, 64, 128 {
+	patch COMPBLUE, 0, 0 { }
+	patch SW2S0, 16, 72 { }
+}
+
+texture SW2CBLU, 64, 128 {
+	patch COMPBLUE, 0, 0 { }
+	patch SW2S1, 16, 72 { }
+}
+
+texture SW1CRED, 64, 128 {
+	patch N_CRED01, 0, 0 { }
+	patch N_CRED01, 0, 64 { }
+	patch SW2S0, 16, 72 { }
+}
+
+texture SW2CRED, 64, 128 {
+	patch N_CRED01, 0, 0 { }
+	patch N_CRED01, 0, 64 { }
+	patch SW2S1, 16, 72 { }
+}
+
 // ============================================================================
 // Skyboxes - these statements flip the ceiling texture.
 texture mp_mer_u, 512, 512

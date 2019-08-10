@@ -81,6 +81,7 @@ OptionValue "AOWMaps"
     18,             "AOW19 - Volcanicity"
     19,             "AOW20 - Renegade 2030"
     20,             "AOW21 - Renegade 2032"
+    21,             "AOW22 - Mercury"
 }
 
 OptionMenu "AOWPlayOffline"

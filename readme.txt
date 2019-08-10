@@ -20,6 +20,7 @@ MAP LIST
   * AOW19 - Volcanicity
   * AOW20 - Renegade 2030
   * AOW21 - Renegade 2032
+  * AOW22 - Mercury
     
 CHANGELOG
     Latest:

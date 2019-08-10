@@ -867,7 +867,7 @@ script 810 (void) {
 		if (!ThingCount (0, i))
 			break;
 		else if (!CheckActorInventory (i, "IsCrateSpot"))
-			Print2f ("Warning: TID %d is reserved for a crate spot but is used by a %s.", i, GetActorClass (i));
+			Print2f ("Warning: TID %d is reserved for a crate spot but is used by a %s.", i, GetAowActorClass (i));
 	}
 	
 	if (i > TID_CRATESPOT_END)
@@ -896,7 +896,7 @@ script 812 OPEN {
 	// The crate TID is expected to be free.
 	if (ThingCount (0, TID_CRATE)) {
 		Print4f ("WARNING: TID %d is reserved for the powerup crate, but is used by a %s at (%d, %d)! There will be no crates.",
-			TID_CRATE, GetActorClass (TID_CRATE), GetActorX (TID_CRATE) >> 16, GetActorY (TID_CRATE) >> 16);
+			TID_CRATE, GetAowActorClass (TID_CRATE), GetActorX (TID_CRATE) >> 16, GetActorY (TID_CRATE) >> 16);
 		terminate;
 	}
 	

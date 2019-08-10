@@ -653,7 +653,7 @@ script 811 (int tid) {
 	SetResultValue (name);
 }
 
-function str GetActorClass (int tid) {
+function str GetAowActorClass (int tid) {
 	return ACS_ExecuteWithResult (811, tid);
 }
 
@@ -681,4 +681,18 @@ script SC_SuperNukeCheck (void) {
 // ============================================================================
 script SC_SillyThings (void) {
 	SetResultValue (GetCVar ("aow_sillythings"));
+}
+
+// ============================================================================
+// Function needed to replicate some functionality in older maps
+function bool AowIsAdmin(int player)
+{
+    return IsAdmin[player];
+}
+
+// ============================================================================
+// Function needed to replicate some functionality in older maps
+function bool AowIsBot(int player)
+{
+    return Bots[player];
 }

@@ -572,6 +572,18 @@ script 353 (void) {
 		PushArmor ();
 }
 
+// [Dusk] thrusts the player with the specified angle if they are in a mech
+// Meant to be used in maps to block areas off from mechs
+script SC_MechThrust (int angle) {
+	if (CheckInventory ("IsMech")) {
+		DisplayCross();
+		SETFONT("BigFont");
+		HudMessage (s:"You can't go there in a mech!";
+			HUDMSG_FADEOUT, 240+PlayerNumber(), CR_DarkRed, 0.5, 0.45, 2.0, 1.0);
+		ThrustThing (angle, 40, 1, 0);
+	}
+}
+
 script 359 (void) {
 	delay (5);
 	SetHealth (GetSpawnHealth() / 2);
