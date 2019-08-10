@@ -83,7 +83,8 @@ OptionValue "AOWMaps"
     20,             "AOW21 - Renegade 2032"
     21,             "AOW22 - Mercury"
     22,             "AOW23 - Emerald Wasteland"
-    22,             "AOW24 - Unending Pain"
+    23,             "AOW24 - Unending Pain"
+    24,             "AOW25 - Defunct Commission"
 }
 
 OptionMenu "AOWPlayOffline"

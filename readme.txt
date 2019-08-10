@@ -23,6 +23,7 @@ MAP LIST
   * AOW22 - Mercury
   * AOW23 - Emerald Wasteland
   * AOW24 - Unending Pain
+  * AOW25 - Defunct Commission
     
 CHANGELOG
     Latest:

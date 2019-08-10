@@ -142,15 +142,21 @@ map aow22 "Mercury" {
 }
 
 map aow23 "Emerald Wasteland" {
-	next = "aow23"
+	next = "aow24"
 	sky1 = "stsky14"
 	music = "d_aow23"
 }
 
 map aow24 "Unending Pain" {
-	next = "aow01"
+	next = "aow25"
 	music = "d_aow24"
 	sky1 = "stsky3"
+}
+
+map aow25 "Defunct Commission" {
+	next = "aow01"
+	sky1 = "skyfog0", 0.1
+	music = "d_aow25"
 }
 
 skill Normal {
