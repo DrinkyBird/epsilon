@@ -36,5 +36,7 @@ CHANGELOG
         * AOW02
           * Fixed a myraid of texture alignment issues
           * Added a basic skybox for a prettier spawn
+        * AOW03
+          * Added a back passage to both bases to make it easier to infiltrate
         * AOW09
           * Better quality music
