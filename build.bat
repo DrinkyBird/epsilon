@@ -7,7 +7,7 @@ SET OUTDIR=%CD%\out
 IF "%1" == "/norev" (
     SET COMPRESSION=-mx=0
 ) ELSE (
-    SET COMPRESSION=-mx=5
+    SET COMPRESSION=-mm=lzma -mx=9
 )
 
 IF NOT EXIST "%OUTDIR%" MKDIR "%OUTDIR%"
