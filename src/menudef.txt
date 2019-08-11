@@ -95,6 +95,8 @@ OptionValue "AOWMaps"
     30,             "AOW31 - All Out War Remake"
     31,             "AOW32 - Blizzard"
     32,             "AOW33 - Goat's Hunting Ground"
+    33,             "AOW34 - Surface Tension Reloaded"
+    34,             "AOW35 - Hoth"
 }
 
 OptionMenu "AOWPlayOffline"

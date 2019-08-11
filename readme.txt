@@ -32,6 +32,7 @@ MAP LIST
   * AOW31 - All Out War Remake
   * AOW32 - Blizzard
   * AOW33 - Goat's Hunting Ground
+  * AOW34 - Surface Tension Reloaded
     
 CHANGELOG
     Latest:

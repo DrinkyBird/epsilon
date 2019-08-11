@@ -211,8 +211,14 @@ map aow33 "Goat's Hunting Ground"
 }
 
 map aow34 "Surface Tension Reloaded" {
-	next = "aow01"
+	next = "aow35"
 	music = "d_aow21"
+}
+
+map aow35 "Hoth" {
+	next = "aow01"
+	music = "d_aow25"
+	sky1 = "skyfog0"
 }
 
 skill Normal {
