@@ -30,6 +30,7 @@ MAP LIST
   * AOW29 - Reactor
   * AOW30 - Mining Camp 2
   * AOW31 - All Out War Remake
+  * AOW32 - Blizzard
     
 CHANGELOG
     Latest:

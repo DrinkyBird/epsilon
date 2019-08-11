@@ -93,6 +93,7 @@ OptionValue "AOWMaps"
     28,             "AOW29 - Reactor"
     29,             "AOW30 - Mining Camp 2"
     30,             "AOW31 - All Out War Remake"
+    31,             "AOW32 - Blizzard"
 }
 
 OptionMenu "AOWPlayOffline"
