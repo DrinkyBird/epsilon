@@ -36,9 +36,12 @@ CHANGELOG
         epsilon_ to avoid conflicts
       * Maps
         * AOW02
-          * Fixed a myraid of texture alignment issues
+          * Fixed a myriad of texture alignment issues
           * Added a basic skybox for a prettier spawn
-        * AOW03
+          * Some aesthetic texture choice changes
+          * Moved the powerup crate to a platform in the middle of the central
+            area
+        * AOW04
           * Added a back passage to both bases to make it easier to infiltrate
         * AOW09
           * Better quality music
