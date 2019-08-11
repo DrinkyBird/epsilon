@@ -160,10 +160,6 @@ script SC_SERVERSETTINGS OPEN {
 	if (!GetCVAR ("compat_limited_airmovement"))
 		ConsoleCommand ("compat_limited_airmovement 1");
 	
-	// [Dusk] sv_nofov is true to eliminate gauss sniping
-	if (!GetCVAR ("sv_nofov"))
-		ConsoleCommand ("sv_nofov 1");
-	
 	// [Dusk] Enforce no pointlimit until game is considered over. However, the pointlimit
 	// is also used to end the game when needed.
 	if (!gameover && GetCVAR ("pointlimit") != 0)

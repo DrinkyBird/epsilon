@@ -126,6 +126,9 @@ user bool epsilon_cl_noteamlog = false;
 // [Dusk] {10/27/12} How much to donate?
 user int epsilon_cl_donateamount = 100;
 
+// The base game FOV
+user int epsilon_cl_fov = 90;
+
 ///////////////////////////////////////////////////////////////////////////////
 // Client MENUDEF stuff
 user noarchive int __epsilon_cl_menutomap = 0;

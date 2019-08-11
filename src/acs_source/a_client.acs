@@ -35,6 +35,27 @@ script SC_CLIENT OPEN CLIENTSIDE {
 }
 
 // =============================================================================
+script "SC_CL_FixFOV" ENTER CLIENTSIDE
+{
+    if (PlayerNumber() != consoleplayer)
+        terminate;
+    
+    int basefov = GetCVAR("epsilon_cl_fov");
+    if (basefov < 70)
+        basefov = 70;
+    else if (basefov > 120)
+        basefov = 120;
+    
+    SetCVAR("epsilon_cl_fov", basefov);
+    
+    str cmd = StrParam(s: "fov ", d: basefov);
+    ConsoleCommand(cmd);
+    
+    delay(1);
+    restart;
+}
+
+// =============================================================================
 script SC_WHOAMI (void) NET CLIENTSIDE {
 	Log (s:"I am player ", d:consoleplayer, s:" named ", n:consoleplayer+1);
 }

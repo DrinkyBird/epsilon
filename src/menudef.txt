@@ -45,6 +45,7 @@ OptionMenu "AOWMain"
 	Option          "Enable team radar",            "epsilon_cl_alwaysradar",       "OnOff"
 	Option          "Enable team log",              "epsilon_cl_noteamlog",         "OffOn"
 	Option          "Show AOW HUD",                 "epsilon_cl_nohud",             "OffOn"
+	Slider          "Field of view",                "epsilon_cl_fov",               70,                     120,                    1,                      0
 }
 
 // Custom quit menu
