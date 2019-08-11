@@ -54,7 +54,7 @@ script SC_BeaconInventory (int team) {
 		ACS_ExecuteAlways (SC_CL_BeaconPlanted, 0);
 		
 		// Tell the enemy team a warning
-		ACS_ExecuteAlways (SC_CL_NukeTimeWarning, 0, !PlayerTeam(), GetCVAR ("aow_nukecountdown"));
+		ACS_ExecuteAlways (SC_CL_NukeTimeWarning, 0, !PlayerTeam(), GetCVAR ("epsilon_nukecountdown"));
 		
 		// Remove the nuke item from the player now
 		SetInventory ("IonCannonBeacon", 0);
@@ -65,11 +65,11 @@ script SC_BeaconInventory (int team) {
 // =============================================================================
 // [Dusk] Beacon timer, now in ACS.
 script SC_BeaconTimer (int team, int ancrwarning) {
-	int timeleft = GetCVAR ("aow_nukecountdown") - CheckInventory ("BeaconCountdown");
+	int timeleft = GetCVAR ("epsilon_nukecountdown") - CheckInventory ("BeaconCountdown");
 	
 	// We're just playing the announcer warning
 	if (ancrwarning) {
-		if (timeleft == GetCVAR ("aow_nukecountdown")) {
+		if (timeleft == GetCVAR ("epsilon_nukecountdown")) {
 			// Initial warning
 			AmbientSound (cond (team == TEAM_Blue, "eva/iondeployed", "eva/nukedeployed"), 127);
 			delay (93);
@@ -108,11 +108,11 @@ script SC_BeaconTimer (int team, int ancrwarning) {
 	ActivatorSound (cond (team == TEAM_Blue, "beacon/ionbeep", "beacon/nukebeep"), 127);
 	
 	// Signal effect to prevent tunnel nukes.
-	if (GetCVar ("aow_nukesurpreme"))
+	if (GetCVar ("epsilon_nukesurpreme"))
 		SpawnSpotForced (cond (team == TEAM_Blue, "BeaconFX", "BeaconFXRed"), 0, 0, 0);
 	
 	// Time-specific stuff:
-	if (timeleft == GetCVAR ("aow_nukecountdown") || timeleft == 30 || timeleft == 15) {
+	if (timeleft == GetCVAR ("epsilon_nukecountdown") || timeleft == 30 || timeleft == 15) {
 		// [Dusk] Has to be executed WithResult or it will only get executed
 		// after the countdown has been incremented - we don't want that.
 		ACS_ExecuteWithResult (SC_BeaconTimer, team, true);

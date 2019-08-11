@@ -25,13 +25,14 @@ addmenukey "Switch to weaker team" teamswitch
 addmenukey "Sell current weapon" sellweapon
 addmenukey "Use self-heal" useselfheal
 addmenukey "Use timed C4" usec4
+addmenukey "Open AOW menu" epsilon_openmenu
 
 // =============================================================================
 // ALIAS CCMDS
 alias sellweapon "puke 950"
 alias donationmenu "puke 988 0"
 alias donationname "puke 988 1"
-alias donationgive "puke 984 $__aow_donatee $aow_cl_donateamount"
+alias donationgive "puke 984 $__aow_donatee $epsilon_cl_donateamount"
 alias donateall "puke 984 255"
 
 alias surrender "puke 342"
@@ -72,7 +73,7 @@ alias forceblue "puke 941 %1 1"
 alias forcered "puke 941 %1 2"
 alias teamshuffle "puke 962"
 
-alias tournamentmode "set aow_tournamentmode 1;set aow_maxcannonsperteam 1;set aow_jugglimit 1;set aow_suddendeathtime 30;set aow_tickets 40;echo Tournament set-up complete - please restart the map."
+alias tournamentmode "set epsilon_tournamentmode 1;set epsilon_maxcannonsperteam 1;set aow_jugglimit 1;set epsilon_suddendeathtime 30;set epsilon_tickets 40;echo Tournament set-up complete - please restart the map."
 
 // =============================================================================
 // GAMEMASTER COMMANDS
@@ -96,6 +97,8 @@ alias a_fly "puke 945 18"
 
 // =============================================================================
 // MENUDEF COMMANDS
-alias __aow_menudef_playoffline "pukename AOW_Menudef_PlayOffline always;closemenu"
-alias __aow_menudef_donationmenu "donationmenu;closemenu"
-alias __aow_menudef_teamswitch "teamswitch;closemenu"
+alias epsilon_openmenu "openmenu AOWMain"
+
+alias __epsilon_menudef_playoffline "pukename AOW_Menudef_PlayOffline always;closemenu"
+alias __epsilon_menudef_donationmenu "donationmenu;closemenu"
+alias __epsilon_menudef_teamswitch "teamswitch;closemenu"

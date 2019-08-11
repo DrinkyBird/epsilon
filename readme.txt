@@ -32,6 +32,8 @@ CHANGELOG
       * Removed the old aow_preferences menu in favour of MENUDEF
       * Added a new console font
       * Some internal data tweaking
+      * CVARs have been moved to CVARINFO, and have been renamed from aow_ to
+        epsilon_ to avoid conflicts
       * Maps
         * AOW02
           * Fixed a myraid of texture alignment issues

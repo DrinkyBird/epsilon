@@ -11,7 +11,7 @@
 script SC_SuddenDeathCounter OPEN {
 	delay (5);
 	
-	while (Timer() < GetCVAR ("aow_suddendeathtime") * MINUTETICS)
+	while (Timer() < GetCVAR ("epsilon_suddendeathtime") * MINUTETICS)
 		delay (35);
 	
 	ACS_Execute (SC_SUDDENDEATH, 0);
@@ -66,7 +66,7 @@ script SC_SuddenDeath (void) {
 		INTEL_XPOS, 0.25, 7.0, 1.0);
 	
 	// Begin degeneration if its set
-	int degeneration = GetCVar ("aow_degeneration");
+	int degeneration = GetCVar ("epsilon_degeneration");
 	if (degeneration) {
 		SetFont("BIGFONT");
 		HudMessageBold (s:"WARNING: BUILDING DEGENERATION ACTIVE!";
@@ -76,8 +76,8 @@ script SC_SuddenDeath (void) {
 	
 	// If ticket pool was not active in regular play, activate it now
 	if (!TicketPool) {
-		SetTickets (TEAM_BLUE, GetCVAR ("aow_tickets"));
-		SetTickets (TEAM_RED, GetCVAR ("aow_tickets"));
+		SetTickets (TEAM_BLUE, GetCVAR ("epsilon_tickets"));
+		SetTickets (TEAM_RED, GetCVAR ("epsilon_tickets"));
 	}
 	
 	int ticker = 0;
@@ -88,7 +88,7 @@ script SC_SuddenDeath (void) {
 			IntelMessage ("Sudden Death!", false);
 		}
 		
-		if (degeneration && !(ticker % GetCVar ("aow_degenerationinterval"))) {
+		if (degeneration && !(ticker % GetCVar ("epsilon_degenerationinterval"))) {
 			// Crash all buildings by 1% every interval seconds
 			for (i = 0; i <= 1; i++) {
 				Thing_Damage (101+(i*100), HP_BARRACKS / 100);

@@ -9,10 +9,10 @@ function void VoteSurrender (void) {
 		return;
 	}
 	
-	if (GetCVAR ("aow_surrendermode") == 2) {
+	if (GetCVAR ("epsilon_surrendermode") == 2) {
 		GenericError ("Surrender is disabled!");
 		return;
-	} else if (GetCVAR("aow_surrendermode") == 1 && CalcBaseLeft (PlayerTeam ()) >= 5) {
+	} else if (GetCVAR("epsilon_surrendermode") == 1 && CalcBaseLeft (PlayerTeam ()) >= 5) {
 		GenericError ("It's too early to surrender!");
 		return;
 	}

@@ -133,7 +133,7 @@ function int CalcCreditFlow (int team) {
 	if (MiniRefinery[team])
 		p += 75;
 	
-	int f = (GetCVAR("aow_credflow") * p) / 100;
+	int f = (GetCVAR("epsilon_credflow") * p) / 100;
 	if (!f)
 		f = 1;
 	

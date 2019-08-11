@@ -225,13 +225,13 @@ function void BuyAddon (int id) {
 			return;
 		}
 		
-		int max = GetCVAR ("aow_maxcannonsperteam");
+		int max = GetCVAR ("epsilon_maxcannonsperteam");
 		if (NumPlasmaCannons[PlayerTeam()] >= max && max != -1) {
 			MenuResponse (MSGTYPE_ERROR, "Your team already has too many of those!");
 			return;
 		}
 		
-		int CannonPurchaseDelay = GetCVAR ("aow_plasmapurchasedelay") * MINUTETICS;
+		int CannonPurchaseDelay = GetCVAR ("epsilon_plasmapurchasedelay") * MINUTETICS;
 		if (Timer() < CannonPurchaseDelay) {
 			LocalAmbientSound ("misc/nope", 127);
 			HudMessage(s:"You must wait \cF", d:(CannonPurchaseDelay - Timer()) / 60,
@@ -315,13 +315,13 @@ function void BuyAddon (int id) {
 		
 		LastPurchasedBeacon[PlayerTeam()] = Timer();
 		
-		if (GetCVar ("aow_nukesurpreme"))
+		if (GetCVar ("epsilon_nukesurpreme"))
 			HudMessage (s:"\cFSUPER BEACONS ARE ENABLED\n\nPlant this in the enemy base and guard it for\n\ck",
-				d:GetCVar ("aow_nukecountdown"), s:" seconds\c- for absolute devastation!";
+				d:GetCVar ("epsilon_nukecountdown"), s:" seconds\c- for absolute devastation!";
 				HUDMSG_FADEOUT, MENU_HID + 101, CR_White, UMENU_X4, UMENU_Y4 - 0.225, 8.0, 1.0);
 		else
 			HudMessage (s:"Place this in front of an enemy MCT and guard\n",
-				s:"it for \cU", d:GetCVar ("aow_nukecountdown"), s:" seconds\c- to destroy it!";
+				s:"it for \cU", d:GetCVar ("epsilon_nukecountdown"), s:" seconds\c- to destroy it!";
 				HUDMSG_FADEOUT, MENU_HID + 101, CR_White, UMENU_X4, UMENU_Y4 - 0.225, 8.0, 1.0);
 		break;
 	}

@@ -30,50 +30,6 @@ script SC_CLIENT OPEN CLIENTSIDE {
 		CR_InitCrateList ();
 	}
 	
-	// [Dusk] Use consolecommand to make client-side CVARs show up properly
-	// Use CONFONT for HUD elements
-	if (GetCVar ("aow_cl_confonthud") <= 0)
-		ConsoleCommand ("set aow_cl_confonthud 0");
-	
-	// Request information about the killer's health when we get fragged
-	if (GetCVar ("aow_cl_killerhealth") <= 0)
-		ConsoleCommand ("set aow_cl_killerhealth 0");
-	
-	// Desired effect level (negative means less, positive means more, 0 means normal)
-	if (GetCVar ("aow_cl_fx") == 0)
-		ConsoleCommand ("set aow_cl_fx 0");
-	
-	// Don't draw any HUD elements
-	if (GetCVar ("aow_cl_nohud") <= 0)
-		ConsoleCommand ("set aow_cl_nohud 0");
-	
-	// Always use the radar (but it will only show teammates)
-	if (GetCVar ("aow_cl_alwaysradar") <= 0)
-		ConsoleCommand ("set aow_cl_alwaysradar 0");
-	
-	// [Dusk] {9/15/12} Disables team log completely.
-	if (GetCVar ("aow_cl_noteamlog") <= 0)
-		ConsoleCommand ("set aow_cl_noteamlog 0");
-	
-	// [Dusk] {10/4/12} CVAR to show team log on the screen.
-	// It takes a lot of screen space so I'm disabling it by default
-	if (GetCVAR ("aow_cl_fullteamlog") <= 0)
-		ConsoleCommand ("set aow_cl_fullteamlog 0");
-	
-	// [Dusk] {10/27/12} How much to donate?
-	if (GetCVAR ("aow_cl_donateamount") <= 0)
-		ConsoleCommand ("set aow_cl_donateamount 100");
-	
-	// [Dusk] Also archive them.
-	ArchiveCVAR ("aow_cl_confonthud");
-	ArchiveCVAR ("aow_cl_killerhealth");
-	ArchiveCVAR ("aow_cl_fx");
-	ArchiveCVAR ("aow_cl_nohud");
-	ArchiveCVAR ("aow_cl_alwaysradar");
-	ArchiveCVAR ("aow_noteamintel");
-	ArchiveCVAR ("aow_cl_fullteamlog");
-	ArchiveCVAR ("aow_cl_donateamount");
-	
 	// [Dusk] {9/10/12} Activate the radar
 	ACS_Execute (SC_CL_RADAR, 0);
 }
@@ -85,18 +41,18 @@ script SC_WHOAMI (void) NET CLIENTSIDE {
 
 // =============================================================================
 script SC_CL_EFFECTS (void) NET CLIENTSIDE {
-	int last_nohud = GetCVAR ("aow_cl_nohud");
-	int last_confonthud = GetCVAR ("aow_cl_confonthud");
+	int last_nohud = GetCVAR ("epsilon_cl_nohud");
+	int last_confonthud = GetCVAR ("epsilon_cl_confonthud");
 	int tid, targ;
 	int tick = 0;
 	
 	while (1) {
 		// [Dusk] If HUD preferences have changed, refresh the HUD.
-		if (GetCVar ("aow_cl_nohud") != last_nohud ||
-			GetCVar ("aow_cl_confonthud") != last_confonthud)
+		if (GetCVar ("epsilon_cl_nohud") != last_nohud ||
+			GetCVar ("epsilon_cl_confonthud") != last_confonthud)
 		{
-			last_nohud = GetCVar ("aow_cl_nohud");
-			last_nohud = GetCVar ("aow_cl_confonthud");
+			last_nohud = GetCVar ("epsilon_cl_nohud");
+			last_nohud = GetCVar ("epsilon_cl_confonthud");
 			UpdateHUD ();
 		}
 		
@@ -255,10 +211,10 @@ function bool SpawnTrail (int src, int dest, str type, int interval, int rand,
 	int n = (d>>16) / interval;
 	int cap = 128;
 	
-	if (GetCVar ("aow_cl_fx") > 0) {
+	if (GetCVar ("epsilon_cl_fx") > 0) {
 		n *= 2;
 		cap *= 2;
-	} else if (GetCVar ("aow_cl_fx") < 0) {
+	} else if (GetCVar ("epsilon_cl_fx") < 0) {
 		n /= 2;
 		cap /= 2;
 	}
@@ -306,9 +262,9 @@ function bool SpawnTrail (int src, int dest, str type, int interval, int rand,
 }
 
 // =============================================================================
-// [Dusk] Get aow_cl_fx value
+// [Dusk] Get epsilon_cl_fx value
 script SC_CL_FXCVAR (void) CLIENTSIDE {
-	SetResultValue (GetCVar ("aow_cl_fx"));
+	SetResultValue (GetCVar ("epsilon_cl_fx"));
 }
 
 // =============================================================================
@@ -393,7 +349,7 @@ script SC_CL_RADAR (void) NET CLIENTSIDE {
 		if (GetConfig (CONFIG_NORADAR) || // server disabled the radar
 			!PlayerInGame (consoleplayer) || // consoleplayer is spectating
 			(
-				!GetCVar ("aow_cl_alwaysradar") && // player has no radar and cvar is disabled
+				!GetCVar ("epsilon_cl_alwaysradar") && // player has no radar and cvar is disabled
 				!CheckActorInventory (3800+consoleplayer, "PowerRadar")
 			))
 		{
@@ -447,7 +403,7 @@ script SC_CL_RADAR (void) NET CLIENTSIDE {
 // ============================================================================
 // [Dusk] Set desired font for HUD display
 function void SetHUDFont (void) {
-	if (GetCVar ("aow_cl_confonthud"))
+	if (GetCVar ("epsilon_cl_confonthud"))
 		SetFont ("CONFONT");
 	else
 		SetFont ("SMALLFONT");

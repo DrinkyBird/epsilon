@@ -1,7 +1,7 @@
 // ACS scripts for MENUDEF menus
 Script "AOW_Menudef_PlayOffline" (void) NET CLIENTSIDE
 {
-    int map = GetCVar("__aow_cl_menutomap") + 1;
+    int map = GetCVar("__epsilon_cl_menutomap") + 1;
     
     str mapname;
     if (map < 10)

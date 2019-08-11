@@ -118,7 +118,7 @@ script SC_CL_PLAYERDEATH DEATH CLIENTSIDE {
 	int killernum = GetTargetInfo (TARGETINFO_PlayerNum);
 	if (PlayerNumber () == consoleplayer &&
 		killernum != consoleplayer &&
-		GetCVar ("aow_cl_killerhealth"))
+		GetCVar ("epsilon_cl_killerhealth"))
 	{
 		Puke (-919);
 	}

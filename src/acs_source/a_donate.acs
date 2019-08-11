@@ -35,7 +35,7 @@ function void DonateCredits (int donatee, int dosh) {
 		return;
 	
 	// [Dusk] Need to be in game for a minute before being able to donate
-	int wait = (StartTime[PlayerNumber()] + (GetCVAR ("aow_donatewait") * 35) - Timer());
+	int wait = (StartTime[PlayerNumber()] + (GetCVAR ("epsilon_donatewait") * 35) - Timer());
 	if (wait > 0) {
 		DisplayCross ();
 		IntelMessageNoLog (strparam (s:"Donation system is not able to find your wallet.\n",
@@ -100,7 +100,7 @@ function void DrawDonateMenu (void) {
 	if (netstate == NETSTATE_Offline)
 		dosh = Credits[g_Donatee];
 	
-	int amount = GetCVAR ("aow_cl_donateamount");
+	int amount = GetCVAR ("epsilon_cl_donateamount");
 	
 	SetFont ("SMALLFONT");
 	HudMessage (s:"\cJ== Make a donation!",

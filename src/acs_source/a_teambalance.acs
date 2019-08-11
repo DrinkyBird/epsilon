@@ -13,10 +13,10 @@ function void CheckTeamBalance (void) {
 	int i;
 	int Counter;
 	int CurTimeMax;
-	int PlayerStayTics = GetCVAR ("aow_teamstaytime") * MINUTETICS;
+	int PlayerStayTics = GetCVAR ("epsilon_teamstaytime") * MINUTETICS;
 	
-	// [Dusk] {10/26/12} aow_noteamswitcher disables this thing, too.
-	if (GetCVar ("sv_noteamswitch") && !GetCVar ("aow_noteamswitcher")) {
+	// [Dusk] {10/26/12} epsilon_noteamswitcher disables this thing, too.
+	if (GetCVar ("sv_noteamswitch") && !GetCVar ("epsilon_noteamswitcher")) {
 		do {
 			int delta = RedCount() - BlueCount();
 			int do_restart = false;

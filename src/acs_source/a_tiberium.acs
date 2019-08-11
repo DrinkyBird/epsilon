@@ -27,26 +27,26 @@ function bool RefineTiberium (int team) {
 	TakeInventory ("TiberiumCrystal",1);
 	
 	// How much to give for others?
-	int amount = GetCVar ("aow_tiberium_other");
+	int amount = GetCVar ("epsilon_tiberium_other");
 	if (EnhancedRefining[Team]) {
-		int factor = (GetCVar ("aow_tiberium_advperc") << 16) / 100;
+		int factor = (GetCVar ("epsilon_tiberium_advperc") << 16) / 100;
 		amount = (amount * factor) >> 16;
 	}
 	
 	int self = PlayerNumber ();
-	if (GetCVar ("aow_tiberium_self") > 0) {
-		GiveCredits (GetCVar ("aow_tiberium_self") - amount);
+	if (GetCVar ("epsilon_tiberium_self") > 0) {
+		GiveCredits (GetCVar ("epsilon_tiberium_self") - amount);
 		GivePoints (1);
 		AddExperience (50);
 		
 		SetFont ("BIGFONT");
 		if (amount < 0)
 			HudMessage (s:"You have refined the \cDTiberium\c and have earned \cQ$\cD",
-				d:GetCVar ("aow_tiberium_self"), s:"\c-!";
+				d:GetCVar ("epsilon_tiberium_self"), s:"\c-!";
 				HUDMSG_FADEOUT, 1800+PlayerNumber(), CR_WHITE, 0.5, 0.45, 2.0, 1.0);
 		else
 			HudMessage (s:"You have refined the \cDTiberium!\n\cQ$\cD",
-				d:GetCVar ("aow_tiberium_self"), s:"\c- for you, \cq$\cd", d:GetCVar ("aow_tiberium_other"),
+				d:GetCVar ("epsilon_tiberium_self"), s:"\c- for you, \cq$\cd", d:GetCVar ("epsilon_tiberium_other"),
 				s:"\c- for teammates!";
 				HUDMSG_FADEOUT, 1800+PlayerNumber(), CR_WHITE, 0.5, 0.45, 2.0, 1.0);
 	}

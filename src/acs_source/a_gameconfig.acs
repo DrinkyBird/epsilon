@@ -12,7 +12,7 @@
 #define CONFIG_AdvMechs					5	//
 #define CONFIG_MaxTimeCops				6	// Max timecops per team
 #define CONFIG_JuggernautLimit			7	// Juggernaut limit
-#define CONFIG_C4Delay					8	// aow_c4delay
+#define CONFIG_C4Delay					8	// epsilon_c4delay
 #define CONFIG_CreditCap				9	// Credit cap
 #define CONFIG_Flags					10	// Flags, see below
 #define CONFIG_ResearchFlags			11	// Research flags

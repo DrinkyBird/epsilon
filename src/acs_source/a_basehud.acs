@@ -3,7 +3,7 @@ function void CL_DisplayBuildingHud (void) {
 	SetHUDFont ();
 	
 	// If we want no hud, clear it
-	if (GetCVar ("aow_cl_nohud")) {
+	if (GetCVar ("epsilon_cl_nohud")) {
 		ClearHudMessage (8850);
 		ClearHudMessage (8851);
 		ClearHudMessage (8852);
@@ -97,7 +97,7 @@ function str PortalLinkColor (int team, int teamcolor) {
 	
 	if (!teamcolor)
 		return "\cQ";
-	if (GetCVar ("aow_cl_confonthud"))
+	if (GetCVar ("epsilon_cl_confonthud"))
 		return "\cU";
 	return "\cM";
 }
@@ -115,7 +115,7 @@ function str ColorCodeHealth(int Percentage)
 	else if (Percentage > 0) // critical
 		return "\cr";
 	
-	if (GetCVar ("aow_cl_confonthud"))
+	if (GetCVar ("epsilon_cl_confonthud"))
 		return "\cU";
 	return "\cM";
 }
@@ -128,7 +128,7 @@ function str ExistsBuilding (int tid) {
 			return "\cG";
 	}
 	
-	if (GetCVar ("aow_cl_confonthud"))
+	if (GetCVar ("epsilon_cl_confonthud"))
 		return "\cU";
 	return "\cM";
 }

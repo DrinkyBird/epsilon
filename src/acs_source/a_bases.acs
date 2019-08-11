@@ -366,7 +366,7 @@ script 214 (VOID)
 
 script 97 (int Structure, int Team) {
 	// stfu during degeneration
-	if (SuddenDeath && GetCVar ("aow_degeneration")) terminate;
+	if (SuddenDeath && GetCVar ("epsilon_degeneration")) terminate;
 	
 	if ( Timer() > LastAttackMessage+35*15 ) {
 		if(Structure == 1 && Team == 0)

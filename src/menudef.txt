@@ -22,8 +22,8 @@ OptionMenu "AOWMain"
 {
 	Title           "ALL OUT WAR"
     
-    Command         "Open donation menu",           "__aow_menudef_donationmenu"
-    Command         "Switch to weaker team",        "__aow_menudef_teamswitch"
+    Command         "Open donation menu",           "__epsilon_menudef_donationmenu"
+    Command         "Switch to weaker team",        "__epsilon_menudef_teamswitch"
 	StaticText      " "
     
 	StaticText      "Controls"
@@ -35,15 +35,16 @@ OptionMenu "AOWMain"
 	Control         "Sell current weapon",          "sellweapon"
 	Control         "Use self-heal",                "useselfheal"
 	Control         "Use timed C4",                 "usec4"
+	Control         "Open AOW menu",                "epsilon_openmenu"
 	StaticText      " "
     
 	StaticText      "Client Settings"
-	Option          "Graphics level",               "aow_cl_fx",                "AOWClientFXLevel"
-	Option          "Show killer's health",         "aow_cl_killerhealth",      "OnOff"
-	Option          "Use console font HUD",         "aow_cl_confonthud",        "OnOff"
-	Option          "Enable team radar",            "aow_cl_alwaysradar",       "OnOff"
-	Option          "Enable team log",              "aow_cl_noteamlog",         "OffOn"
-	Option          "Show AOW HUD",                 "aow_cl_nohud",             "OffOn"
+	Option          "Graphics level",               "epsilon_cl_fx",                "AOWClientFXLevel"
+	Option          "Show killer's health",         "epsilon_cl_killerhealth",      "OnOff"
+	Option          "Use console font HUD",         "epsilon_cl_confonthud",        "OnOff"
+	Option          "Enable team radar",            "epsilon_cl_alwaysradar",       "OnOff"
+	Option          "Enable team log",              "epsilon_cl_noteamlog",         "OffOn"
+	Option          "Show AOW HUD",                 "epsilon_cl_nohud",             "OffOn"
 }
 
 // Custom quit menu
@@ -92,7 +93,7 @@ OptionMenu "AOWPlayOffline"
     Title           "Play Offline"
 
     StaticText      " "
-    Option          "Map",              "__aow_cl_menutomap",           "AOWMaps",          1
+    Option          "Map",              "__epsilon_cl_menutomap",           "AOWMaps",          1
     StaticText      " "
-    Command         "Play",             "__aow_menudef_playoffline"//,    "Are you sure you want to start an offline game?"
+    Command         "Play",             "__epsilon_menudef_playoffline"//,    "Are you sure you want to start an offline game?"
 }

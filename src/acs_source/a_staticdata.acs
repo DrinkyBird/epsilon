@@ -121,7 +121,7 @@ int g_CrateSeed; // [Dusk] Crate logic
 #define CONFIG_ADVMECHS_RED				11	// -- red
 #define CONFIG_MAXTIMECOPS				12	// Max timecops per team
 #define CONFIG_JUGGERNAUTLIMIT			13	// Juggernaut limit
-#define CONFIG_C4DELAY					14	// aow_c4delay
+#define CONFIG_C4DELAY					14	// epsilon_c4delay
 #define CONFIG_NORADAR					15  // Is the radar forbidden in game?
 #define CONFIG_CREDITCAP				16	// Credit cap
 #define CONFIG_SANDBAGS					17	// Are sandbags allowed?

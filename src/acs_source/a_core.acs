@@ -27,7 +27,7 @@ script SC_GAMEINIT OPEN {
 		GotObelisk[i] = True;
 	}
 	
-	StartingTickets = GetCVAR ("aow_tickets");
+	StartingTickets = GetCVAR ("epsilon_tickets");
 	
 	SetLineSpecial (159, ACS_Execute, 342);
 	
@@ -46,8 +46,8 @@ script SC_GAMEINIT OPEN {
 	
 	// If we have ticket pool active, set the initial tickets now.
 	if (TicketPool) {
-		SetTickets (TEAM_Blue, GetCVAR ("aow_tickets"));
-		SetTickets (TEAM_RED, GetCVAR ("aow_tickets"));
+		SetTickets (TEAM_Blue, GetCVAR ("epsilon_tickets"));
+		SetTickets (TEAM_RED, GetCVAR ("epsilon_tickets"));
 	}
 	
 	// Map markers
@@ -89,41 +89,41 @@ script SC_GAMEINIT OPEN {
 	
 	// Archive some server CVars here
 	delay (35);
-	ArchiveCVAR ("aow_credflow");
-	ArchiveCVAR ("aow_startcredits");
-	ArchiveCVAR ("aow_creditfrag");
-	ArchiveCVAR ("aow_bonusamount");
-	ArchiveCVAR ("aow_bonustime");
-	ArchiveCVAR ("aow_medicbonusneed");
-	ArchiveCVAR ("aow_repairbonus");
-	ArchiveCVAR ("aow_juggernautlimit");
-	ArchiveCVAR ("aow_ticketpool");
-	ArchiveCVAR ("aow_teamstaytime");
-	ArchiveCVAR ("aow_plasmapurchasedelay");
-	ArchiveCVAR ("aow_maxcannonsperteam");
-	ArchiveCVAR ("aow_plasmacooldown");
-	ArchiveCVAR ("aow_nukepurchasedelay");
-	ArchiveCVAR ("aow_maxtimecopsperteam");
-	ArchiveCVAR ("aow_c4delay");
-	ArchiveCVAR ("aow_suddendeathtime");
-	ArchiveCVAR ("aow_degeneration");
-	ArchiveCVAR ("aow_degenerationinterval");
-	ArchiveCVAR ("aow_tournamentmode");
-	ArchiveCVAR ("aow_disablemechs");
-	ArchiveCVAR ("aow_surrendermode");
+	ArchiveCVAR ("epsilon_credflow");
+	ArchiveCVAR ("epsilon_startcredits");
+	ArchiveCVAR ("epsilon_creditfrag");
+	ArchiveCVAR ("epsilon_bonusamount");
+	ArchiveCVAR ("epsilon_bonustime");
+	ArchiveCVAR ("epsilon_medicbonusneed");
+	ArchiveCVAR ("epsilon_repairbonus");
+	ArchiveCVAR ("epsilon_juggernautlimit");
+	ArchiveCVAR ("epsilon_ticketpool");
+	ArchiveCVAR ("epsilon_teamstaytime");
+	ArchiveCVAR ("epsilon_plasmapurchasedelay");
+	ArchiveCVAR ("epsilon_maxcannonsperteam");
+	ArchiveCVAR ("epsilon_plasmacooldown");
+	ArchiveCVAR ("epsilon_nukepurchasedelay");
+	ArchiveCVAR ("epsilon_maxtimecopsperteam");
+	ArchiveCVAR ("epsilon_c4delay");
+	ArchiveCVAR ("epsilon_suddendeathtime");
+	ArchiveCVAR ("epsilon_degeneration");
+	ArchiveCVAR ("epsilon_degenerationinterval");
+	ArchiveCVAR ("epsilon_tournamentmode");
+	ArchiveCVAR ("epsilon_disablemechs");
+	ArchiveCVAR ("epsilon_surrendermode");
 	ArchiveCVAR ("aow_buildingpoints");
-	ArchiveCVAR ("aow_tiberium_self");
-	ArchiveCVAR ("aow_tiberium_other");
-	ArchiveCVAR ("aow_tiberium_advperc");
-	ArchiveCVAR ("aow_creditcap");
-	ArchiveCVAR ("aow_nomechs");
-	ArchiveCVAR ("aow_noradar");
-	ArchiveCVAR ("aow_noteamswitcher");
-	ArchiveCVAR ("aow_nospawninvul");
-	ArchiveCVAR ("aow_nodisconnectdonate");
-	ArchiveCVAR ("aow_donatewait");
-	ArchiveCVAR ("aow_nukecountdown");
-	ArchiveCVAR ("aow_nukesurpreme");
+	ArchiveCVAR ("epsilon_tiberium_self");
+	ArchiveCVAR ("epsilon_tiberium_other");
+	ArchiveCVAR ("epsilon_tiberium_advperc");
+	ArchiveCVAR ("epsilon_creditcap");
+	ArchiveCVAR ("epsilon_nomechs");
+	ArchiveCVAR ("epsilon_noradar");
+	ArchiveCVAR ("epsilon_noteamswitcher");
+	ArchiveCVAR ("epsilon_nospawninvul");
+	ArchiveCVAR ("epsilon_nodisconnectdonate");
+	ArchiveCVAR ("epsilon_donatewait");
+	ArchiveCVAR ("epsilon_nukecountdown");
+	ArchiveCVAR ("epsilon_nukesurpreme");
 	
 	// If we're offline, set the game to multiplayer emulation
 	// for more accurate netgame emulation.
@@ -176,133 +176,96 @@ script SC_SERVERSETTINGS OPEN {
 	// ==================================
 	// CUSTOM CVARS
 	// w/ sanity checks
-	if (!GetCVAR ("aow_credflow")) ConsoleCommand ("set aow_credflow 4");
-	if (GetCVAR ("aow_startcredits") <= 0) ConsoleCommand ("set aow_startcredits 300");
-	if (GetCVAR ("aow_creditfrag") <= 0) ConsoleCommand ("set aow_creditfrag 50");	
-	if (GetCVAR ("aow_bonusamount") <= 0) ConsoleCommand ("set aow_bonusamount 300");	
-	if (GetCVAR ("aow_bonustime") <= 0) ConsoleCommand ("set aow_bonustime 5");
-	if (GetCVAR ("aow_medicbonusneed") <= 0) ConsoleCommand ("set aow_medicbonusneed 175");
-	if (GetCVAR ("aow_repairbonus") <= 0) ConsoleCommand ("set aow_repairbonus 1");	
-	if (GetCVAR ("aow_juggernautlimit") <= 0) ConsoleCommand ("set aow_juggernautlimit 2");
-	if (GetCVAR ("aow_ticketpool") <= 0)
-		ConsoleCommand ("set aow_ticketpool 0");
+	if (!GetCVAR ("epsilon_credflow")) SetCVAR("epsilon_credflow", 4);
+	if (GetCVAR ("epsilon_startcredits") <= 0) SetCVAR("epsilon_startcredits", 300);
+	if (GetCVAR ("epsilon_creditfrag") <= 0) SetCVAR("epsilon_creditfrag", 50);
+	if (GetCVAR ("epsilon_bonusamount") <= 0) SetCVAR("epsilon_bonusamount", 300);
+	if (GetCVAR ("epsilon_bonustime") <= 0) SetCVAR("epsilon_bonustime", 5);
+	if (GetCVAR ("epsilon_medicbonusneed") <= 0) SetCVAR("epsilon_medicbonusneed", 175);
+	if (GetCVAR ("epsilon_repairbonus") <= 0) SetCVAR("epsilon_repairbonus", 1);	
+	if (GetCVAR ("epsilon_juggernautlimit") <= 0) SetCVAR("epsilon_juggernautlimit", 2);
+	if (GetCVAR ("epsilon_ticketpool") <= 0) SetCVAR("epsilon_ticketpool", false);
 	//[SP]How long you can stay on a team before you are never switched.
-	if (GetCVAR ("aow_teamstaytime") <= 0) ConsoleCommand("set aow_teamstaytime 2");
+	if (GetCVAR ("epsilon_teamstaytime") <= 0)  SetCVAR("epsilon_teamstaytime", 15);
 	
-	if (GetCVAR ("aow_tickets") <= 0)
-		ConsoleCommand ("set aow_tickets 75");
+	if (GetCVAR ("epsilon_tickets") <= 0) SetCVAR("epsilon_tickets", 75);
 	
 	// Plasma Cannon initial delay
-	if (!GetCVAR ("aow_plasmapurchasedelay")) ConsoleCommand("set aow_plasmapurchasedelay 5");
+	if (!GetCVAR ("epsilon_plasmapurchasedelay")) SetCVAR("epsilon_plasmapurchasedelay", 5);
 	//[SP]Maximum number of plasma cannons per team. (Set to -1 for unlimited)
-	if (!GetCVAR ("aow_maxcannonsperteam")) ConsoleCommand("set aow_maxcannonsperteam 4");
+	if (!GetCVAR ("epsilon_maxcannonsperteam")) SetCVAR("epsilon_maxcannonsperteam", 4);
 	// [Dusk] Time (in minutes) to determine plasma cannon cooldown. Use -1 to disable
-	if (!GetCVAR ("aow_plasmacooldown")) ConsoleCommand("set aow_plasmacooldown 3");
+	if (!GetCVAR ("epsilon_plasmacooldown")) SetCVAR("epsilon_plasmacooldown", 3);
 	
 	//[SP]How long you have to wait to buy a new superweapon beacon. (Minutes) (Set to -1 to disable wait)
-	if (!GetCVAR ("aow_nukepurchasedelay"))ConsoleCommand("set aow_nukepurchasedelay 5");
+	if (!GetCVAR ("epsilon_nukepurchasedelay")) SetCVAR("epsilon_nukepurchasedelay", 5);
 	
 	// [SP]Maximum number of time cops per team. (Set to -1 for unlimited)
-	if (!GetCVAR ("aow_maxtimecopsperteam")) ConsoleCommand("set aow_maxtimecopsperteam 1");
+	if (!GetCVAR ("epsilon_maxtimecopsperteam")) SetCVAR("epsilon_maxtimecopsperteam", 1);
 	
 	// [Dusk] How many minutes until +1 Timed C4 can be purchased. (-1 to disable)
-	if (!GetCVAR ("aow_c4delay")) ConsoleCommand("set aow_c4delay 5");
+	if (!GetCVAR ("epsilon_c4delay")) SetCVAR("epsilon_c4delay", 5);
 	
 	//[SP] Time (in minutes) before sudden death.
 	// [Dusk] changed default to 45, -1 means immediate
-	if (GetCVAR ("aow_suddendeathtime") == 0)
-		ConsoleCommand("set aow_suddendeathtime 45");
+	if (GetCVAR ("epsilon_suddendeathtime") == 0)
+		SetCVAR("epsilon_suddendeathtime", 45);
 	
 	// [Dusk] Sudden death degeneration
-	if (GetCVAR ("aow_degeneration") <= 0)
-		ConsoleCommand("set aow_degeneration 0");
-	if (GetCVAR ("aow_degenerationinterval") <= 0)
-		ConsoleCommand("set aow_degenerationinterval 10");
+	if (GetCVAR ("epsilon_degeneration") <= 0)
+		SetCVAR("epsilon_degeneration", 0);
+	if (GetCVAR ("epsilon_degenerationinterval") <= 0)
+		SetCVAR("epsilon_degenerationinterval", 10);
 	
-	if (GetCVAR ("aow_tournamentmode") <= 0)
-		ConsoleCommand("set aow_tournamentmode 0");
-	if (GetCVAR ("aow_disablemechs") <= 0)
-		ConsoleCommand("set aow_disablemechs 0");
-	if (GetCVAR ("aow_surrendermode") <= 0)
-		ConsoleCommand("set aow_surrendermode 0");
+	if (GetCVAR ("epsilon_surrendermode") <= 0)
+        SetCVAR("epsilon_surrendermode", 0);
 	
 	// [Dusk] Tiberium amounts
-	if (!GetCVAR ("aow_tiberium_self"))
-		ConsoleCommand ("set aow_tiberium_self 225");
-	if (!GetCVAR ("aow_tiberium_other"))
-		ConsoleCommand ("set aow_tiberium_other 75");
-	if (!GetCVAR ("aow_tiberium_advperc"))
-		ConsoleCommand ("set aow_tiberium_advperc 300");
-	
-	// [Dusk] Alternate experience mode. In altexp, exp needs are lowered
-	// to a third, but experience is reset upon death.
-	if (GetCVAR ("aow_altexp") <= 0)
-		ConsoleCommand ("set aow_altexp 0");
+	if (!GetCVAR ("epsilon_tiberium_self"))
+		SetCVAR("epsilon_tiberium_self", 225);
+	if (!GetCVAR ("epsilon_tiberium_other"))
+		SetCVAR("epsilon_tiberium_other", 75);
+	if (!GetCVAR ("epsilon_tiberium_advperc"))
+		SetCVAR("epsilon_tiberium_advperc", 300);
 	
 	// [Dusk] {9/6/12} Maximum amount of credits a player can possess.
 	//     0 = infinite (well, as infinite as integers go..)
 	// [Dusk] {1/16/13} Cap at 30k because of networking issues. The HUD
 	// overflows otherwise. If this cap is to be increased, the networking
 	// will have to be increased to something.. hackier.
-	if (GetCVAR ("aow_creditcap") == 0 || GetCVAR ("aow_creditcap") > 30000)
-		ConsoleCommand ("set aow_creditcap 30000");
-	
-	// [Dusk] {9/10/12} Server config for absolutely no mechs
-	if (GetCVAR ("aow_nomechs") <= 0)
-		ConsoleCommand ("set aow_nomechs 0");
-	
-	// [Dusk] {9/10/12} Server config for no radar. Safety measure
-	// in case the radar breaks up and bad things happen.
-	if (GetCVAR ("aow_noradar") <= 0)
-		ConsoleCommand ("set aow_noradar 0");
-	
-	// [Dusk] {10/26/12} If true, the team switcher is disabled.
-	if (GetCVAR ("aow_noteamswitcher") <= 0)
-		ConsoleCommand ("set aow_noteamswitcher 0");
-	
-	// [Dusk] {10/27/12} If true, players do not get spawn invulnerability upon respawn
-	if (GetCVAR ("aow_nospawninvul") <= 0)
-		ConsoleCommand ("set aow_nospawninvul 0");
-	
-	// [Dusk] {11/2/12} Toggle disconnect donate (donation of all money upon disconnect)
-	if (GetCVAR ("aow_nodisconnectdonate") <= 0)
-		ConsoleCommand ("set aow_nodisconnectdonate 0");
+	if (GetCVAR ("epsilon_creditcap") == 0 || GetCVAR ("epsilon_creditcap") > 30000)
+        SetCVAR("epsilon_creditcap", 30000);
 	
 	// [Dusk] {11/19/12} How many seconds must the player be in game until they can donate?
-	if (GetCVAR ("aow_donatewait") == 0)
-		ConsoleCommand ("set aow_donatewait 0");
+	if (GetCVAR ("epsilon_donatewait") == 0)
+        SetCVAR("epsilon_donatewait", 0);
 	
 	// [Dusk] {1/16/13} How many seconds does a beacon take to detonate?
-	if (GetCVAR ("aow_nukecountdown") <= 0)
-		ConsoleCommand ("set aow_nukecountdown 60");
-	
-	// [Dusk] {2/16/13} Use more powerful nukes? These ones have half the health but
-	// come with a DEVASTATING blast that can easily obliterate MULTIPLE buildings.
-	if (GetCVar ("aow_nukesurpreme") <= 0)
-		ConsoleCommand ("set aow_nukesurpreme 0");
+	if (GetCVAR ("epsilon_nukecountdown") <= 0)
+        SetCVAR("epsilon_nukecountdown", 6);
 	
 	// TODO: get rid of these variables and replace with direct GetCVAR calls
-	CreditFragAward = GetCVAR("aow_creditfrag");
-	CreditAwardTime = GetCVAR("aow_bonustime");
-	CreditAwardAmount = GetCVAR("aow_bonusamount");
-	CreditRepairAmount = GetCVAR("aow_repairbonus");
-	TicketPool = GetCVAR("aow_ticketpool");
-	TournamentMode = GetCVAR("aow_tournamentmode");
-	BeaconPurchaseDelay = GetCVAR("aow_nukepurchasedelay") * 60;
-	PlasmaCooldownTime = GetCVAR("aow_plasmacooldown") * MINUTETICS;
-	MedicBonusNeed = GetCVAR ("aow_medicbonusneed");
+	CreditFragAward = GetCVAR("epsilon_creditfrag");
+	CreditAwardTime = GetCVAR("epsilon_bonustime");
+	CreditAwardAmount = GetCVAR("epsilon_bonusamount");
+	CreditRepairAmount = GetCVAR("epsilon_repairbonus");
+	TicketPool = GetCVAR("epsilon_ticketpool");
+	TournamentMode = GetCVAR("epsilon_tournamentmode");
+	BeaconPurchaseDelay = GetCVAR("epsilon_nukepurchasedelay") * 60;
+	PlasmaCooldownTime = GetCVAR("epsilon_plasmacooldown") * MINUTETICS;
+	MedicBonusNeed = GetCVAR ("epsilon_medicbonusneed");
 	
 	// ======================================================================
 	// [Dusk] Synchronized configurations!
-	SetConfig (CONFIG_ALTEXP, GetCVAR ("aow_altexp"));
-	SetConfig (CONFIG_STARTTICKETS, GetCVAR ("aow_tickets"));
-	SetConfig (CONFIG_MECHS, (!CheckMapFlags (MAPF_NOMECHS) && !GetCVAR ("aow_nomechs")));
+	SetConfig (CONFIG_ALTEXP, GetCVAR ("epsilon_altexp"));
+	SetConfig (CONFIG_STARTTICKETS, GetCVAR ("epsilon_tickets"));
+	SetConfig (CONFIG_MECHS, (!CheckMapFlags (MAPF_NOMECHS) && !GetCVAR ("epsilon_nomechs")));
 	SetConfig (CONFIG_TOURNAMENTMODE, TournamentMode);
-	SetConfig (CONFIG_MAXTIMECOPS, GetCVAR ("aow_maxtimecopsperteam"));
-	SetConfig (CONFIG_JUGGERNAUTLIMIT, GetCVAR ("aow_juggernautlimit"));
-	SetConfig (CONFIG_C4DELAY, GetCVAR ("aow_c4delay"));
-	SetConfig (CONFIG_NORADAR, GetCVAR ("aow_noradar"));
-	SetConfig (CONFIG_CREDITCAP, GetCVAR ("aow_creditcap"));
+	SetConfig (CONFIG_MAXTIMECOPS, GetCVAR ("epsilon_maxtimecopsperteam"));
+	SetConfig (CONFIG_JUGGERNAUTLIMIT, GetCVAR ("epsilon_juggernautlimit"));
+	SetConfig (CONFIG_C4DELAY, GetCVAR ("epsilon_c4delay"));
+	SetConfig (CONFIG_NORADAR, GetCVAR ("epsilon_noradar"));
+	SetConfig (CONFIG_CREDITCAP, GetCVAR ("epsilon_creditcap"));
 	
 	// [Dusk] {9/6/12} Are these needed in this function? They're updated upon research anyway.
 	SetConfig (CONFIG_ADVTURRETS_BLUE, AdvancedTurrets[TEAM_BLUE]);
@@ -364,7 +327,7 @@ script SC_PLAYERENTER ENTER {
 Script SC_PLAYERDISCONNECT (int gone) DISCONNECT {
 	// [Dusk] {11/2/12} Donate all credits to teammates. This
 	// has to be done before the block below which resets credits!
-	if (!GetCVar ("aow_nodisconnectdonate")) {
+	if (!GetCVar ("epsilon_nodisconnectdonate")) {
 		int team = PlayersTeam[gone];
 		int teammates = GetTeamProperty (team, TPROP_NumPlayers);
 		if (teammates > 0) {
@@ -490,7 +453,7 @@ script SC_CL_PLAYERDISCONNECT (int gone) DISCONNECT CLIENTSIDE {
 }
 
 function void InitPlayer (void) {
-	SetCredits (GetCVAR ("aow_startcredits"));
+	SetCredits (GetCVAR ("epsilon_startcredits"));
 	Experience[PlayerNumber()] = 0;
 	Surrender[PlayerNumber()] = False;
 	PlayersTeam[PlayerNumber()] = PlayerTeam();

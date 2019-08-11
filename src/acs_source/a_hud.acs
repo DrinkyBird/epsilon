@@ -74,7 +74,7 @@ script SC_HUDINTERPOLATOR (void) NET CLIENTSIDE {
 	
 	// If we want less effects, disable interpolation
 	// In this case, apply counters instantly and exit
-	if (GetCVar ("aow_cl_fx") < 0) {
+	if (GetCVar ("epsilon_cl_fx") < 0) {
 		HUDInterpolationCounter[0] = 0;
 		HUDInterpolationCounter[1] = 0;
 		DisplayStatusHUD ();
@@ -133,7 +133,7 @@ function void DisplayStatusHUD (void) {
 		return;
 	
 	// [Dusk] If we want no hud, clear it
-	if (GetCVar ("aow_cl_nohud")) {
+	if (GetCVar ("epsilon_cl_nohud")) {
 		ClearHudMessage (50);
 		ClearHudMessage (5000);
 		return;
@@ -216,7 +216,7 @@ function void TeamMessage (int msgtype, int x0, int x1) {
 // [Dusk] Script 982: Client recieves data from server about a team
 // message. Build the string from recieved information and add it to team log.
 script SC_CL_TeamLog (int msgtype, int x0, int x1) NET CLIENTSIDE {
-	if (GetCVar ("aow_cl_noteamlog"))
+	if (GetCVar ("epsilon_cl_noteamlog"))
 		terminate;
 	
 	str ec, elc, ac, alc;
@@ -298,7 +298,7 @@ script SC_CL_TeamLog (int msgtype, int x0, int x1) NET CLIENTSIDE {
 // =============================================================================
 // [Dusk] {9/15/12} CL_TeamMessage - Adds a new message into the team log.
 function void CL_TeamMessage (str incoming) {
-	if (GetCVar ("aow_cl_noteamlog"))
+	if (GetCVar ("epsilon_cl_noteamlog"))
 		return; // User doesn't want team intel, period.
 	
 	if (!PlayerInGame (consoleplayer) || PlayerTeam() != ConsoleTeam())

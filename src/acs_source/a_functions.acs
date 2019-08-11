@@ -675,7 +675,7 @@ function void RefillC4 (void) {
 
 // ============================================================================
 script SC_SuperNukeCheck (void) {
-	SetResultValue (GetCVar ("aow_nukesurpreme"));
+	SetResultValue (GetCVar ("epsilon_nukesurpreme"));
 }
 
 // ============================================================================
