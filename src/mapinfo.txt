@@ -178,9 +178,15 @@ map aow28 "Mir" {
 }
 
 map aow29 "Reactor" {
-	next = "aow01"
+	next = "aow30"
 	sky1 = "stsky5"
 	music = "d_aow07"
+}
+
+map aow30 "Mining Camp 2" {
+	next = "aow01"
+	sky1 = "stsky5"
+	music = "d_aow02"
 }
 
 skill Normal {

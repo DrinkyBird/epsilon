@@ -27,6 +27,8 @@ MAP LIST
   * AOW26 - Shattered Remains
   * AOW27 - Happy Fragging
   * AOW28 - Mir
+  * AOW29 - Reactor
+  * AOW30 - Mining Camp 2
     
 CHANGELOG
     Latest:
