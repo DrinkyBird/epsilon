@@ -33,6 +33,7 @@ MAP LIST
   * AOW32 - Blizzard
   * AOW33 - Goat's Hunting Ground
   * AOW34 - Surface Tension Reloaded
+  * AOW35 - Hoth
     
 CHANGELOG
     Latest:
