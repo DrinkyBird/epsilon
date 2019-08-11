@@ -90,6 +90,7 @@ OptionValue "AOWMaps"
     25,             "AOW26 - Shattered Remains"
     26,             "AOW27 - Happy Fragging"
     27,             "AOW28 - Mir"
+    28,             "AOW29 - Reactor"
 }
 
 OptionMenu "AOWPlayOffline"

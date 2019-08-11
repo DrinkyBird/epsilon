@@ -172,9 +172,15 @@ map aow27 "Happy Fragging" {
 }
 
 map aow28 "Mir" {
-	next = "aow01"
+	next = "aow29"
 	sky1 = "stsky5", 0.1
 	music = "d_aow20"
+}
+
+map aow29 "Reactor" {
+	next = "aow01"
+	sky1 = "stsky5"
+	music = "d_aow07"
 }
 
 skill Normal {
