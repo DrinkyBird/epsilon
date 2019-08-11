@@ -24,6 +24,7 @@ MAP LIST
   * AOW23 - Emerald Wasteland
   * AOW24 - Unending Pain
   * AOW25 - Defunct Commission
+  * AOW26 - Shattered Remains
     
 CHANGELOG
     Latest:

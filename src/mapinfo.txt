@@ -154,8 +154,14 @@ map aow24 "Unending Pain" {
 }
 
 map aow25 "Defunct Commission" {
-	next = "aow01"
+	next = "aow26"
 	sky1 = "skyfog0", 0.1
+	music = "d_aow25"
+}
+
+map aow26 "Shattered Remains" {
+	next = "aow01"
+	sky1 = "STSKY3"
 	music = "d_aow25"
 }
 

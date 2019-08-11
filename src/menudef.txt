@@ -87,6 +87,7 @@ OptionValue "AOWMaps"
     22,             "AOW23 - Emerald Wasteland"
     23,             "AOW24 - Unending Pain"
     24,             "AOW25 - Defunct Commission"
+    25,             "AOW26 - Shattered Remains"
 }
 
 OptionMenu "AOWPlayOffline"
