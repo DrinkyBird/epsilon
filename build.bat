@@ -27,20 +27,31 @@ IF NOT "%GIT_BRANCH%" == "master" (
 
 
 :: Generate gitcommit.py
-python "tools\gitcommit.py" "src\acs_source\a_gitcommit.acs"
+python "tools\gitcommit.py" "src\core\acs_source\a_gitcommit.acs"
 
 
 :: Compile ACS
-IF NOT EXIST "src\acs" MKDIR "src\acs"
-acc "src\acs_source\aow2scrp.acs" "src\acs\aow2scrp.o"
+IF NOT EXIST "src\core\acs" MKDIR "src\core\acs"
+acc "src\core\acs_source\aow2scrp.acs" "src\core\acs\aow2scrp.o"
 
-:: Create the actual PK3
-COPY readme.txt src\
+:: Create the actual PK3s
+COPY readme.txt src\core\
 
 IF "%1" == "/norev" SET GIT_NUMBER=dev
 SET OUTFILE=%OUTDIR%\aow2_epsilon%PK3BRANCH%-r%GIT_NUMBER%.pk3
+SET MUSFILE=%OUTDIR%\epsilon_music%PK3BRANCH%-r%GIT_NUMBER%.pk3
+
 IF EXIST "%OUTFILE%" DEL "%OUTFILE%"
+IF EXIST "%MUSFILE%" DEL "%MUSFILE%"
 
 PUSHD src
+
+PUSHD core
 7za a -tzip "%OUTFILE%" %COMPRESSION% *.* -r -xr!*.dbs -xr!*.backup1 -xr!*.backup2 -xr!*.backup3 -xr!*.bak
+POPD
+
+PUSHD music
+7za a -tzip "%MUSFILE%" %COMPRESSION% *.* -r -xr!*.dbs -xr!*.backup1 -xr!*.backup2 -xr!*.backup3 -xr!*.bak
+POPD
+
 POPD
