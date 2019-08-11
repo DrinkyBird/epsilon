@@ -13,15 +13,19 @@
 #define MAX_ADDON_KEYS 3
 
 #define MAX_ADDONS 7
-int AddOns[MAX_ADDONS][MAX_ADDON_KEYS] = {
-	{"+1 Armor", 250, ITEM_ArmorUp},
-	{"Tiberium Autorifle", 300, ITEM_TibRifleWeak},
-	{"Combustion Autorifle", 300, ITEM_CombustRifleWeak},
-	{"Artillery Cannon", 550, ITEM_Artillery},
-	{"Chainsaw", 250, ITEM_Chainsaw},
-	{"Plasma Cannon", 1500, ITEM_PlasmaCannon},
-	{"Superweapon Beacon", 1750, ITEM_Beacon}
-};
+int AddOns[MAX_ADDONS][MAX_ADDON_KEYS];
+
+function void AddAddon(int id, str name, int cost, int item)
+{	
+    if (id < 0 || id >= MAX_ADDONS) {
+		FatalError3f ("Invalid token %d for addon `%s` (should be between [0 - %d], did you forget to update MAX_ADDONS?)",
+            id, name, MAX_ADDONS - 1);
+	}
+    
+    AddOns[id][ADK_NAME] = name;
+    AddOns[id][ADK_COST] = cost;
+    AddOns[id][ADK_ITEM] = item;
+}
 
 // =============================================================================
 // [Dusk] Adds a class type. Holy SHIT what a long ass prototype.

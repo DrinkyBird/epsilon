@@ -289,6 +289,8 @@ int Mechs[NUM_MECHS][NUM_MECH_KEYS] = {
  */
 
 function void InitClasses (void) {
+    int i = 0;
+    
 	/* AddClass (token, "Name of class", cost, speed, dependency,
 		armor, armor_mod, frags, c4, enhanced, flags,
 		item0, item1, item2, item3, item4, item5);
@@ -495,7 +497,15 @@ function void InitClasses (void) {
 	AddItem(ITEM_CombustRifle, "Combustion Autorifle", "CombustionAutorifle", "FA21CalAmmo", "", 1, 120, 0, 125);
 	AddItem(ITEM_CombustRifleWeak, "Combustion Autorifle (weak)", "CombustionAutorifleWeak", "FA21CalAmmo", "", 1, 120, 0, 75);
 	AddItem(ITEM_SniperRifleWeak, "Sniper Rifle (weak)", "SniperRifleWeak", "SniperAmmo", "", 1, 40, 0, 125);
-	AddItem(ITEM_CryoBow, "Chrono Bow", "ChronoBow", "ChronoBolt", "", 1, 25, 0, 400);
+	AddItem(ITEM_CryoBow, "Chrono Bow", "ChronoBow", "ChronoBolt", "", 1, 25, 0, 400);	
+    
+    AddAddon(i++, "+1 Armor", 250, ITEM_ArmorUp);
+	AddAddon(i++, "Tiberium Autorifle", 300, ITEM_TibRifleWeak);
+	AddAddon(i++, "Combustion Autorifle", 300, ITEM_CombustRifleWeak);
+	AddAddon(i++, "Artillery Cannon", 550, ITEM_Artillery);
+	AddAddon(i++, "Chainsaw", 250, ITEM_Chainsaw);
+	AddAddon(i++, "Plasma Cannon", 1500, ITEM_PlasmaCannon);
+	AddAddon(i++, "Superweapon Beacon", 1750, ITEM_Beacon);
         
     // For some reason, mech and research ints get broken, so we have to define them here
     // Research upgrades
