@@ -166,9 +166,15 @@ map aow26 "Shattered Remains" {
 }
 
 map aow27 "Happy Fragging" {
-	next = "aow01"
+	next = "aow28"
 	sky1 = "stsky14"
 	music = "d_aow03"
+}
+
+map aow28 "Mir" {
+	next = "aow01"
+	sky1 = "stsky5", 0.1
+	music = "d_aow20"
 }
 
 skill Normal {

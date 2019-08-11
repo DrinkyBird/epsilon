@@ -26,6 +26,7 @@ MAP LIST
   * AOW25 - Defunct Commission
   * AOW26 - Shattered Remains
   * AOW27 - Happy Fragging
+  * AOW28 - Mir
     
 CHANGELOG
     Latest:
