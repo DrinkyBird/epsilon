@@ -56,6 +56,8 @@
 #define HM_4TICS 7489 // (4/35) << 16
 #define HM_5TICS 9362 // (5/35) << 16
 
+#define HU_CLIENTWELCOME 1220
+
 // ============================================================================
 // Building healths.. should use spawn healths instead of 
 #define HP_BARRACKS 18000

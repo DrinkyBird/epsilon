@@ -207,6 +207,12 @@ script SC_MENU (int player) CLIENTSIDE {
 	InitMenu ();
 	
 	LocalAmbientSound ("menu/prompt", 127);
+    
+    // Hide welcome message
+    for (int i = 0; i < 10; i++)
+    {
+        ClearHudMessage(HU_CLIENTWELCOME + i);
+    }
 	
 	delay (1);
 	DrawMenu ();
