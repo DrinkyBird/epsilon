@@ -160,9 +160,15 @@ map aow25 "Defunct Commission" {
 }
 
 map aow26 "Shattered Remains" {
-	next = "aow01"
+	next = "aow27"
 	sky1 = "STSKY3"
 	music = "d_aow25"
+}
+
+map aow27 "Happy Fragging" {
+	next = "aow01"
+	sky1 = "stsky14"
+	music = "d_aow03"
 }
 
 skill Normal {

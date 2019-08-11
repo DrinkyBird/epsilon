@@ -88,6 +88,7 @@ OptionValue "AOWMaps"
     23,             "AOW24 - Unending Pain"
     24,             "AOW25 - Defunct Commission"
     25,             "AOW26 - Shattered Remains"
+    26,             "AOW27 - Happy Fragging"
 }
 
 OptionMenu "AOWPlayOffline"

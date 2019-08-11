@@ -25,6 +25,7 @@ MAP LIST
   * AOW24 - Unending Pain
   * AOW25 - Defunct Commission
   * AOW26 - Shattered Remains
+  * AOW27 - Happy Fragging
     
 CHANGELOG
     Latest:
