@@ -94,6 +94,7 @@ OptionValue "AOWMaps"
     29,             "AOW30 - Mining Camp 2"
     30,             "AOW31 - All Out War Remake"
     31,             "AOW32 - Blizzard"
+    32,             "AOW33 - Goat's Hunting Ground"
 }
 
 OptionMenu "AOWPlayOffline"

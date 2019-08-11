@@ -198,9 +198,16 @@ map aow31 "All Out War Remake"
 
 map aow32 "Blizzard"
 {
-	next = "aow01"
+	next = "aow32"
 	sky1 = "stsky14"
 	music = "d_aow04"
+}
+
+map aow33 "Goat's Hunting Ground"
+{
+	next = "aow01"
+	sky1 = "stsky14"
+	music = "d_aow20"
 }
 
 skill Normal {

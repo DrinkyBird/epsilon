@@ -31,6 +31,7 @@ MAP LIST
   * AOW30 - Mining Camp 2
   * AOW31 - All Out War Remake
   * AOW32 - Blizzard
+  * AOW33 - Goat's Hunting Ground
     
 CHANGELOG
     Latest:
