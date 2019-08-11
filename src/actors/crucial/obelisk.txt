@@ -252,7 +252,7 @@ actor ObeliskShotRed : FastProjectile {
 	Speed 2000
 	Damage (250)
 	DamageType "Explosion"
-	Translation "192:207=228:246"
+	Translation "192:207=176:191"
 	states {
 	Spawn:
 		TNT1 A -1

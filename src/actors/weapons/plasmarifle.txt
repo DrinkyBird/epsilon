@@ -135,7 +135,7 @@ actor PlasmaShotBlue {
 }
 
 Actor PlasmaShotRed : PlasmaShotBlue {
-	Translation "192:207=224:246"
+	Translation "192:207=176:191"
 	States {
 		PLSR A -1 Bright
 		stop

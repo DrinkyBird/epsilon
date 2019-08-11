@@ -154,7 +154,7 @@ actor TimedC4Count : Inventory {inventory.maxamount 4}
 actor EnhancedTimedC4 : Inventory {}
 
 actor TimedC4ThrownE : TimedC4Thrown {
-	Translation "1:32=16:32", "112:127=176:191"
+	Translation "112:127=176:191"
 	health 500
 	states {
 	Death:
@@ -186,7 +186,7 @@ actor TimedC4ArmedE : TimedC4Armed {
 }
 
 actor TimedC4ThrownEBlue : TimedC4ThrownBlue {
-	Translation "1:39=16:39", "112:127=192:207"
+	Translation "112:127=192:207"
 	Health 500
 	States {
 	Death:

@@ -175,7 +175,7 @@ actor LaserPuff : HHBulletPuff {
 	-ALLOWPARTICLES +PUFFONACTORS
 	Scale 0.5
 	DamageType "Energy"
-	Translation "192:207=224:247"
+	Translation "192:207=176:191"
 	RenderStyle Add
 	Alpha 0.75
 	VSpeed 0
