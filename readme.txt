@@ -29,6 +29,7 @@ MAP LIST
   * AOW28 - Mir
   * AOW29 - Reactor
   * AOW30 - Mining Camp 2
+  * AOW31 - All Out War Remake
     
 CHANGELOG
     Latest:

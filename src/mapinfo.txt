@@ -184,9 +184,16 @@ map aow29 "Reactor" {
 }
 
 map aow30 "Mining Camp 2" {
-	next = "aow01"
+	next = "aow31"
 	sky1 = "stsky5"
 	music = "d_aow02"
+}
+
+map aow31 "All Out War Remake"
+{
+	next = "aow01"
+	sky1 = "stsky14"
+	music = "d_aow03"
 }
 
 skill Normal {
