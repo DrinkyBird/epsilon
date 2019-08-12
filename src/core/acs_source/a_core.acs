@@ -378,26 +378,28 @@ script SC_CL_PLAYERENTER ENTER CLIENTSIDE {
 	
 	// START UP MESSAGES
 	int y = 0.3;
+    
+    LogBar1();
 	
 	SetFont ("BIGFONT");
-	HudMessage(s:"Welcome to \cFAll Out War 2!";
+	HudMessageAndLogFadeInOut(StrParam(s:"Welcome to \cFAll Out War 2!"),
 		HUDMSG_FADEINOUT|HUDMSG_LOG, HU_CLIENTWELCOME + 0, CR_WHITE, 0.5, y, 7.0, 0.5, 1.0);
 	y += 0.10;
 	
 	SetHUDFont ();
 	
-	HUDMessage (s:"You are playing \cfThe Epsilon Project\cj ", s:VersionString ();
+	HudMessageAndLogFadeInOut (StrParam(s:"You are playing \cfThe Epsilon Project\cj ", s:VersionString ()),
 		HUDMSG_FADEINOUT|HUDMSG_LOG, HU_CLIENTWELCOME + 1, CR_WHITE, 0.5, y, 7.0, 0.5, 1.0);
 	y += SMALLSPACE;
 	
-	HudMessage (s:"\nSee \cFOptions \cN-> \cFCustomise Controls\c- for keybinds!";
+	HudMessageAndLogFadeInOut (StrParam(s:"\nSee \cFOptions \cN-> \cFCustomise Controls\c- for keybinds!"),
 		HUDMSG_FADEINOUT|HUDMSG_LOG, HU_CLIENTWELCOME + 2, CR_WHITE, 0.5, y, 7.0, 0.5, 1.0);
 	y += SMALLSPACE;
 	
 	if (GetConfig (CONFIG_ALTEXP)) {
-		HudMessage (s:"This server uses alternate experience mode.\n",
+		HudMessageAndLogFadeInOut (StrParam(s:"This server uses alternate experience mode.\n",
 			s:"Rank needs are down to a third",
-			s:"\cGbut you lose it all when you die!";
+			s:"\cGbut you lose it all when you die!"),
 			HUDMSG_FADEINOUT|HUDMSG_LOG, HU_CLIENTWELCOME + 3, CR_GOLD, -0.25, 0.6, 12.0, 0.5, 1.0);
 		y += 0.25;
 	}
@@ -405,16 +407,17 @@ script SC_CL_PLAYERENTER ENTER CLIENTSIDE {
 	if (VERSION_MINOR > 50) {
         y += SMALLSPACE * 2; // Weird positioning bug
 		// This is running a beta version
-		HudMessage (s:"This is a beta release, bear in mind that\n",
-			s:"everything might not be working properly!";
+		HudMessageAndLogFadeInOut (StrParam(s:"This is a beta release, bear in mind that\n",
+			s:"everything might not be working properly!"),
 			HUDMSG_FADEINOUT|HUDMSG_LOG, HU_CLIENTWELCOME + 4, CR_GOLD, 0.5, y, 7.0, 0.5, 1.0);
 		y += 0.25;
 	}
+    
+    LogBar3();
 	
 	delay (20);
 	
-	if (netstate == NETSTATE_Client)
-		LocalAmbientSound ("voltlock/welcome", 127);
+    LocalAmbientSound ("voltlock/welcome", 127);
 	
 	// =========================================================================
 	// [Dusk] We joined the game - refresh the HUD

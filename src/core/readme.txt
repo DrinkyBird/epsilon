@@ -45,6 +45,8 @@ CHANGELOG
       * CVARs have been moved to CVARINFO, and have been renamed from aow_ to
         epsilon_ to avoid conflicts
       * Added epsilon_cl_fov, which allows changing player FOV between 70-120
+      * Added epsilon_cl_menubackground, which draws a transparent background
+        behind menus to increase readability
       * Maps
         * AOW02
           * Fixed a myriad of texture alignment issues

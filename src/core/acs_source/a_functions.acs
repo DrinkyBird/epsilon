@@ -714,3 +714,38 @@ function bool TeamHasBuilding(int team, int building)
     
     return false;
 }
+
+// ============================================================================
+function void HudMessageAndLogFadeOut(str text, int flags, int id, int color, int x, int y, int holdTime, int fadetime)
+{
+    flags |= HUDMSG_FADEOUT;
+    if (flags & HUDMSG_LOG)
+        flags &= ~HUDMSG_LOG;
+    
+    HudMessage(s: text; flags, id, color, x, y, holdTime, fadetime);
+    Log(s: text);
+}
+
+function void HudMessageAndLogFadeInOut(str text, int flags, int id, int color, int x, int y, int holdTime, int inTime, int outTime)
+{
+    flags |= HUDMSG_FADEOUT;
+    if (flags & HUDMSG_LOG)
+        flags &= ~HUDMSG_LOG;
+    
+    HudMessage(s: text; flags, id, color, x, y, holdTime, inTime, outTime);
+    Log(s: text);
+}
+
+// ============================================================================
+function void LogBar1(void)
+{
+    Log(s: "\cG\x1D\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1F\cB");
+}
+function void LogBar2(void)
+{
+    Log(s: "\cG\x1D\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1F\cD");
+}
+function void LogBar3(void)
+{
+    Log(s: "\cG\x1D\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1F\c-");
+}
