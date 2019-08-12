@@ -392,7 +392,7 @@ script SC_CL_PLAYERENTER ENTER CLIENTSIDE {
 		HUDMSG_FADEINOUT|HUDMSG_LOG, HU_CLIENTWELCOME + 1, CR_WHITE, 0.5, y, 7.0, 0.5, 1.0);
 	y += SMALLSPACE;
 	
-	HudMessageAndLogFadeInOut (StrParam(s:"\nSee \cFOptions \cN-> \cFCustomise Controls\c- for keybinds!"),
+	HudMessageAndLogFadeInOut (StrParam(s:"\nSee \cFOptions \cN-> \cFCustomise Controls\c- for keybinds!\n"),
 		HUDMSG_FADEINOUT|HUDMSG_LOG, HU_CLIENTWELCOME + 2, CR_WHITE, 0.5, y, 7.0, 0.5, 1.0);
 	y += SMALLSPACE;
 	
