@@ -129,6 +129,9 @@ user int epsilon_cl_donateamount = 100;
 // The base game FOV
 user int epsilon_cl_fov = 90;
 
+// Display a transparent background behind menus, for visibility
+user bool epsilon_cl_menubackground = true;
+
 ///////////////////////////////////////////////////////////////////////////////
 // Client MENUDEF stuff
 user noarchive int __epsilon_cl_menutomap = 0;
