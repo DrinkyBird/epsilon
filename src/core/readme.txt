@@ -58,3 +58,5 @@ CHANGELOG
           * Added a back passage to both bases to make it easier to infiltrate
         * AOW09
           * Better quality music
+      * Weapons
+        * Weakened submachine gun slightly
