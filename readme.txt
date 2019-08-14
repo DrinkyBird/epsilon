@@ -57,6 +57,9 @@ CHANGELOG
           * Adjusted the slopes on the outskirts of bases
         * AOW04
           * Added a back passage to both bases to make it easier to infiltrate
+        * AOW07
+          * Added more dynamic lights
+          * A few minor texture changes
         * AOW09
           * Better quality music
       * Weapons
