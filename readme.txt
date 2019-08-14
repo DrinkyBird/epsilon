@@ -54,6 +54,7 @@ CHANGELOG
           * Some aesthetic texture choice changes
           * Moved the powerup crate to a platform in the middle of the central
             area
+          * Adjusted the slopes on the outskirts of bases
         * AOW04
           * Added a back passage to both bases to make it easier to infiltrate
         * AOW09
