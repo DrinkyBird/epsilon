@@ -51,7 +51,6 @@
 #include "actors/weapons/ammoinfantry.txt"
 #include "actors/weapons/chainsaw.txt"
 #include "actors/weapons/chemsprayer.txt"
-#include "actors/weapons/cryobow.txt"
 #include "actors/weapons/doubleshotgun.txt"
 #include "actors/weapons/fists.txt"
 #include "actors/crucial/berserk.txt"

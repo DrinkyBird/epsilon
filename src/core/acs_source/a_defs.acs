@@ -445,11 +445,6 @@ function void InitClasses (void) {
 		1, ARMOD_FIRE,
 		2, 1, false, 0,
 		ITEM_COMBUSTRIFLE, 0, 0, 0, 0, 0);
-		
-	AddClass (CLASS_ChronoArcher, "Chrono Archer", 1500, 0.9, DEP_CENTRE,
-		2, ARMOD_NOCHANGE,
-		4, 2, true, CF_Warning|CF_CantPilot,
-		ITEM_CRYOBOW, 0, 0, 0, 0, 0);
         
     AddItem(ITEM_None, "", "", "", "", 0, 0, 0, 0); // Mandatory empty entry for no item
 	AddItem(ITEM_Handgun, "Handgun", "Handgun", "NewClipAmmo", "", 1, 400, 0, 5);
@@ -497,7 +492,6 @@ function void InitClasses (void) {
 	AddItem(ITEM_CombustRifle, "Combustion Autorifle", "CombustionAutorifle", "FA21CalAmmo", "", 1, 120, 0, 125);
 	AddItem(ITEM_CombustRifleWeak, "Combustion Autorifle (weak)", "CombustionAutorifleWeak", "FA21CalAmmo", "", 1, 120, 0, 75);
 	AddItem(ITEM_SniperRifleWeak, "Sniper Rifle (weak)", "SniperRifleWeak", "SniperAmmo", "", 1, 40, 0, 125);
-	AddItem(ITEM_CryoBow, "Chrono Bow", "ChronoBow", "ChronoBolt", "", 1, 25, 0, 400);	
     
     AddAddon(i++, "+1 Armor", 250, ITEM_ArmorUp);
 	AddAddon(i++, "Tiberium Autorifle", 300, ITEM_TibRifleWeak);

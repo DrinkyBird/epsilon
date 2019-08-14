@@ -62,5 +62,7 @@ CHANGELOG
           * A few minor texture changes
         * AOW09
           * Better quality music
+      * Classes
+        * Removed Chrono Archer. It was just bad...
       * Weapons
         * Weakened submachine gun slightly

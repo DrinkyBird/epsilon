@@ -453,9 +453,8 @@
 #libdefine CLASS_Harvester				27
 #libdefine CLASS_AdvHarvester			28
 #libdefine CLASS_CombustionGunner		29
-#libdefine CLASS_ChronoArcher			30
 // ----
-#libdefine NUMCLASSES					31
+#libdefine NUMCLASSES					30
 
 // Item identifiers
 #define ITEM_None				0
@@ -504,9 +503,8 @@
 #define ITEM_CombustRifle		40
 #define ITEM_CombustRifleWeak	41
 #define ITEM_SniperRifleWeak	42
-#define ITEM_CryoBow			43
 // -- Total of items
-#define MAX_ITEMS				44 // Amount of items in the above list
+#define MAX_ITEMS				43 // Amount of items in the above list
 
 // ============================================================================
 // Miscallenous stuff
