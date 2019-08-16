@@ -9,6 +9,7 @@ actor BombPack : AOWWeapon {
 	Weapon.AmmoGive 1
 	Weapon.PreferredSkin "MarineBackpack"
 	DropItem "Nothing"
+    Tag "Bomb Pack"
 	States {
 	Ready:
 		SBOM A 0 A_ChangeFlag ("PICKUP", 0)

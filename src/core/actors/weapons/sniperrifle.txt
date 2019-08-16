@@ -11,6 +11,7 @@ actor SniperRifle : AOWWeapon {
 	inventory.pickupmessage "You got the sniper rifle!"
 	+NOEXTREMEDEATH
 	Weapon.PreferredSkin "MarineSniper"
+	tag "Sniper Rifle"
 	states {
 	Ready:
 		SNIE AA 0 A_JumpIfInventory ("IsZoomed", 1, "ReadyZoomed")

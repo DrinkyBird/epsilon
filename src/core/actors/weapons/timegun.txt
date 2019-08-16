@@ -12,6 +12,7 @@ actor TimeGun : AOWWeapon {
 	Weapon.Kickback 25
 	Weapon.PreferredSkin "MarineTimegun"
 	AttackSound "mech/gauss"
+    Tag "Time Gun"
 
 	States {
 	Spawn:

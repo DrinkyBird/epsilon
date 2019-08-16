@@ -23,6 +23,7 @@ actor SelfHeal : AOWWeapon {
 	+CHEATNOTWEAPON
 	weapon.preferredskin "MarineFist"
 	dropitem "SpentSyringe", 255
+    Tag "Self-Heal"
 	states {
 	Deselect:
 		SYRU AA 0 A_JumpIfInventory ("SelfHealItem", 1, "DeselectFull")

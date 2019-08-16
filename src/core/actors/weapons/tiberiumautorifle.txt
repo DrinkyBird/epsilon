@@ -13,6 +13,7 @@ actor TiberiumAutorifleWeak : AOWWeapon 21084 {
 	weapon.ammogive2 20
 	obituary "%o was skewered by %k's Tiberium Autorifle."
 	Weapon.PreferredSkin "MarineMachineGun"
+    tag "Tiberium Autorifle"
 	states
 	{
 	Ready:
@@ -115,6 +116,7 @@ actor TiberiumAutorifle : TiberiumAutorifleWeak {
 	weapon.ammouse 1
 	Dropitem "TiberiumAutorifleWeak"
 	weapon.ammogive 3
+    tag "Tiberium Autorifle"
 	states {
 	Ready:
 		E21C A 0

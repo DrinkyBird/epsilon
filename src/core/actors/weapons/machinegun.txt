@@ -11,7 +11,7 @@ actor MachineGun : AOWWeapon replaces Chaingun 21044 {
 	Inventory.PickupMessage "You got the machine gun!"
 	Weapon.PreferredSkin "MarineMachineGun"
 	AttackSound "ak47/fire"
-	Tag "Machinegun"
+	Tag "Machine Gun"
 	states {
 	Ready:
 		AK47 A 1 A_WeaponReady
