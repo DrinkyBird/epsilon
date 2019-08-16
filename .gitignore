@@ -13,5 +13,5 @@ out/
 
 # Generated files
 a_gitcommit.acs
-
+acsconstants.txt
 src/core/readme.txt

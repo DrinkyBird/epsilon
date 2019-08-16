@@ -30,6 +30,10 @@ IF NOT "%GIT_BRANCH%" == "master" (
 python "tools\gitcommit.py" "src\core\acs_source\a_gitcommit.acs"
 
 
+:: Generate acsconstants.txt
+"tools\acsconstants.exe" "src\core\acs_source\aow2scrp.acs" "src\core\actors\acsconstants.txt"
+
+
 :: Compile ACS
 IF NOT EXIST "src\core\acs" MKDIR "src\core\acs"
 acc "src\core\acs_source\aow2scrp.acs" "src\core\acs\aow2scrp.o"
