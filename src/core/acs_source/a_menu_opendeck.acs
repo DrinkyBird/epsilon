@@ -9,7 +9,7 @@ int OpenDeckMenuInit = 0;
 script 716 (void) CLIENTSIDE {
 	MenuName = "CHOOSE YOUR CRATE";
 	
-	MenuCategories[0] = "ARMOR";
+	MenuCategories[0] = "ARMOUR";
 	MenuCategories[1] = "POWERUP";
 	MenuCategories[2] = "UPGRADE";
 	MenuCategories[3] = "WEAPON";

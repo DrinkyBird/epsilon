@@ -211,7 +211,7 @@ int Mechs[NUM_MECHS][NUM_MECH_KEYS] = {
 		This metal-tearing grinder turns mechs\n
 		to metal bits before they can even spell\n
 		its name. It is also effective on buildings.\n
-		However, its slow speed and anti-armor\n
+		However, its slow speed and anti-armour\n
 		weapons make it a sitting duck for infantry.\n
 		\n
 		\n
@@ -493,7 +493,7 @@ function void InitClasses (void) {
 	AddItem(ITEM_CombustRifleWeak, "Combustion Autorifle (weak)", "CombustionAutorifleWeak", "FA21CalAmmo", "", 1, 120, 0, 75);
 	AddItem(ITEM_SniperRifleWeak, "Sniper Rifle (weak)", "SniperRifleWeak", "SniperAmmo", "", 1, 40, 0, 125);
     
-    AddAddon(i++, "+1 Armor", 250, ITEM_ArmorUp);
+    AddAddon(i++, "+1 Armour", 250, ITEM_ArmorUp);
 	AddAddon(i++, "Tiberium Autorifle", 300, ITEM_TibRifleWeak);
 	AddAddon(i++, "Combustion Autorifle", 300, ITEM_CombustRifleWeak);
 	AddAddon(i++, "Artillery Cannon", 550, ITEM_Artillery);

@@ -102,7 +102,7 @@ function void CR_InitCrateList (void) {
 	// token, name, color, weight,
 	// type, flags
 	
-	AddCrateType (CRATE_ARMORUP,		"armor upgrade",		"F", 25, CRT_Armor,		(0));
+	AddCrateType (CRATE_ARMORUP,		"armour upgrade",		"F", 25, CRT_Armor,		(0));
 	AddCrateType (CRATE_BASEMIRACLE,	"base miracle",			"D",  5, CRT_Upgrade,	(CRF_Announce | CRF_NoDeck));
 	AddCrateType (CRATE_CHEMARMOR,		"chemical proof",		"D", 10, CRT_Armor,		(0));
 	AddCrateType (CRATE_FIREPOWER,		"firepower upgrade",	"F", 10, CRT_Upgrade,	(0));

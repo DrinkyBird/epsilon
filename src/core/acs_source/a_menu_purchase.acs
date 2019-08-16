@@ -88,7 +88,7 @@ script 703 (int m0, int m1, int y) CLIENTSIDE {
 		str classinfo;
 		classinfo = strparam (s:"Speed: \cD", d:(Classes[id][CK_SPEED] * 100) >> 16,
 			s:"\cQ%\nPrice: \cQ$\cD", d:Classes[id][CK_COST],
-			s:"\nArmor: \cDGrade ", s:ArmorColor (armor), d:armor, s:" ", s:ArModColor (armod), s:ArModName (armod));
+			s:"\nArmour: \cDGrade ", s:ArmorColor (armor), d:armor, s:" ", s:ArModColor (armod), s:ArModName (armod));
 			
 		// Unless we're a support class, write down strengths and weaknesses
 		if (!(Classes[id][CK_FLAGS] & CF_SUPPORT)) {

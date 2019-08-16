@@ -3,7 +3,7 @@
 
 actor FireArmor : InventoryItem {
 	+NOGRAVITY +NOCLIP
-	tag "Fire Proof Armor"
+	tag "Fire Proof Armour"
 	inventory.pickupmessage "Picked up fireproof armor!"
 	inventory.pickupsound "misc/armor_pkup"
 	inventory.icon "arm3icon"
@@ -36,7 +36,7 @@ actor FireArmor : InventoryItem {
 }
 
 actor ChemicalArmor : FireArmor {
-	tag "Chemical Proof Armor"
+	tag "Chemical Proof Armour"
 	inventory.pickupmessage "Picked up chemproof armor!"
 	inventory.icon "arm1icon"
 	states {
@@ -64,7 +64,7 @@ actor ChemicalArmor : FireArmor {
 }
 
 actor EnergyArmor : FireArmor {
-	tag "Energy-Resistant Armor"
+	tag "Energy-Resistant Armour"
 	inventory.pickupmessage "Picked up energy-resistant armor!"
 	inventory.icon "arm2icon"
 	states {
@@ -88,7 +88,7 @@ actor EnergyArmor : FireArmor {
 // MY ARMOR IS EXPLOSIONS
 // RUN
 actor ExplosionArmor : FireArmor {
-	tag "Explosive-Resistant Armor"
+	tag "Explosive-Resistant Armour"
 	inventory.pickupmessage "Picked up explosive-resistant armor!"
 	inventory.icon "arm4icon"
 	states {

@@ -64,9 +64,9 @@ function void InitParticleFuserData (void) {
 		"A standard issue military rifle equipped\nwith rifle grenades.");
 	PF_AddDef (1, 3, PF_MACHINEGUN, "Machine gun", 0, 0, 6.0,
 		"A standard issue machine gun capable\nof tap firing.");
-	PF_AddDef (1, 4, PF_FIREPROOF, "Fireproof armor", 100, 0, 9.0,
+	PF_AddDef (1, 4, PF_FIREPROOF, "Fireproof armour", 100, 0, 9.0,
 		"Gives the user total immunity against\nfire-based attacks.");
-	PF_AddDef (1, 5, PF_CHEMPROOF, "Chemicalproof armor", 100, 0, 9.0,
+	PF_AddDef (1, 5, PF_CHEMPROOF, "Chemicalproof armour", 100, 0, 9.0,
 		"Gives the user total immunity against\nchemical-based attacks.");
 	PF_AddDef (1, 6, PF_RAVEN, "Raven mech", 1400, 2000, 18.0,
 		"A basic, fast mech armed with LRM-5:s\nand an AC2 rotary gun.");
