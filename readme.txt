@@ -48,6 +48,7 @@ CHANGELOG
       * Added epsilon_cl_menubackground, which draws a transparent background
         behind menus to increase readability
       * Updated TITLEPIC and INTERPIC
+      * Added back developer mode
       * Added tags to weapons that didn't already have them
       * Maps
         * AOW02

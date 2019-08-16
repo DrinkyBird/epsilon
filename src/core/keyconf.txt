@@ -73,6 +73,9 @@ alias forceblue "puke 941 %1 1"
 alias forcered "puke 941 %1 2"
 alias teamshuffle "puke 962"
 
+// Developer mode
+alias activatedeveloper "puke -917"
+
 alias tournamentmode "set epsilon_tournamentmode 1;set epsilon_maxcannonsperteam 1;set aow_jugglimit 1;set epsilon_suddendeathtime 30;set epsilon_tickets 40;echo Tournament set-up complete - please restart the map."
 
 // =============================================================================

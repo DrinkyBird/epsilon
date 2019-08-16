@@ -848,6 +848,11 @@ script SC_UTILITYHUD (int clear) {
 // set and 0 is returned.
 function int PF_CheckLimits (int def) {
 	int ct = PlayerTeam ();
+    
+    if (Developer)
+    {
+        return 1;
+    }
 	
 	if (g_ParticleFuserData[def][UK_COST] > GetCredits ()) {
 		g_Error = "You need more credits!";

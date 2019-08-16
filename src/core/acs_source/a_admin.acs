@@ -262,3 +262,44 @@ script SC_ADMIN_CLIENT (int Arg1, int Arg2, int Arg3) NET
 		Log(s:"Unknown action!");
 	}
 }
+
+// ERROR: SCRIPT NOT FOUND >:V
+// developer mode: activates all researches, knocks out money limits... 
+// basically I got tired of going past limits when testing stuff.
+
+script SC_DEVELOPERMODE (void) {
+	// This is a dangerous script. RCON must call it twice, if it ever does that...
+	if (Timer() > DeveloperSafetyLock) {
+		DeveloperSafetyLock = Timer() + 10*35;
+		Log (s:"Call activatedeveloper again to activate deverloper mode.");
+		Log (s:"WARNING: THIS WILL MAKE ALL PLAYERS GAMEMASTER! DO NOT USE IN PUBLIC GAMES!");
+		terminate;
+	}
+	
+	Developer = true;
+	
+	SetFont ("BIGFONT");
+	HudMessageBold (s:"DEVELOPER MODE ACTIVATED\n\nALL PLAYERS ARE NOW GAMEMASTERS";
+		HUDMSG_FADEOUT, 1800+PlayerNumber(), CR_BLUE, 0.5, 0.45, 2.0, 1.0);
+	Log(s:"*** \caWARNING!\c- Developer mode active. ALL players are now gamemasters.");
+	
+	for (int i = 0; i <= 1; i++) {
+		EnhancedRefining[i] = true;
+		AdvancedMechs[i] = true;
+		AdvancedTurrets[i] = true;
+		MoreTurrets[i] = true;
+		MaxTurrets[i] = 1000000;
+	}
+	
+	// disable limits and delays
+	ConsoleCommand ("set epsilon_c4limit -1");
+	ConsoleCommand ("set epsilon_guardianlimit 32");
+	ConsoleCommand ("set epsilon_teamstaytime -1");
+	ConsoleCommand ("set epsilon_maxcannonsperteam -1");
+	ConsoleCommand ("set epsilon_plasmacooldown -1");
+	ConsoleCommand ("set epsilon_beaconpurchasedelay -1");
+	ConsoleCommand ("set epsilon_maxtimecopsperteam -1");
+	
+	// make everybody gamemaster, but don't morph them
+	for (i = 0; i <= 31; i++) IsAdmin[i] = true;
+}
