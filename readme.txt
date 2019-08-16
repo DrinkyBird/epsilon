@@ -47,6 +47,7 @@ CHANGELOG
       * Added epsilon_cl_fov, which allows changing player FOV between 70-120
       * Added epsilon_cl_menubackground, which draws a transparent background
         behind menus to increase readability
+      * Updated TITLEPIC and INTERPIC
       * Maps
         * AOW02
           * Fixed a myriad of texture alignment issues
