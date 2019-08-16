@@ -66,5 +66,7 @@ CHANGELOG
           * Better quality music
       * Classes
         * Removed Chrono Archer. It was just bad...
+        * Shotgunner: speed 0.8 -> 0.9
+        * Technician: cost 200 -> 250
       * Weapons
         * Weakened submachine gun slightly
