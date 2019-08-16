@@ -2,7 +2,7 @@
 // MENU INIT
 script 700 (void) CLIENTSIDE {
 	// Top-level name
-	MenuName = "UTILITY GUN";
+	MenuName = "PARTICLE FUSER";
 	
 	// Name the categories
 	MenuCategories[0] = "CACHES";
