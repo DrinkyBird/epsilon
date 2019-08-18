@@ -52,6 +52,12 @@ function str WF_CheckAvailability (int mech) {
 	if (!CanAfford (Mechs[mech][MK_COST]))
 		return "You need more credits!";
 	
+	if (Timer() < MechPurchaseCooldown[PlayerNumber()])
+	{
+		int time = (MechPurchaseCooldown[PlayerNumber()] - Timer()) / 35;
+		return StrParam(s: "You must wait ", d: time, s: " seconds before purchasing another mech");
+	}
+	
 	return 0;
 }
 
@@ -91,6 +97,7 @@ script SC_MECHMORPH (int mech) {
 			SetResultValue ("Cannot teleport into the hanger!");
 	}
 	
+	
 	// At this point, we should be good.
 	SetResultValue (0);
 	
@@ -98,6 +105,8 @@ script SC_MECHMORPH (int mech) {
 	delay (1);
 	
 	CallEvent (ACTION_MechPurchase, mech);
+	
+	MechPurchaseCooldown[PlayerNumber()] = Timer() + GetCVar("epsilon_mechpurchasecooldown") * 35 * 60;
 	
 	// If the player had the jetpack active while getting the mech, we need to
 	// deactivate it now.

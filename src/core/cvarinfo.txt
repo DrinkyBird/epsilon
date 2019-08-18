@@ -102,6 +102,9 @@ server int epsilon_nukecountdown = 60;
 // come with a DEVASTATING blast that can easily obliterate MULTIPLE buildings.
 server bool epsilon_nukesurpreme = false;
 
+// How long a player must wait between purchasing mechs
+server int epsilon_mechpurchasecooldown = 3;
+
 ///////////////////////////////////////////////////////////////////////////////
 // Client settings
 

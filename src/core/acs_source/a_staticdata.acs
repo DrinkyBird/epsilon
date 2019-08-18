@@ -151,6 +151,9 @@ int CanCheckKillerHealth[MAXPLAYERS];
 
 int MenuMechs[NUM_MECH_WEIGHTS][MAX_MENU_ITEMS];
 
+// When the player can purche a mech again
+int MechPurchaseCooldown[MAXPLAYERS];
+
 // ============================================================================
 
 // Identifiers of weapons the random weapon crate can give.

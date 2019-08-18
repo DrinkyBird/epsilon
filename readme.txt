@@ -51,6 +51,7 @@ CHANGELOG
       * Added back developer mode
       * Added tags to weapons that didn't already have them
 	  * Players can no longer eject mechs in Sudden Death
+	  * Added a configurable mech purchase cooldown
       * Maps
         * AOW02
           * Fixed a myriad of texture alignment issues

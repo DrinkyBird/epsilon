@@ -461,6 +461,7 @@ function void InitPlayer (void) {
 	RepairBonus[PlayerNumber()] = 0;
 	MedicBonus[PlayerNumber()] = 0;
 	UnawardedDamage[PlayerNumber ()] = 0;
+	MechPurchaseCooldown[PlayerNumber()] = 0;
 	
 	// [Dusk] If we're in developer mode, make him gamemaster.
 	if (Developer) {
