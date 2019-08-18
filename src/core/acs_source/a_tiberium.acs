@@ -4,7 +4,7 @@ script 357 (void) {
 	if (CheckInventory ("IsHarvester") && !CheckInventory ("TiberiumCrystal")) {
 		SetResultValue (1);
 		SetFont ("SMALLFONT");
-		IntelMessage ("\cJTake it back to \cQRefinery!", false);
+		IntelMessage ("\cJTake it back to the \cQRefinery!", false);
 	}
 }
 
