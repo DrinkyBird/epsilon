@@ -50,6 +50,7 @@ CHANGELOG
       * Updated TITLEPIC and INTERPIC
       * Added back developer mode
       * Added tags to weapons that didn't already have them
+	  * Players can no longer eject mechs in Sudden Death
       * Maps
         * AOW02
           * Fixed a myriad of texture alignment issues

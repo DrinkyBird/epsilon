@@ -414,6 +414,11 @@ script 697 (void) {
 		terminate;
 	}
 	
+	if (SuddenDeath) {
+		GenericError ("You cannot eject a mech during Sudden Death!");
+		terminate;
+	}
+	
 	int x = GetActorX (0);
 	int y = GetActorY (0);
 	int z = GetActorZ (0);
