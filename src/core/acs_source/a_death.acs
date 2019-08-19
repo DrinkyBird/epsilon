@@ -35,6 +35,8 @@ script SC_DEATH DEATH {
 	// How much is this thing worth?
 	int points = 1;
 	if (CheckInventory ("IsMech")) {
+		UpdateMechPurchaseCooldown ();
+		
 		if (CheckInventory ("OrcaWeapons") ||
 			CheckInventory ("RavenWeapons")) {
 			

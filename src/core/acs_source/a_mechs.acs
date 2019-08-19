@@ -61,6 +61,12 @@ function str WF_CheckAvailability (int mech) {
 	return 0;
 }
 
+
+// =============================================================================
+function void UpdateMechPurchaseCooldown (void) {
+	MechPurchaseCooldown[PlayerNumber()] = Timer() + GetCVar("epsilon_mechpurchasecooldown") * 35 * 60;
+}
+
 // =============================================================================
 // [Dusk] Mech morph script. Result value is 0 if success,
 // a script table index containing error message if failure
@@ -106,7 +112,7 @@ script SC_MECHMORPH (int mech) {
 	
 	CallEvent (ACTION_MechPurchase, mech);
 	
-	MechPurchaseCooldown[PlayerNumber()] = Timer() + GetCVar("epsilon_mechpurchasecooldown") * 35 * 60;
+	UpdateMechPurchaseCooldown ();
 	
 	// If the player had the jetpack active while getting the mech, we need to
 	// deactivate it now.
@@ -500,6 +506,7 @@ script 697 (void) {
 	ACS_ExecuteAlways (10, 0);
 	TakeInventory ("IsMech", 1);
 	PopArmor ();
+	UpdateMechPurchaseCooldown ();
 	
 	delay (1);
 	
