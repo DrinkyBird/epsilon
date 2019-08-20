@@ -75,3 +75,6 @@ CHANGELOG
         * Technician: cost 200 -> 250
       * Weapons
         * Weakened submachine gun slightly
+      * Crates
+	    * Made Instant Juggernaut crate much rarer
+		* Hidden a bunch of crates from Open Deck

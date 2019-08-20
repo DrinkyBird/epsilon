@@ -118,12 +118,12 @@ function void CR_InitCrateList (void) {
 	AddCrateType (CRATE_CREDITSSTOLEN,	"credits stolen",		"G", 10, CRT_Bad,		(0));
 	AddCrateType (CRATE_TIMEGUN,		"time gun",				"I", 10, CRT_Weapon,	(CRF_ANNOUNCE));
 	AddCrateType (CRATE_BOMB,			"bomb crate",			"G", 25, CRT_Bad,		(0));
-	AddCrateType (CRATE_BASECRASHER,	"base crasher",			"G", 10, CRT_Bad,		(CRF_ANNOUNCE));
+	AddCrateType (CRATE_BASECRASHER,	"base crasher",			"G", 10, CRT_Bad,		(CRF_Announce | CRF_NoDeck));
 	AddCrateType (CRATE_UTILITYGUN,		"utility gun",			"D", 10, CRT_Weapon,	(0));
 	AddCrateType (CRATE_ENERGYARMOR,	"energy resistance",	"N", 10, CRT_Armor,		(0));
 	AddCrateType (CRATE_EXPLOARMOR,		"explosive resistance",	"F", 10, CRT_Armor,		(0));
 	AddCrateType (CRATE_BULLETARMOR,	"bulletproof vest",		"C", 10, CRT_Armor,		(0));
-	AddCrateType (CRATE_JUGGERNAUT,		"instant juggernaut",	"F",  5, CRT_Powerup,	(CRF_ANNOUNCE));
+	AddCrateType (CRATE_JUGGERNAUT,		"instant juggernaut",	"F",  2, CRT_Powerup,	(CRF_Announce | CRF_NoDeck));
 	AddCrateType (CRATE_BERSERK,		"berserk",				"G",  4, CRT_Powerup,	(CRF_ANNOUNCE));
 	AddCrateType (CRATE_MEDFIELD,		"medication field",		"A", 10, CRT_Item,		(0));
 	AddCrateType (CRATE_TEAMBOOST,		"team boost",			"A",  7, CRT_Upgrade,	(CRF_ANNOUNCE));
@@ -140,7 +140,7 @@ function void CR_InitCrateList (void) {
 	AddCrateType (CRATE_REVOLVER,		"blood revolver",		"G",  2, CRT_Weapon,	(CRF_Announce | CRF_NoDeck));
 	AddCrateType (CRATE_RADAR,			"radar",				"D",  3, CRT_Powerup,	(CRF_ANNOUNCE));
 	AddCrateType (CRATE_BOMBPACK,		"bomb pack",			"F",  7, CRT_Item,		(CRF_ANNOUNCE));
-	AddCrateType (CRATE_IMP,			"imp attack",			"S",  8, CRT_Bad,		(CRF_ANNOUNCE));
+	AddCrateType (CRATE_IMP,			"imp attack",			"S",  8, CRT_Bad,		(CRF_Announce | CRF_NoDeck));
 	AddCrateType (CRATE_C4,				"C4",					"K", 10, CRT_Item,		(0));
 }
 
