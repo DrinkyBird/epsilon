@@ -36,19 +36,16 @@ script SC_DEATH DEATH {
 	int points = 1;
 	if (CheckInventory ("IsMech")) {
 		UpdateMechPurchaseCooldown ();
-		
-		if (CheckInventory ("OrcaWeapons") ||
-			CheckInventory ("RavenWeapons")) {
-			
-			points = 3;
-		} else if (CheckInventory ("WolverineWeapons") ||
-			CheckInventory ("MadCatWeapons") ||
-			CheckInventory ("TitanWeapons") ||
-			CheckInventory ("JuggernautWeapons")) {
-			
-			points = 4;
-		}
 	}
+	
+	// [SB]
+	int maxmech = CheckInventory("MaxMechWeight") - 1;
+	if (maxmech == MECHWEIGHT_LIGHT)
+		points = 3;
+	else if (maxmech == MECHWEIGHT_MEDIUM)
+		points = 4;
+	else if (maxmech == MECHWEIGHT_HEAVY)
+		points = 4;
 	
 	// If we're in alternate experience mode, we lose all experience now
 	if (GetConfig (CONFIG_ALTEXP))

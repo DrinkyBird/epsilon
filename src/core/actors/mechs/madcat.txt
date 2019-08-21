@@ -113,7 +113,7 @@ actor MadCatSwitchPickup : CustomInventory {
 		MAD2 B -1
 		loop
 	Pickup:
-		TNT1 A 0 ACS_ExecuteWithResult (353, 0)
+		TNT1 A 0 ACS_ExecuteWithResult (353, MECH_MADCAT)
 		stop
 	Use:
 		TNT1 A 0 ACS_ExecuteAlways (699, 0, 1)

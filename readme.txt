@@ -50,7 +50,8 @@ CHANGELOG
       * Updated TITLEPIC and INTERPIC
       * Added back developer mode
       * Added tags to weapons that didn't already have them
-	  * Players can no longer eject mechs in Sudden Death
+	  * It is no longer possible to evade having the full amount of tickets
+	    being deducted from the pool by ejecting a mech before dying
 	  * Added a configurable mech purchase cooldown
       * Maps
         * AOW02

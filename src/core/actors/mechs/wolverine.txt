@@ -109,7 +109,7 @@ actor WolverineSwitchPickup : CustomInventory {
 		ROB1 A -1
 		stop
 	Pickup:
-		TNT1 A 0 ACS_ExecuteWithResult (353)
+		TNT1 A 0 ACS_ExecuteWithResult (353, MECH_WOLVERINE)
 		stop
 	Use:
 		TNT1 A 0 A_GiveInventory ("WolverineSwitchUsed", 1)

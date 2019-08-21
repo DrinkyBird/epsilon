@@ -39,3 +39,9 @@ actor Experience : Inventory {
 }
 
 actor HasRankUpgrades : Inventory {}
+
+// [SB] Used to keep track of the maximum weight of mech this player has been
+//  in, to properly deduct sudden death tickets
+actor MaxMechWeight : Inventory {
+	Inventory.MaxAmount 3
+}

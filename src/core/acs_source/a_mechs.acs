@@ -127,6 +127,10 @@ script SC_MECHMORPH (int mech) {
 	GiveInventory (Mechs[mech][MK_MORPH], 1);
 	GiveInventory (Mechs[mech][MK_AMMO], 1);
 	
+	// [SB] Ensure the correct amount of tickets are deducted in Sudden Death
+	if (mech != MECH_Tortoise && Mechs[mech][MK_WEIGHT] + 1 > CheckInventory("MaxMechWeight"))
+		SetInventory("MaxMechWeight", Mechs[mech][MK_WEIGHT] + 1);
+	
 	SetThingSpecial (0, ACS_ExecuteAlways, 317, 0, PlayerTeam());
 	
 	SpendCredits (Mechs[mech][MK_COST]);
@@ -429,11 +433,6 @@ script 697 (void) {
 		terminate;
 	}
 	
-	if (SuddenDeath) {
-		GenericError ("You cannot eject a mech during Sudden Death!");
-		terminate;
-	}
-	
 	int x = GetActorX (0);
 	int y = GetActorY (0);
 	int z = GetActorZ (0);
@@ -579,7 +578,7 @@ script 332 (void) CLIENTSIDE {
 }
 
 // check if you can enter an ejected mech
-script 353 (void) {
+script 353 (int mech) {
 	int r = 1;
 	if(CheckInventory ("CantMech"))
 		r = 0;
@@ -589,8 +588,13 @@ script 353 (void) {
 	SetResultValue (r);
 	
 	// [Dusk] Push the armor to stack now.
-	if (r)
+	if (r) {
 		PushArmor ();
+		
+		// [SB] Ensure the correct amount of tickets are deducted in Sudden Death
+		if (mech != MECH_Tortoise && Mechs[mech][MK_WEIGHT] + 1 > CheckInventory("MaxMechWeight"))
+			SetInventory("MaxMechWeight", Mechs[mech][MK_WEIGHT] + 1);
+	}
 }
 
 // [Dusk] thrusts the player with the specified angle if they are in a mech
