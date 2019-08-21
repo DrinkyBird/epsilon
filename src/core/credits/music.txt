@@ -68,18 +68,14 @@ AOW21 - Renegade 2032
 AOW22 - Mercury
   * D_AOW22: Frank Klepacki - On Your Feet (Command and Conquer: Renegade)
   
-AOW23 - Emerald Wasteland
-  * D_AOW23: Frank Klepacki - 200 Meters (Command and Conquer: Red Alert 2)
-  
-AOW24 - Unending Pain
-  * D_AOW24: Bobby Prince - Sign of Evil, cover by Per Kristian Risvik
-  
-AOW25 - Defunct Commission
+AOW23 - Defunct Commission
   * D_AOW25: 
   
 Sudden Death:
-  * RAZOR-UB: Frank Klepacki - Stomp (Command and Conquer: Renegade)
-  * RAZORUB2: Frank Klepacki - In the Line of Fire (Command and Conquer: Renegade)
+  * D_SUDD01: Frank Klepacki - Stomp (Command and Conquer: Renegade)
+  * D_SUDD02: Frank Klepacki - In the Line of Fire (Command and Conquer: Renegade)
+  * D_SUDD03: Frank Klepacki - Warfare / Full Stop (Command and Conquer)
+  * D_SUDD04: Frank Klepacki - Smash (Command and Conquer: Red Alert)
   
 Intermission:
   * D_DM2INT: Frank Klepacki - Militant Force (Command and Conquer: Red Alert)

@@ -43,13 +43,15 @@ script SC_SuddenDeath (void) {
 	GiveActorInventory (208, "SuddenDeathVulnerability", 1);
 	GiveActorInventory (214, "SuddenDeathVulnerability", 1);
 	GiveActorInventory (215, "SuddenDeathVulnerability", 1);
-	if (Timer() > 5*35 + 10) {
-		if (random (0, 1))
-			SetMusic ("razor-ub");
-		else
-			SetMusic ("razorub2");
-	}
 	
+	int musnum = random(1, NUM_SUDDENDEATH_MUSIC);
+	str musname;
+	if (musnum < 10)
+		musname = StrParam(s: "d_sudd0", d: musnum);
+	else
+		musname = StrParam(s: "d_sudd", d: musnum);
+	SetMusic (musname);
+
 	// [Dusk] Allow maps to take action on sudden death
 	CallEvent (ACTION_SUDDENDEATH, 0);
 	

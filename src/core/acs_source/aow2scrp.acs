@@ -589,6 +589,10 @@
 #define NUM_MSGTYPES 13
 
 // ============================================================================
+// Number of Sudden Death music
+#define NUM_SUDDENDEATH_MUSIC 4
+
+// ============================================================================
 // VARIABLES
 
 int Developer;
