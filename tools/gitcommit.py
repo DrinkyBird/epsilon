@@ -42,7 +42,7 @@ class Hgver:
         self.defines[key.upper()] = value
 
     def add_define_parent(self, key, format):
-        self.add_define(key, self.git_log_cmd(format))
+        self.add_define(key, str(self.git_log_cmd(format)))
 
     def add_define_parent_int(self, key, format):
         self.add_define(key, int(self.git_log_cmd(format)))
