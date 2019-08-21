@@ -141,84 +141,15 @@ map aow22 "Mercury" {
 	music = "d_aow22"
 }
 
-map aow23 "Emerald Wasteland" {
-	next = "aow24"
-	sky1 = "stsky14"
+map aow23 "Defunct Commission" {
+	next = "aow26"
+	sky1 = "skyfog0", 0.1
 	music = "d_aow23"
 }
 
-map aow24 "Unending Pain" {
-	next = "aow25"
-	music = "d_aow24"
-	sky1 = "stsky3"
-}
-
-map aow25 "Defunct Commission" {
-	next = "aow26"
-	sky1 = "skyfog0", 0.1
-	music = "d_aow25"
-}
-
-map aow26 "Shattered Remains" {
-	next = "aow27"
-	sky1 = "STSKY3"
-	music = "d_aow25"
-}
-
-map aow27 "Happy Fragging" {
-	next = "aow28"
-	sky1 = "stsky14"
-	music = "d_aow03"
-}
-
-map aow28 "Mir" {
-	next = "aow29"
-	sky1 = "stsky5", 0.1
-	music = "d_aow20"
-}
-
-map aow29 "Reactor" {
-	next = "aow30"
-	sky1 = "stsky5"
-	music = "d_aow07"
-}
-
-map aow30 "Mining Camp 2" {
-	next = "aow31"
-	sky1 = "stsky5"
-	music = "d_aow02"
-}
-
-map aow31 "All Out War Remake"
-{
-	next = "aow32"
-	sky1 = "stsky14"
-	music = "d_aow03"
-}
-
-map aow32 "Blizzard"
-{
-	next = "aow32"
-	sky1 = "stsky14"
-	music = "d_aow04"
-}
-
-map aow33 "Goat's Hunting Ground"
-{
-	next = "aow34"
-	sky1 = "stsky14"
-	music = "d_aow20"
-}
-
-map aow34 "Surface Tension Reloaded" {
+map aow24 "Surface Tension Reloaded" {
 	next = "aow35"
 	music = "d_aow21"
-}
-
-map aow35 "Hoth" {
-	next = "aow01"
-	music = "d_aow25"
-	sky1 = "skyfog0"
 }
 
 skill Normal {

@@ -21,19 +21,8 @@ MAP LIST
   * AOW20 - Renegade 2030
   * AOW21 - Renegade 2032
   * AOW22 - Mercury
-  * AOW23 - Emerald Wasteland
-  * AOW24 - Unending Pain
-  * AOW25 - Defunct Commission
-  * AOW26 - Shattered Remains
-  * AOW27 - Happy Fragging
-  * AOW28 - Mir
-  * AOW29 - Reactor
-  * AOW30 - Mining Camp 2
-  * AOW31 - All Out War Remake
-  * AOW32 - Blizzard
-  * AOW33 - Goat's Hunting Ground
-  * AOW34 - Surface Tension Reloaded
-  * AOW35 - Hoth
+  * AOW23 - Defunct Commission
+  * AOW24 - Surface Tension Reloaded
     
 CHANGELOG
     Latest:
