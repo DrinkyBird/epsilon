@@ -119,6 +119,7 @@ actor TortoiseWeapons : AOWWeapon {
 	Weapon.AmmoGive 400
 	Weapon.AmmoType "PlasmaRifleAmmo"
 	Obituary "$OB_TORTOISE"
+	Tag "Piloting Tortoise"
 	+WEAPON.CHEATNOTWEAPON
 	+WEAPON.DONTBOB
 	Weapon.PreferredSkin "Tortoise"

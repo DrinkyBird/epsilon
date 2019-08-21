@@ -133,6 +133,7 @@ actor MadCatWeapons : AOWWeapon {
 	Weapon.AmmoGive 480
 	Weapon.AmmoType "Titan-RocketAmmo"
 	Obituary "$OB_MADCAT"
+	Tag "Piloting MadCat"
 	+WEAPON.CHEATNOTWEAPON
 	+WEAPON.DONTBOB
 	states {

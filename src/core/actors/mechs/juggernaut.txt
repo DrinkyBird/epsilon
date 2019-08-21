@@ -151,6 +151,7 @@ actor JuggernautWeapons : AOWWeapon {
 	obituary "$OB_JUGGERNAUT" // %o was ground to bits by %k's Juggernaut MKII.
 	weapon.selectionorder 1
 	weapon.kickback 150
+	tag "Piloting Juggernaut MkII"
 	Weapon.PreferredSkin "Juggernaut"
 	states {
 	Ready:

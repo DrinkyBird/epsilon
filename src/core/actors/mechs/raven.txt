@@ -124,6 +124,7 @@ actor RavenWeapons : AOWWeapon {
 	weapon.ammouse2 1
 	weapon.ammogive 120
 	weapon.ammogive2 120
+	tag "Piloting Raven"
 	obituary "$OB_RAVEN"
 	states {
 	Ready:

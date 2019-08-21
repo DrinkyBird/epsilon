@@ -110,6 +110,7 @@ actor TitanWeapons : AOWWeapon {
 	Weapon.AmmoGive 40
 	Weapon.AmmoType "Titan-80mmAmmo"
 	Obituary "$OB_TITAN"
+	Tag "Piloting Titan"
 	+WEAPON.CHEATNOTWEAPON
 	+WEAPON.DONTBOB
 	weapon.preferredskin "TitanMech"

@@ -95,6 +95,7 @@ actor OrcaWeapons : AOWWeapon {
 	Weapon.AmmoGive2 60
 	Weapon.AmmoType2 "Orca-RocketAmmo"
 	obituary "$OB_ORCA" // "%o was pinned down by %k's Orca."
+	Tag "Piloting Orca"
 	+WEAPON.CHEATNOTWEAPON
 	+WEAPON.DONTBOB
 	states {

@@ -120,6 +120,7 @@ actor WolverineSwitchPickup : CustomInventory {
 actor WolverineWeapons : AOWWeapon {
 	Weapon.SelectionOrder 1
 	Obituary "%o was overwhelmed by %k's Wolverine."
+	Tag "Piloting Wolverine"
 	+WEAPON.CHEATNOTWEAPON
 	+WEAPON.DONTBOB
 	weapon.preferredskin "WolverineMech"
