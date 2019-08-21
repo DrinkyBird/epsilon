@@ -78,3 +78,5 @@ CHANGELOG
       * Crates
 	    * Made Instant Juggernaut crate much rarer
 		* Hidden a bunch of crates from Open Deck
+	  * Mechs
+	    * The repair facility no longer replenishes Juggernaut nukes
