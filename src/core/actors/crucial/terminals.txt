@@ -32,7 +32,6 @@ actor BaseTerminal {
 	DamageFactor "AntiArmor", 0.25
 	DamageFactor "Time", 1.0
 	DamageFactor "Disarm", 0.0
-	DamageFactor "Ice", 0.0 //Are you going to freeze it?
 	DamageFactor "Superweapon", 10.0
 	DamageFactor "MassDriver", 0.25
 	DamageFactor "Mechstomp", 0.0

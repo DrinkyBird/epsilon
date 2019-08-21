@@ -16,7 +16,6 @@ actor BaseTerminalOutside {
 	DamageFactor "Time", 0.0
 	DamageFactor "Disarm", 0.0
 	DamageFactor "Flash", 0.0
-	DamageFactor "Ice", 0.0
 	DamageFactor "Superweapon", 0.0
 	DamageFactor "Mechstomp", 0.0
 	DamageFactor "Monster", 0.0

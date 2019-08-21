@@ -21,7 +21,6 @@
 	DamageFactor "Disarm",			1.0
 	DamageFactor "Deconstruction",	1.0
 	DamageFactor "Monster",			1.0
-	DamageFactor "Ice",				1.0
 */
 
 // =============================================================================
@@ -40,7 +39,6 @@ actor PowerGrade1Armor : PowerProtection {
 	DamageFactor "ChemicalSpecial",	0.95
 	DamageFactor "Mechstomp",		0.95
 	DamageFactor "Monster",			0.95
-	DamageFactor "Ice",				0.95
 }
 
 // =============================================================================
@@ -59,7 +57,6 @@ actor PowerGrade2Armor : PowerProtection {
 	DamageFactor "ChemicalSpecial",	0.90
 	DamageFactor "Mechstomp",		0.90
 	DamageFactor "Monster",			0.90
-	DamageFactor "Ice",				0.90
 }
 
 // =============================================================================
@@ -78,7 +75,6 @@ actor PowerGrade3Armor : PowerProtection {
 	DamageFactor "ChemicalSpecial",	0.85
 	DamageFactor "Mechstomp",		0.85
 	DamageFactor "Monster",			0.85
-	DamageFactor "Ice",				0.85
 }
 
 // =============================================================================
@@ -97,7 +93,6 @@ actor PowerGrade4Armor : PowerProtection {
 	DamageFactor "ChemicalSpecial",	0.80
 	DamageFactor "Mechstomp",		0.80
 	DamageFactor "Monster",			0.80
-	DamageFactor "Ice",				0.80
 }
 
 // =============================================================================
@@ -117,7 +112,6 @@ actor PowerGrade5Armor : PowerProtection {
 	DamageFactor "ChemicalSpecial",	0.75
 	DamageFactor "Mechstomp",		0.75
 	DamageFactor "Monster",			0.75
-	DamageFactor "Ice",				0.75
 }
 
 // =============================================================================
@@ -137,7 +131,6 @@ actor PowerGradeNeg1Armor : PowerProtection {
 	DamageFactor "ChemicalSpecial",	1.15
 	DamageFactor "Mechstomp",		1.15
 	DamageFactor "Monster",			1.15
-	DamageFactor "Ice",				1.15
 }
 
 // =============================================================================
