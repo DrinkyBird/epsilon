@@ -471,7 +471,7 @@ function void InitClasses (void) {
     
 	AddItem(ITEM_Repair, "Repair Gun", "RepairGun", "", "", 1, 0, 0, 0);
 	AddItem(ITEM_Decon, "Deconstruction Gun", "RemoverGun", "", "", 1, 0, 0, 0);
-	AddItem(ITEM_Decon, "Bomb-Squad Gun", "BombSquadGun", "", "", 1, 0, 0, 0);
+	AddItem(ITEM_BombSquad, "Bomb-Squad Gun", "BombSquadGun", "", "", 1, 0, 0, 0);
 	AddItem(ITEM_HealGun, "Heal Gun", "HealGun", "", "", 1, 0, 0, 0);
 	AddItem(ITEM_Missile, "Missile Launcher", "MissileLauncher", "MissileAmmo", "", 1, 15, 0, 125);
 	AddItem(ITEM_Flamer, "Flamethrower", "Flamer", "FlamerAmmo", "PhosphorusGrenadeAmmo", 1, 400, 4, 125);
