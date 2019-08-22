@@ -362,7 +362,7 @@ function void InitClasses (void) {
 		ITEM_SHOCKRIFLE, 0, 0, 0, 0, 0);
 	
 	AddClass (CLASS_Commando, "Commando", 1000, 0.85, DEP_CENTRE,
-		0, ARMOD_NOCHANGE,
+		2, ARMOD_NOCHANGE,
 		4, 2, true, CF_Warning|CF_CantPilot,
 		ITEM_GAUSS, ITEM_MISSILE, ITEM_GATLING, ITEM_RIFLE, 0, 0);
 	
