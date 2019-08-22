@@ -39,9 +39,9 @@ CHANGELOG
       * Updated TITLEPIC and INTERPIC
       * Added back developer mode
       * Added tags to weapons that didn't already have them
-	  * It is no longer possible to evade having the full amount of tickets
-	    being deducted from the pool by ejecting a mech before dying
-	  * Added a configurable mech purchase cooldown
+      * It is no longer possible to evade having the full amount of tickets
+        being deducted from the pool by ejecting a mech before dying
+      * Added a configurable mech purchase cooldown
       * Maps
         * AOW02
           * Fixed a myriad of texture alignment issues
@@ -66,7 +66,7 @@ CHANGELOG
       * Weapons
         * Weakened submachine gun slightly
       * Crates
-	    * Made Instant Juggernaut crate much rarer
-		* Hidden a bunch of crates from Open Deck
+        * Made Instant Juggernaut crate much rarer
+        * Hidden a bunch of crates from Open Deck
 	  * Mechs
 	    * The repair facility no longer replenishes Juggernaut nukes
