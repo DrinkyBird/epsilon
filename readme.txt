@@ -67,6 +67,7 @@ CHANGELOG
         * Submachine gun now deals a consistent 6 damage
         * Gatling gun now deals a consistent 6 primary fire damage and 20
 		  altfire damage
+        * Machine gun now deals a consistent 12 damage
       * Crates
         * Made Instant Juggernaut crate much rarer
         * Hidden a bunch of crates from Open Deck
