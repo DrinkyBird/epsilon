@@ -150,6 +150,37 @@ script 650 (int amount, int repairtype, int turret) {
 	}
 }
 
+// [SB] Checks if we can heal a target
+Script 651 (void) {
+	int r = 1;
+	
+	int myTeam = PlayerTeam ();
+	int myTid = ActivatorTID ();
+	
+	SetActivatorToTarget (0);
+	int targetIdx = PlayerNumber ();
+	int targetTeam = PlayerTeam ();
+	int targetTid = ActivatorTID ();
+	
+	// Different team
+	if (targetTeam != myTeam)
+		r = 0;
+	
+	// Target is stealthed
+	if (CheckInventory("StealthMode"))
+		r = 0;
+	
+	// Out of range
+	if (!CheckActorDistance (myTid, targetTid, 800))
+		r = 0;
+	
+	// Target not a player
+	if (targetIdx == -1)
+		r = 0;
+	
+	SetResultValue(r);
+}
+
 // =============================================================================
 // Repair turret ACS
 // The repair turret, being a non-player, uses a simpler version
