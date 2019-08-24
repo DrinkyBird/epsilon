@@ -80,3 +80,4 @@ CHANGELOG
         * Hidden a bunch of crates from Open Deck
       * Mechs
         * The repair facility no longer replenishes Juggernaut nukes
+		* Juggernaut flak cannon now deals a consistent 20 damage
