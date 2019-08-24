@@ -73,6 +73,7 @@ CHANGELOG
         * Shock rifle now deals a consistent 2 damage
         * Shotgun now deals consistent damage
         * Chainsaw now deals a consistent 23 damage
+        * Double shotgun now deals a consistent 10 damage
       * Crates
         * Made Instant Juggernaut crate much rarer
         * Hidden a bunch of crates from Open Deck
