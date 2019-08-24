@@ -82,6 +82,41 @@ actor StealthMode : Inventory {
     Inventory.MaxAmount 3
 }
 
+// [SB] Disallow players being able to identify target stealths
+actor StealthIdentifyOff : CustomInventory {
+	+INVENTORY.ALWAYSPICKUP
+	+INVENTORY.AUTOACTIVATE
+	
+	Inventory.Amount 1
+	Inventory.MaxAmount 1
+	
+	States
+	{
+		Use:
+		Pickup:
+			TNT1 A 0
+			TNT1 A 0 A_ChangeFlag("DONTIDENTIFYTARGET", true)
+			Stop
+	}
+}
+
+actor StealthIdentifyOn : CustomInventory {
+	+INVENTORY.ALWAYSPICKUP
+	+INVENTORY.AUTOACTIVATE
+	
+	Inventory.Amount 1
+	Inventory.MaxAmount 1
+	
+	States
+	{
+		Use:
+		Pickup:
+			TNT1 A 0
+			TNT1 A 0 A_ChangeFlag("DONTIDENTIFYTARGET", false)
+			Stop
+	}
+}
+
 // Players get this when they start pain flashing.
 actor StealthPain : Inventory {}
 

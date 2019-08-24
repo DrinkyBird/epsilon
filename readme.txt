@@ -42,6 +42,8 @@ CHANGELOG
       * It is no longer possible to evade having the full amount of tickets
         being deducted from the pool by ejecting a mech before dying
       * Added a configurable mech purchase cooldown
+	  * General bugfixes
+	    * You can no longer identifytarget stealthed players
       * Maps
         * AOW02
           * Fixed a myriad of texture alignment issues

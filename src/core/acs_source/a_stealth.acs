@@ -8,6 +8,7 @@ script SC_STEALTH (int action) {
 			terminate;
 		
 		SetInventory ("StealthMode", 1);
+		GiveInventory ("StealthIdentifyOff", 1); // [SB]
 		ActivatorSound ("misc/stealthON", 96);
 		SetActorProperty (0, APROP_RenderStyle, STYLE_Translucent);
 		for (a = 1.0; a >= 0.0; a -= 0.05) {
@@ -28,6 +29,7 @@ script SC_STEALTH (int action) {
 		if (CheckInventory ("StealthMode") != 2)
 			terminate;
 		SetInventory ("StealthMode", 3);
+		GiveInventory ("StealthIdentifyOn", 1); // [SB]
 		ActivatorSound ("misc/stealthON", 96);
 		SetActorProperty (0, APROP_RenderStyle, STYLE_Translucent);
 		
@@ -57,6 +59,7 @@ script SC_STEALTH (int action) {
 		int oldmode = CheckInventory ("StealthMode");
 		ActivatorSound ("misc/stealthON", 96);
 		SetInventory ("StealthMode", 3);
+		GiveInventory ("StealthIdentifyOn", 1); // [SB]
 		TakeInventory ("DestealthOverride", CheckInventory ("DestealthOverride"));
 		SetActorProperty (0, APROP_RenderStyle, STYLE_Translucent);
 		
@@ -80,6 +83,7 @@ script SC_STEALTH (int action) {
 			ActivatorSound ("misc/stealthON", 96);
 		
 		SetInventory ("StealthMode", 3);
+		GiveInventory ("StealthIdentifyOn", 1); // [SB]
 		if (CheckInventory ("StealthPain"))
 			terminate;
 		
