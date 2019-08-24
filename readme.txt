@@ -52,6 +52,7 @@ CHANGELOG
           * Moved the powerup crate to a platform in the middle of the central
             area
           * Adjusted the slopes on the outskirts of bases
+		  * Fixed the asymmetry of the level; Red base is now equal to Blue
         * AOW04
           * Added a back passage to both bases to make it easier to infiltrate
         * AOW06
