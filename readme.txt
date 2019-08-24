@@ -70,6 +70,7 @@ CHANGELOG
 		  altfire damage
         * Machine gun now deals a consistent 12 damage
         * Laser chaingun now deals a consistent 8 damage
+        * Shock rifle now deals a consistent 2 damage
       * Crates
         * Made Instant Juggernaut crate much rarer
         * Hidden a bunch of crates from Open Deck
