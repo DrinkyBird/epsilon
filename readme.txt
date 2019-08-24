@@ -65,6 +65,8 @@ CHANGELOG
         * Technician: cost 200 -> 250
       * Weapons
         * Submachine gun now deals a consistent 6 damage
+        * Gatling gun now deals a consistent 6 primary fire damage and 20
+		  altfire damage
       * Crates
         * Made Instant Juggernaut crate much rarer
         * Hidden a bunch of crates from Open Deck
