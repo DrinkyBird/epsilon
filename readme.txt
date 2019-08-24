@@ -64,6 +64,7 @@ CHANGELOG
         * Shotgunner: speed 0.8 -> 0.9
         * Technician: cost 200 -> 250
       * Weapons
+	    * Weakened handgun
         * Submachine gun now deals a consistent 6 damage
         * Gatling gun now deals a consistent 6 primary fire damage and 20
 		  altfire damage
