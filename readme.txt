@@ -79,6 +79,7 @@ CHANGELOG
         * Sniper rifle now deals a consistent 50 damage when unzoomed
         * Weak sniper rifle now deals a consistent 34 damage when unzoomed
 		* Heal gun will no longer attempt to heal stealth players or terminals
+		* Improved repair/heal gun altfire behaviour
       * Crates
         * Made Instant Juggernaut crate much rarer
         * Hidden a bunch of crates from Open Deck

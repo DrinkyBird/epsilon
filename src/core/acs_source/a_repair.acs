@@ -151,7 +151,7 @@ script 650 (int amount, int repairtype, int turret) {
 }
 
 // [SB] Checks if we can heal a target
-Script 651 (void) {
+Script 651 (int isHeal) {
 	int r = 1;
 	
 	int myTeam = PlayerTeam ();
@@ -161,13 +161,26 @@ Script 651 (void) {
 	int targetIdx = PlayerNumber ();
 	int targetTeam = PlayerTeam ();
 	int targetTid = ActivatorTID ();
+	bool isPlayer = targetIdx != -1;	
+	
+	int what = -1;
+	int tteam = -1;
+	
+	// Are we shooting at a terminal?
+	// If so, find its information
+	if (!isPlayer) {
+		for (int i = 0; i < 18; i++) {
+			if (targetTid == BaseTIDs[i]) {
+				what = i/2;
+				tteam = i%2;
+			}
+		}
+	}
 	
 	// Different team
-	if (targetTeam != myTeam)
+	if (isPlayer && targetTeam != myTeam)
 		r = 0;
-	
-	// Target is stealthed
-	if (CheckInventory("StealthMode"))
+	else if (tteam != -1 && tteam != myTeam)
 		r = 0;
 	
 	// Out of range
@@ -175,7 +188,11 @@ Script 651 (void) {
 		r = 0;
 	
 	// Target not a player
-	if (targetIdx == -1)
+	if (isHeal && !isPlayer)
+		r = 0;
+	
+	// Attempting to repair building in SD
+	if (SuddenDeath && !isPlayer && !isHeal)
 		r = 0;
 	
 	SetResultValue(r);
