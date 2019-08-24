@@ -56,9 +56,6 @@ actor BaseTerminal {
 		stop
 	Pain:
 		goto Spawn
-	Pain.Chemical:
-	Pain.Fire:
-		goto Pain+1
 	Death:
 		TNT1 A 5 A_Scream
 		TNT1 A 5 A_Scream
