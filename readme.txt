@@ -64,7 +64,7 @@ CHANGELOG
         * Shotgunner: speed 0.8 -> 0.9
         * Technician: cost 200 -> 250
       * Weapons
-        * Weakened submachine gun slightly
+        * Submachine gun now deals a consistent 6 damage
       * Crates
         * Made Instant Juggernaut crate much rarer
         * Hidden a bunch of crates from Open Deck
