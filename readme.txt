@@ -82,3 +82,4 @@ CHANGELOG
         * The repair facility no longer replenishes Juggernaut nukes
 		* Juggernaut flak cannon now deals a consistent 20 damage
 		* Madcat shock rifle now deals a consistent 20 damage
+		* Orca minigun now deals a consistent 14 damage
