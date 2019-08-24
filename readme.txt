@@ -74,7 +74,8 @@ CHANGELOG
         * Shotgun now deals consistent damage
         * Chainsaw now deals a consistent 23 damage
         * Double shotgun now deals a consistent 10 damage
-        * Sniper rifle now deals a consistent 50 damage
+        * Sniper rifle now deals a consistent 50 damage when unzoomed
+        * Weak sniper rifle now deals a consistent 34 damage when unzoomed
       * Crates
         * Made Instant Juggernaut crate much rarer
         * Hidden a bunch of crates from Open Deck
