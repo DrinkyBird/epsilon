@@ -231,10 +231,10 @@ script SC_CL_TeamLog (int msgtype, int x0, int x1) NET CLIENTSIDE {
 	}
 	
 	switch (x0) {
-	case 0: cname = "mini-refinery";
-	case 1: cname = "health regen";
-	case 2: cname = "ammo regen";
-	case 3: cname = "portal node";
+	case 0: cname = "mini-refinery"; break;
+	case 1: cname = "health regen"; break;
+	case 2: cname = "ammo regen"; break;
+	case 3: cname = "portal node"; break;
 	}
 	
 	// Build the string from incoming data
@@ -267,7 +267,7 @@ script SC_CL_TeamLog (int msgtype, int x0, int x1) NET CLIENTSIDE {
 		msg = strparam (n:0, s:"\ci resigns");
 		break;
 	case TMSG_CONSTRUCT:
-		msg = strparam (n:0, s:"\c- builds a ", s:ac, s:cname);
+		msg = strparam (n:0, s:"\c- builds ", s:ac, s:cname);
 		break;
 	case TMSG_DESTRUCT:
 		msg = strparam (n:0, s:"\c- destroys ", s:ec, s:"enemy ", s:cname);
