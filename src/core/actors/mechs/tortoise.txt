@@ -122,7 +122,6 @@ actor TortoiseWeapons : AOWWeapon {
 	Tag "Piloting Tortoise"
 	+WEAPON.CHEATNOTWEAPON
 	+WEAPON.DONTBOB
-	Weapon.PreferredSkin "Tortoise"
 	states {
 	Ready:
 		MHUD A 1 A_WeaponReady
