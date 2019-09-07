@@ -96,6 +96,7 @@ actor HealGun : RepairGun {
 actor BombSquadGun : RepairGun {
 	+THRUGHOST
 	AttackSound "repairgun/fire"
+	Tag "Bomb Squad Gun"
 	States {
 	Ready:
 		REP3 A 1 A_WeaponReady
