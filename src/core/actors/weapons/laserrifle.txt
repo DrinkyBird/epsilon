@@ -160,7 +160,7 @@ actor StealthLaserRifle : AOWWeapon {
 actor LaserRifle : StealthLaserRifle 21050 {
 	//$Category Weapons
 	tag "Laser Rifle"
-	Weapon.AmmoType2 ""
+	Weapon.AmmoType2 "LaserRifleAmmo"
 	Weapon.SelectionOrder 9
 	States {
 	AltFire:
