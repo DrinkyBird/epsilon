@@ -21,7 +21,7 @@ script SC_STEALTH (int action) {
 			SetActorProperty(0, APROP_Alpha, a);
 			delay(3);
 		}
-		SetActorProperty (0, APROP_RenderStyle, STYLE_None);
+		SetActorProperty (0, APROP_ALPHA, 0);
 		SetInventory ("StealthMode", 2);
 		terminate;
 	case STEALTH_OFF:
