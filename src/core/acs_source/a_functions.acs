@@ -507,7 +507,30 @@ function void ClearHudMessage (int i) {
 // ============================================================================
 // [Dusk] {9/6/12} The panic button. Only use for unrecoverable errors!
 function void FatalError (str text) {
-	ConsoleCommand (strparam (s:"error \"ACS: FATAL ERROR: ", s:text, s:"\""));
+	Log (s: strparam (s:"ACS: FATAL ERROR: ", s:text));
+	
+	// If we're the server - forcespec all players, go to next map
+	if (Netstate & NETSTATE_Server) {
+		str s = "";
+		s = StrParam(s: s, s: "\cgA fatal mod error has occured!\n");
+		s = StrParam(s: s, s: "\cfThe map has been changed as the game would otherwise be unstable.\n");
+		s = StrParam(s: s, s: "\cfThe error has been printed to the server console.");
+		
+		HudMessageBold(s: s; HUDMSG_PLAIN|HUDMSG_LOG, 0, CR_RED, 1.5, 0.3, 0.0);
+		
+		Log(s: "ACS: A fatal error has occured, changing to next map");
+		ConsoleCommand("nextmap");
+	} 
+	// Clients spectate and throw up an error message
+	else if (Netstate == NETSTATE_Client) {
+		SetFont("BIGFONT");
+		HudMessage(s: "\cgA fatal mod error has occurred!"; HUDMSG_PLAIN|HUDMSG_LOG, 0, CR_RED, 1.5, 0.3, 5.0);
+		
+		SetFont("SMALLFONT");
+		HudMessage(s: "You have been forced to spectate.\nIt's probably a good idea to re-connect to the server.\n\n\cj", s: text; HUDMSG_PLAIN|HUDMSG_LOG, 0, CR_YELLOW, 1.5, 0.4, 5.0);
+		
+		ConsoleCommand("spectate");
+	}
 }
 
 // ============================================================================
