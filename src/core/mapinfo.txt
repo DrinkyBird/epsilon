@@ -129,7 +129,7 @@ map aow20 "Renegade 2030" {
 	sky1 = "stars"
 }
 
-map aow21 "Renegade 2032" {
+map aow21 "Renegade" {
 	next = "aow22"
 	music = "d_aow21"
 	sky1 = "stars"
