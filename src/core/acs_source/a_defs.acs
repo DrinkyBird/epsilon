@@ -307,7 +307,7 @@ function void InitClasses (void) {
 		ITEM_REPAIR, 0, 0, 0, 0, 0);
 	
 	AddClass (CLASS_Minigunner, "Minigunner", 400, 0.7, DEP_NONE,
-		1, ARMOD_BULLET,
+		1, ARMOD_NOCHANGE,
 		2, 1, false, 0,
 		ITEM_GATLING, 0, 0, 0, 0, 0);
 	
