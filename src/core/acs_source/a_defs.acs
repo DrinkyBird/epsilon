@@ -327,7 +327,7 @@ function void InitClasses (void) {
 		ITEM_RIFLE, 0, 0, 0, 0, 0);
 	
 	AddClass (CLASS_MachineGunner, "Machine Gunner", 300, 0.9, DEP_NONE,
-		1, ARMOD_BULLET,
+		0, ARMOD_NOCHANGE,
 		2, 1, false, 0,
 		ITEM_MACHINEGUN, 0, 0, 0, 0, 0);
 	
