@@ -229,10 +229,6 @@ script 823 (int check, int team) {
 		}
 	}
 	
-	if (check) {
-		Log (s:"TID: ", d:tid, s:", what: ", d:what, s:", tteam: ", d:tteam);
-	}
-	
 	if (what == -1 || tteam != team)
 		terminate; // check returns with 0
 	
