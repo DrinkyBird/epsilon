@@ -1,6 +1,8 @@
 // =============================================================================
 // MENU INIT
 script 700 (void) CLIENTSIDE {
+	if (PlayerNumber() != ConsolePlayerNumber()) terminate;
+	
 	// Top-level name
 	MenuName = "PARTICLE FUSER";
 	
@@ -24,6 +26,8 @@ script 700 (void) CLIENTSIDE {
 // =============================================================================
 // MENU DRAW
 script 701 (int m0, int m1, int y) CLIENTSIDE {
+	if (PlayerNumber() != ConsolePlayerNumber()) terminate;
+	
 	int x = PF_FindDefByMenuCoords (m0, m1);
 	
 	// Description
@@ -123,6 +127,8 @@ script 708 (int m0, int m1) {
 // =============================================================================
 // MENU LIMIT
 script 712 (int m0, int m1) CLIENTSIDE {
+	if (PlayerNumber() != ConsolePlayerNumber()) terminate;
+	
 	int x = PF_FindDefByMenuCoords (m0, m1);
 	SetResultValue (!PF_CheckLimits (x));
 }

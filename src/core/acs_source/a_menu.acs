@@ -198,6 +198,8 @@ script SC_MENU_SELECT (int sel0, int sel1, int primary) NET {
 // MENU LOOP
 bool MenuActive = false;
 script SC_MENU (int player) CLIENTSIDE {
+	if (PlayerNumber() != ConsolePlayerNumber()) terminate;
+	
 	// If it wasn't us who went to menu, then do nothing
 	// Maybe display a menu icon above his head?
 	if (player != consoleplayer || MenuActive)

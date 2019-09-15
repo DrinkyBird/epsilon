@@ -1,6 +1,8 @@
 // =============================================================================
 // MENU INIT
 script 704 (void) CLIENTSIDE {
+	if (PlayerNumber() != ConsolePlayerNumber()) terminate;
+	
 	if (!(MenuTables & MTABLE_RESEARCHES))
 		BuildMenuResearches ();
 	
@@ -25,6 +27,8 @@ script 704 (void) CLIENTSIDE {
 // =============================================================================
 // MENU DRAW
 script 705 (int m0, int m1, int y) CLIENTSIDE {
+	if (PlayerNumber() != ConsolePlayerNumber()) terminate;
+	
 	HudMessage (s:Researches[MenuResearches[m0][m1]][RCK_DESCRIPTION];
 		HUDMSG_PLAIN, MENU_HID + 21, CR_WHITE, UMENU_X4, y, 0.0);
 	y -= 0.1;
@@ -47,5 +51,7 @@ script 710 (int m0, int m1) {
 // =============================================================================
 // MENU LIMIT
 script 714 (int m0, int m1) CLIENTSIDE {
+	if (PlayerNumber() != ConsolePlayerNumber()) terminate;
+	
 	SetResultValue (!CheckResearch (MenuResearches[m0][m1]));
 }

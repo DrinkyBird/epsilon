@@ -7,6 +7,8 @@ int OpenDeckMenuInit = 0;
 // =============================================================================
 // MENU INIT
 script 716 (void) CLIENTSIDE {
+	if (PlayerNumber() != ConsolePlayerNumber()) terminate;
+	
 	MenuName = "CHOOSE YOUR CRATE";
 	
 	MenuCategories[0] = "ARMOUR";
@@ -71,6 +73,8 @@ script 716 (void) CLIENTSIDE {
 // =============================================================================
 // MENU DRAW - eh?
 script 717 (int m0, int m1, int y) CLIENTSIDE {
+	if (PlayerNumber() != ConsolePlayerNumber()) terminate;
+	
 	int hid = MENU_HID + 21;
 	SetResultValue (y);
 }
@@ -89,11 +93,15 @@ script 718 (int c) {
 // =============================================================================
 // MENU LIMIT
 script 719 (int m0, int m1) CLIENTSIDE {
+	if (PlayerNumber() != ConsolePlayerNumber()) terminate;
+	
 	SetResultValue (!CheckCrate (OpenDeckMenu[m0][m1]));
 }
 
 // =============================================================================
 // MENU SEND
 script 720 (int m0, int m1) CLIENTSIDE {
+	if (PlayerNumber() != ConsolePlayerNumber()) terminate;
+	
 	SetResultValue (OpenDeckMenu[m0][m1]);
 }

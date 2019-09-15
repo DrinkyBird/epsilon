@@ -1,6 +1,8 @@
 // =============================================================================
 // MENU INIT
 script 702 (void) CLIENTSIDE {
+	if (PlayerNumber() != ConsolePlayerNumber()) terminate;
+	
 	// If the menu-class table hasn't been built yet, do so now
 	if (!(MenuTables & MTABLE_CLASSES))
 		BuildMenuClasses ();
@@ -34,6 +36,8 @@ script 702 (void) CLIENTSIDE {
 // =============================================================================
 // MENU DRAW
 script 703 (int m0, int m1, int y) CLIENTSIDE {
+	if (PlayerNumber() != ConsolePlayerNumber()) terminate;
+	
 	int id = MenuClasses[m0][m1];
 	if (id < 0 || id > NUMCLASSES)
 		terminate;
@@ -171,6 +175,8 @@ script 709 (int m0, int m1) {
 // =============================================================================
 // MENU LIMIT
 script 713 (int m0, int m1, int y) CLIENTSIDE {
+	if (PlayerNumber() != ConsolePlayerNumber()) terminate;
+	
 	int limited;
 	if (m0 <= 3) {
 		limited = !CheckClassAvailability (MenuClasses[m0][m1]);

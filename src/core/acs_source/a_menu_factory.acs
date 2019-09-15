@@ -1,6 +1,8 @@
 // =============================================================================
 // MENU INIT
 script 706 (void) CLIENTSIDE {
+	if (PlayerNumber() != ConsolePlayerNumber()) terminate;
+	
 	if (!(MenuTables & MTABLE_MECHS))
 		BuildMenuMechs ();
 	
@@ -25,6 +27,8 @@ script 706 (void) CLIENTSIDE {
 // =============================================================================
 // MENU DRAW
 script 707 (int m0, int m1, int y) CLIENTSIDE {
+	if (PlayerNumber() != ConsolePlayerNumber()) terminate;
+	
 	int hid = MENU_HID + 21;
 	
 	// Health
@@ -61,5 +65,7 @@ script 711 (int m0, int m1) {
 // =============================================================================
 // MENU LIMIT
 script 715 (int m0, int m1) CLIENTSIDE {
+	if (PlayerNumber() != ConsolePlayerNumber()) terminate;
+	
 	SetResultValue (WF_CheckAvailability (MenuMechs[m0][m1]));
 }
