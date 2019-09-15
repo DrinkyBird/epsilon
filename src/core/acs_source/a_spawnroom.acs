@@ -44,8 +44,6 @@ script 94 (int Team) {
 		terminate;
 	}
 	
-	TakeInventory("IsInSpawnRoom",1);
-	
 	ACS_ExecuteAlways (SC_DOTELEPORTTOFIELD, 0, Team);
 }
 
@@ -156,8 +154,10 @@ script SC_DOTELEPORTTOFIELD (int team) {
 		}
 	}
 	
-	if (failed)
+	if (failed) {
+		GiveInventory ("IsInSpawnRoom", 1);
 		IntelMessage ("In-field teleportation \cAfailed\cJ", false);
+	}
 	else
 		TakeInventory ("IsInSpawnRoom", 1);
 }
