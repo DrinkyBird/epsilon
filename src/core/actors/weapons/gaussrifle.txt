@@ -166,7 +166,7 @@ actor GaussPuff : HHBulletPuff {
 	-ALLOWPARTICLES
 	+PUFFONACTORS
 	DamageType "Energy"
-	translation "168:191=192:213", "112:127=192:213"
+	translation "192:207=176:191", "112:127=176:191"
 	renderstyle Add
 	alpha 0.75
 	vspeed 0
