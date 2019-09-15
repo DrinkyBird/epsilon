@@ -126,6 +126,7 @@ script SC_MECHMORPH (int mech) {
 	GiveInventory ("IsMech", 1);
 	GiveInventory (Mechs[mech][MK_MORPH], 1);
 	GiveInventory (Mechs[mech][MK_AMMO], 1);
+	TakeInventory ("DidEjectMech", 1);
 	
 	// [SB] Ensure the correct amount of tickets are deducted in Sudden Death
 	if (mech != MECH_Tortoise && Mechs[mech][MK_WEIGHT] + 1 > CheckInventory("MaxMechWeight"))

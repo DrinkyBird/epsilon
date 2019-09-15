@@ -160,10 +160,15 @@ actor MechEjectButton : CustomInventory {
 		TNT1 A 0
 		stop
 	Use:
+		TNT1 A 0
+		TNT1 A 0 A_JumpIfInventory ("DidEjectMech", 1, "Spawn")
+		TNT1 A 0 A_GiveInventory ("DidEjectMech", 1)
 		TNT1 A 0 ACS_ExecuteAlways (697, 0)
 		stop
 	}
 }
+
+actor DidEjectMech : Inventory {} 
 
 actor LongRangeMissile {
 	PROJECTILE
