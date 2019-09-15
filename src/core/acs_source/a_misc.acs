@@ -242,3 +242,9 @@ script SC_PopAngle (void) {
 script SC_InitMonster (void) {
 	SetThingSpecial (0, ACS_ExecuteWithResult, SC_MONSTERDEATH, GetSpawnHealth() / 6);
 }
+
+// =============================================================================
+script SC_RemoteC4DisarmCheck (void) {
+	SetActivatorToTarget (0);
+	SetResultValue (PlayerInGame (PlayerNumber ()));
+}
