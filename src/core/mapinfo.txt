@@ -123,13 +123,13 @@ map aow19 "Volcanicity" {
 	music = "d_aow19"
 }
 
-map aow20 "Renegade 2030" {
+map aow20 "Renegade" {
 	next = "aow21"
 	music = "d_aow20"
 	sky1 = "stars"
 }
 
-map aow21 "Renegade" {
+map aow21 "Renegade 2032" {
 	next = "aow22"
 	music = "d_aow21"
 	sky1 = "stars"
