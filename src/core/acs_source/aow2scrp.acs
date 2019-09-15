@@ -154,6 +154,7 @@
 #libdefine SC_PushAngle					825
 #libdefine SC_PopAngle					826
 #libdefine SC_InitMonster				827
+#libdefine SC_C4TimeCheck				828
 // [...]
 #libdefine SC_BotEnter					888
 #libdefine SC_BotRespawn				889
