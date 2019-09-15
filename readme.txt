@@ -31,6 +31,9 @@ CHANGELOG
 	  * Bumped proxy mine health; can no longer be removed by removergun
 	  * Mitigate a bug with the util menu that causes many clients to 
 	    FatalError.
+	  * Fixed being able to use weapons in spawn by walking through the other
+	    side of the teleporter 
+	  * Remote C4s no longer auto-disarm themselves
 	  * Added usefraggrenade bind
       * Weapons
 	    * Gattling gun now fires 2 bullets instead of 3 

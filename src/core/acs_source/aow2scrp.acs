@@ -155,7 +155,6 @@
 #libdefine SC_PopAngle					826
 #libdefine SC_InitMonster				827
 #libdefine SC_C4TimeCheck				828
-#libdefine SC_RemoteC4DisarmCheck		829
 #libdefine SC_TimedC4DisarmCheck		830
 #libdefine SC_BindGrenadeResetWep		831
 #libdefine SC_BindGrenade				832

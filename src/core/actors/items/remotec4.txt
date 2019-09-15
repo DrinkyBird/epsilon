@@ -155,7 +155,7 @@ actor RemoteC4Armed {
 	Idle:
 		RC4T A 0 A_JumpIfInTargetInventory ("RemoteC4Ammo", 4, "Death.Disarm")
 		RC4T A 0 A_JumpIfInTargetInventory ("C4DetonateCheck", 1, "Death")
-		RC4T A 1 A_JumpIf (ACS_ExecuteWithResult (SC_RemoteC4DisarmCheck, 0) == 1, "Death.Disarm")
+		RC4T A 5
 		loop
 	Death:
 		RC4T A 0 A_NoGravity

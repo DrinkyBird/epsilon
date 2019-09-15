@@ -244,10 +244,6 @@ script SC_InitMonster (void) {
 }
 
 // =============================================================================
-script SC_RemoteC4DisarmCheck (void) {
-	SetActivatorToTarget (0);
-	SetResultValue (PlayerInGame (PlayerNumber ()));
-}
 
 function int IsNearTeamTerminal(int team, int dist)
 {
