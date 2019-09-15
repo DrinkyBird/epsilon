@@ -46,7 +46,7 @@ Actor ProxyMineRed {
 	Obituary "$OB_MINEBARREL"
 	Radius 8
 	Height 14
-	Health 20
+	Health 160
 	Damage 0
 	Speed 0
 	Scale .2
@@ -66,7 +66,7 @@ Actor ProxyMineRed {
 	DamageFactor "FireSpecial",		0.0
 	DamageFactor "ChemicalSpecial",	0.0
 	DamageFactor "Disarm",			1.0
-	DamageFactor "Deconstruction",	1.0
+	DamageFactor "Deconstruction",	0.0
 	DamageFactor "Mechstomp",		0.0
 	DamageFactor "Monster",			0.0
 	Translation "112:127=176:191"
