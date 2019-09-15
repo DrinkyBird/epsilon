@@ -639,6 +639,16 @@ script 309 (int c) {
 		CheckAndRemove ("CombustionAutorifle");
 		CheckAndRemove ("CombustionAutorifleWeak");
 		
+		// remove timegun effects
+		CheckAndRemove ("TimeGunSpeed");
+		CheckAndRemove ("PowerTimeGunSpeed");
+		CheckAndRemove ("TimeGunBoost");
+		CheckAndRemove ("PowerTimeGunBoost");
+		
+		// correct translucency
+		SetActorProperty (0, APROP_RenderStyle, STYLE_Normal);
+		SetActorProperty (0, APROP_Alpha, 1.0);
+		
 		if (CheckInventory ("EagerBeaver")) {
 			TakeInventory ("EagerBeaver", 1);
 			GiveInventory ("Unarmed", 1);
