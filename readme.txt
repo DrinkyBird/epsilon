@@ -25,7 +25,7 @@ MAP LIST
   * AOW24 - Surface Tension Reloaded
     
 CHANGELOG
-    Latest:
+    r189 (15/09/2019):
       * A new palette, inspired by that of Omega v15
       * Added new AOW2-specific MENUDEF
       * Removed the old aow_preferences menu in favour of MENUDEF
@@ -49,6 +49,7 @@ CHANGELOG
 	    disconnects/spectates
 	  * The Intel and Rank backgrounds were removed from the HUD due to scaling
 	    issues
+	  * Added aow_forceteambalance, to manually invoke team balancer
 	  * General bugfixes
 	    * You can no longer identifytarget stealthed players
 		* Stealth weapons are no longer rendered black
