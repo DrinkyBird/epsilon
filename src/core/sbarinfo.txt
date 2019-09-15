@@ -9,14 +9,12 @@ statusbar fullscreen, forcescaled, fullscreenoffsets {
 	InInventory Not IsRed {
 		drawimage "IS2_AMMO", -110, -20;
 		drawimage "IS2_HPI",  5, -17;
-		drawimage "IS2_RANK", -115, -46;
 	}
 	
 	// Red HUD
 	InInventory IsRed {
 		drawimage "IS2RAMMO", -110, -20;
 		drawimage "IS2RHPI",  5, -17;
-		drawimage "IS2RRANK", -115, -46;
 	}
 	
 	// Health. For admin morph health is not relevant.
