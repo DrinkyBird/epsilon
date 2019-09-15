@@ -15,7 +15,7 @@ class Hgver:
         self.add_define_parent('GIT_COMMIT', '%h')
         self.add_define_parent('GIT_COMMIT_LONG', '%H')
         self.add_define('GIT_REVISION', int(self.exec_cmd('git rev-list --count HEAD')))
-        self.add_define('GIT_REVISION_STR', self.exec_cmd('git rev-list --count HEAD'))
+        self.add_define('GIT_REVISION_STR', str(self.exec_cmd('git rev-list --count HEAD')))
 
         self.generate_header()
 
