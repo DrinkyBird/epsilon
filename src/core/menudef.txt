@@ -35,6 +35,7 @@ OptionMenu "AOWMain"
 	Control         "Sell current weapon",          "sellweapon"
 	Control         "Use self-heal",                "useselfheal"
 	Control         "Use timed C4",                 "usec4"
+	Control         "Use frag grenade",             "usefraggrenade"
 	Control         "Open AOW menu",                "epsilon_openmenu"
 	StaticText      " "
     

@@ -157,6 +157,8 @@
 #libdefine SC_C4TimeCheck				828
 #libdefine SC_RemoteC4DisarmCheck		829
 #libdefine SC_TimedC4DisarmCheck		830
+#libdefine SC_BindGrenadeResetWep		831
+#libdefine SC_BindGrenade				832
 // [...]
 #libdefine SC_BotEnter					888
 #libdefine SC_BotRespawn				889

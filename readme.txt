@@ -29,6 +29,9 @@ CHANGELOG
 	  * Bumped max number of razor wires to 40
 	  * epsilon_cl_menubackground now defaults to false
 	  * Bumped proxy mine health; can no longer be removed by removergun
+	  * Mitigate a bug with the util menu that causes many clients to 
+	    FatalError.
+	  * Added usefraggrenade bind
       * Weapons
 	    * Gattling gun now fires 2 bullets instead of 3 
       * Mechs

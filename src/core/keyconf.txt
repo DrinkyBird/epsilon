@@ -25,6 +25,7 @@ addmenukey "Switch to weaker team" teamswitch
 addmenukey "Sell current weapon" sellweapon
 addmenukey "Use self-heal" useselfheal
 addmenukey "Use timed C4" usec4
+addmenukey "Use frag grenade" usefraggrenade
 addmenukey "Open AOW menu" epsilon_openmenu
 
 // =============================================================================
@@ -41,6 +42,7 @@ alias spectatorteleport "puke 940"
 // Items
 alias useselfheal "use SelfHealItem"
 alias usec4 "use TimedC4"
+alias usefraggrenade "puke -832 0"
 
 // Player number of our own self
 alias whoami "puke 946"

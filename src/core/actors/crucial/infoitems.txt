@@ -155,3 +155,7 @@ actor StoredArmorGrade : Inventory {
 actor InMenu : Inventory {
 	Inventory.MaxAmount 10
 }
+
+// Grenade binds
+actor GrenadeBindUsing : Inventory {}
+actor GrenadeBindFragGrenade : Inventory {}

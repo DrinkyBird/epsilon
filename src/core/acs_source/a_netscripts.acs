@@ -7,6 +7,37 @@
  * credit where credit is due. Please don't be lame and just copy-paste any
  * of this and call it your own. Thanks!
  */
+ 
+script SC_BindGrenade (int type) NET {
+	if (CheckInventory ("InMenu") || CheckInventory ("IsInSpawnRoom") || CheckInventory ("GrenadeBindUsing"))
+		terminate;
+		
+	GrenadeBindWeapon[PlayerNumber ()] = GetWeapon ();
+	
+	switch (type) {
+		case 0: // frag
+		
+			if ((!CheckInventory ("FragGrenade")) || (!CheckInventory ("FragGrenadeAmmo")) | (CheckInventory ("GrenadeBindFragGrenade")))
+				terminate;
+		
+			GiveInventory ("GrenadeBindUsing", 1);
+			GiveInventory ("GrenadeBindFragGrenade", 1);
+			
+			SetWeapon ("FragGrenade");
+		
+			break;
+	}
+}
+
+script SC_BindGrenadeResetWep (void) {
+	if (CheckInventory ("GrenadeBindFragGrenade"))
+		terminate;
+		
+	TakeInventory("GrenadeBindUsing", 1);
+	
+	SetWeapon (GrenadeBindWeapon[PlayerNumber ()]);
+	GrenadeBindWeapon[PlayerNumber ()] = "";
+}
 
 // =============================================================================
 // [SP] This allows a spectator to spawn outside of the team selection room

@@ -154,6 +154,9 @@ int MenuMechs[NUM_MECH_WEIGHTS][MAX_MENU_ITEMS];
 // When the player can purche a mech again
 int MechPurchaseCooldown[MAXPLAYERS];
 
+// The last weapon used by a player before using a grenade bind
+str GrenadeBindWeapon[MAXPLAYERS];
+
 // ============================================================================
 
 // Identifiers of weapons the random weapon crate can give.
