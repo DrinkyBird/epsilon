@@ -19,7 +19,7 @@ MAP LIST
   * AOW18 - Mining Site
   * AOW19 - Volcanicity
   * AOW20 - Renegade 2030
-  * AOW21 - Renegade 2032
+  * AOW21 - Renegade
   * AOW22 - Mercury
   * AOW23 - Defunct Commission
   * AOW24 - Surface Tension Reloaded
@@ -43,6 +43,12 @@ CHANGELOG
         being deducted from the pool by ejecting a mech before dying
       * Added a configurable mech purchase cooldown
 	  * Improved FatalError implementation
+	  * Timed C4s will disarm themselves when placed near their own team's
+	    terminals
+	  * Remote C4s will disarm themselves when the player who placed them
+	    disconnects/spectates
+	  * The Intel and Rank backgrounds were removed from the HUD due to scaling
+	    issues
 	  * General bugfixes
 	    * You can no longer identifytarget stealthed players
 		* Stealth weapons are no longer rendered black
@@ -66,6 +72,10 @@ CHANGELOG
           * A few minor texture changes
         * AOW09
           * Better quality music
+		* AOW14 
+		  * has been replaced with the version from AOW 2.2
+		* AOW16 
+		  * has been replaced with the version from AOW 2.2
       * Classes
         * Removed Chrono Archer. It was just bad...
         * Shotgunner: speed 0.8 -> 0.9
@@ -85,6 +95,8 @@ CHANGELOG
         * Weak sniper rifle now deals a consistent 34 damage when unzoomed
 		* Heal gun will no longer attempt to heal stealth players or terminals
 		* Improved repair/heal gun altfire behaviour
+		* Missile launcher rockets now home correctly
+		* Laser rifle now works when acquired as a pickup
       * Crates
         * Made Instant Juggernaut crate much rarer
         * Hidden a bunch of crates from Open Deck

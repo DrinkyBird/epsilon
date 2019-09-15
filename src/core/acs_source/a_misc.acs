@@ -248,3 +248,22 @@ script SC_RemoteC4DisarmCheck (void) {
 	SetActivatorToTarget (0);
 	SetResultValue (PlayerInGame (PlayerNumber ()));
 }
+
+function int IsNearTeamTerminal(int team, int dist)
+{
+	for (int i = 0; i < MAX_BUILDINGS; i++)
+	{
+		if (CheckBuilding (i, team) && AproxDistance (BaseTIDs[2 * i + team], ActivatorTID ()) < dist)
+			return true;
+	}
+
+	return false;
+}
+
+script SC_TimedC4DisarmCheck (int team) 
+{
+	if (!GetCVar ("epsilon_c4antigrief"))
+		SetResultValue (0);
+	else
+		SetResultValue (IsNearTeamTerminal (team, 192.0));
+}

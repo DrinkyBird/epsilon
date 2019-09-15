@@ -105,6 +105,9 @@ server bool epsilon_nukesurpreme = false;
 // How long a player must wait between purchasing mechs
 server int epsilon_mechpurchasecooldown = 3;
 
+// Whether to disarm timed C4s when placed near their own terminal
+server bool epsilon_c4antigrief = true;
+
 ///////////////////////////////////////////////////////////////////////////////
 // Client settings
 

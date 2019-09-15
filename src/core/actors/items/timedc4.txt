@@ -113,6 +113,7 @@ actor TimedC4Armed {
 	Spawn:
 		TNT1 A 0
 		TNT1 A 0 A_JumpIf (waterlevel > 1, "Death.Disarm")
+		TNT1 A 0 A_JumpIf (ACS_ExecuteWithResult (SC_TimedC4DisarmCheck, TEAM_RED), "Death.Disarm")
 		TC4T R 35 Thing_SetSpecial (0, 226, 328, 0, 1)
 		goto Idle
 	Idle:
@@ -145,6 +146,7 @@ actor TimedC4ArmedBlue : TimedC4Armed {
 	states {
 	Spawn:
 		TC4T BB 0 A_JumpIf (waterlevel > 1, "Death.Disarm")
+		TNT1 A 0 A_JumpIf (ACS_ExecuteWithResult (SC_TimedC4DisarmCheck, TEAM_BLUE), "Death.Disarm")
 		TC4T B 35 Thing_SetSpecial (0, 226, 328, 0, 0)
 		goto Idle
 	Death.Disarm:  
