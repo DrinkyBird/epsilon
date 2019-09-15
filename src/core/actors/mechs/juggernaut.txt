@@ -318,7 +318,7 @@ actor NukeAmmo : Ammo {
 	inventory.amount 1
 	inventory.maxamount 2
 	ammo.backpackamount 0
-	ammo.backpackmaxamount 0
+	ammo.backpackmaxamount 2
 }
 
 actor JuggernautAttack : Inventory {inventory.maxamount 10}
