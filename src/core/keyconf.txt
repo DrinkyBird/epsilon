@@ -66,6 +66,9 @@ alias getsnapshot "puke -932"
 // Version information
 alias aow_versioninfo "puke -813"
 
+// Force the team balancer to run
+alias aow_forceteambalance "pukename SC_ForceTeamBalance always"
+
 // =============================================================================
 // RCON ADMIN COMMANDS
 alias gamemaster "puke 941 %1 3"

@@ -153,3 +153,7 @@ script SC_TEAMSHUFFLE (void) {
 	HudMessageBold (s:"Shuffle complete. Game on!"; HUDMSG_FADEOUT, 0, CR_GREEN, 0.5, 0.3, 3.5, 1.0);
 	log (s:"[SHUFFLE] Shuffle complete.");
 }
+
+script "SC_ForceTeamBalance" (void) {
+	CheckTeamBalance ();
+}
