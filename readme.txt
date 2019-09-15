@@ -27,6 +27,7 @@ MAP LIST
 CHANGELOG
 	Latest:
 	  * Bumped max number of razor wires to 40
+	  * epsilon_cl_menubackground now defaults to false
 	  
     r189 (15/09/2019):
       * A new palette, inspired by that of Omega v15

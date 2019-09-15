@@ -136,7 +136,7 @@ user int epsilon_cl_donateamount = 100;
 user int epsilon_cl_fov = 90;
 
 // Display a transparent background behind menus, for visibility
-user bool epsilon_cl_menubackground = true;
+user bool epsilon_cl_menubackground = false;
 
 ///////////////////////////////////////////////////////////////////////////////
 // Client MENUDEF stuff
