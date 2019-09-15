@@ -144,7 +144,7 @@ function int PF_FindDefByMenuCoords (int i, int j) {
 		return x;
 	}
 	
-	FatalError2f ("PF_FindByMenuCoords: Couldn't find any particle fuser definition at %d:%d", i, j);
+	// FatalError2f ("PF_FindByMenuCoords: Couldn't find any particle fuser definition at %d:%d", i, j);
 	return -1;
 }
 

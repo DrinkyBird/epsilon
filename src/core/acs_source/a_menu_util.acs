@@ -29,6 +29,7 @@ script 701 (int m0, int m1, int y) CLIENTSIDE {
 	if (PlayerNumber() != ConsolePlayerNumber()) terminate;
 	
 	int x = PF_FindDefByMenuCoords (m0, m1);
+	if (x == -1) terminate;
 	
 	// Description
 	HudMessage (s:g_ParticleFuserData[x][UK_DESCRIPTION];
@@ -105,6 +106,7 @@ script 701 (int m0, int m1, int y) CLIENTSIDE {
 script 708 (int m0, int m1) {
 	// Utility-specific stuff
 	int x = PF_FindDefByMenuCoords (m0, m1);
+	if (x == -1) terminate;
 	
 	// Check limit
 	if (!PF_CheckLimits (x)) {
@@ -130,5 +132,6 @@ script 712 (int m0, int m1) CLIENTSIDE {
 	if (PlayerNumber() != ConsolePlayerNumber()) terminate;
 	
 	int x = PF_FindDefByMenuCoords (m0, m1);
+	if (x == -1) terminate;
 	SetResultValue (!PF_CheckLimits (x));
 }
