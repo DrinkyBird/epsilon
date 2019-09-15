@@ -519,7 +519,7 @@
 #define MAX_MARINES 24
 
 // Utility limits
-#define MAX_RAZORWIRE 20
+#define MAX_RAZORWIRE 40
 #define MAX_PROXYMINE 50
 #define MAX_MINIRAVENS 5
 #define MAX_TURRETS 15

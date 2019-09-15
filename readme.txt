@@ -25,6 +25,9 @@ MAP LIST
   * AOW24 - Surface Tension Reloaded
     
 CHANGELOG
+	Latest:
+	  * Bumped max number of razor wires to 40
+	  
     r189 (15/09/2019):
       * A new palette, inspired by that of Omega v15
       * Added new AOW2-specific MENUDEF
