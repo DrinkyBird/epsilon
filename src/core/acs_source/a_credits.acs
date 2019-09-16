@@ -143,17 +143,11 @@ function int CalcCreditFlow (int team) {
 // Credit flow
 script SC_CREDITFLOW OPEN {
 	while (1) {
-		int b = CalcCreditFlow (TEAM_BLUE);
-		int r = CalcCreditFlow (TEAM_RED);
-		
 		for (int i = 0; i < MAXPLAYERS; i++) {
 			if (!PlayerInGame (i) || GetActorHealth (3800 + i) <= 0)
 				continue;
 			
-			if (GetPlayerInfo (i, PLAYERINFO_TEAM) == TEAM_BLUE)
-				GivePlayerCredits (i, b);
-			else
-				GivePlayerCredits (i, r);
+			GivePlayerCredits (i, CalcCreditFlow (PlayerTeam ()));
 		}
 		
 		delay (35);
