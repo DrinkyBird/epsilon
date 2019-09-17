@@ -35,7 +35,7 @@ function bool RefineTiberium (int team) {
 	
 	int self = PlayerNumber ();
 	if (GetCVar ("epsilon_tiberium_self") > 0) {
-		GiveCredits (GetCVar ("epsilon_tiberium_self") - amount);
+		GiveCredits (GetCVar ("epsilon_tiberium_self") - GetCVar ("epsilon_tiberium_other"));
 		GivePoints (1);
 		AddExperience (50);
 		
@@ -46,7 +46,7 @@ function bool RefineTiberium (int team) {
 				HUDMSG_FADEOUT, 1800+PlayerNumber(), CR_WHITE, 0.5, 0.45, 2.0, 1.0);
 		else
 			HudMessage (s:"You have refined the \cDTiberium!\n\cQ$\cD",
-				d:GetCVar ("epsilon_tiberium_self"), s:"\c- for you, \cq$\cd", d:GetCVar ("epsilon_tiberium_other"),
+				d:(GetCVar ("epsilon_tiberium_self") - GetCVar ("epsilon_tiberium_other") + amount), s:"\c- for you, \cq$\cd", d: amount,
 				s:"\c- for teammates!";
 				HUDMSG_FADEOUT, 1800+PlayerNumber(), CR_WHITE, 0.5, 0.45, 2.0, 1.0);
 	}
