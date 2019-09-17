@@ -213,6 +213,12 @@ function void BuyAddon (int id) {
 		return;
 	}
 	
+	// Check cost
+	if (GetCredits () < cost - CalcDiscount (cost)) {
+		MenuResponse (MSGTYPE_ERROR, "You need more credits!");
+		return;
+	}
+	
 	// Item-specific checks
 	switch (item) {
 	case ITEM_PlasmaCannon:
