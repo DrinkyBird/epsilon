@@ -42,6 +42,7 @@ CHANGELOG
 	    * Gatling gun now fires 2 bullets instead of 3 
 		* Gatling gun now does 4 damage per bullet instead of 6
 		* Shotgun has been nerfed
+		* Chainsaw alt-fire is no longer an instakill (at full health)
       * Mechs
         * The repair facility once again replenishes Juggernaut nukes
 	  * Classes
