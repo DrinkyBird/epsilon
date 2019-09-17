@@ -205,4 +205,5 @@ script SC_KILLERHEALTH (void) NET {
 // =============================================================================
 script SC_AOWVERSIONINFO (void) NET CLIENTSIDE {
 	Log (s:"Current version: ", s:VersionString ());
+	Log (s:"Built at: ", s:strftime (BUILD_TIME, "%Y-%m-%d %H:%M:%S"));
 }

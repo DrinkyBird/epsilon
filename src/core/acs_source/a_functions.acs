@@ -684,6 +684,7 @@ function str GetAowActorClass (int tid) {
 // [Dusk] Build the version string
 function str VersionString (void) {
 	str msg = strparam (s: "r", d: GIT_REVISION);
+	msg = strparam (s: msg, s: " ", s: strftime (GIT_COMMIT_TIME, "%Y-%m-%d %H:%M:%S"));
 	return msg;
 }
 
