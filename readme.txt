@@ -25,29 +25,29 @@ MAP LIST
   * AOW24 - Surface Tension Reloaded
     
 CHANGELOG
-	Latest:
-	  * Bumped max number of razor wires to 40
-	  * epsilon_cl_menubackground now defaults to false
-	  * Bumped proxy mine health; can no longer be removed by removergun
-	  * Mitigate a bug with the util menu that causes many clients to 
-	    FatalError.
-	  * Fixed being able to use weapons in spawn by walking through the other
-	    side of the teleporter 
-	  * Remote C4s no longer auto-disarm themselves
-	  * Added usefraggrenade bind
-	  * Can no longer buy addons with insufficient credits
-	  * Fixed enhanced refining
-	  * Fixed credit flow issues
+    Latest:
+      * Bumped max number of razor wires to 40
+      * epsilon_cl_menubackground now defaults to false
+      * Bumped proxy mine health; can no longer be removed by removergun
+      * Mitigate a bug with the util menu that causes many clients to 
+        FatalError.
+      * Fixed being able to use weapons in spawn by walking through the other
+        side of the teleporter 
+      * Remote C4s no longer auto-disarm themselves
+      * Added usefraggrenade bind
+      * Can no longer buy addons with insufficient credits
+      * Fixed enhanced refining
+      * Fixed credit flow issues
       * Weapons
-	    * Gatling gun now fires 2 bullets instead of 3 
-		* Gatling gun now does 4 damage per bullet instead of 6
-		* Shotgun has been nerfed
-		* Chainsaw alt-fire is no longer an instakill (at full health)
+        * Gatling gun now fires 2 bullets instead of 3 
+        * Gatling gun now does 4 damage per bullet instead of 6
+        * Shotgun has been nerfed
+        * Chainsaw alt-fire is no longer an instakill (at full health)
       * Mechs
         * The repair facility once again replenishes Juggernaut nukes
-	  * Classes
-	    * Minigunner and machinegunner no longer have bulletproof armour
-	  
+      * Classes
+        * Minigunner and machinegunner no longer have bulletproof armour
+      
     r189 (15/09/2019):
       * A new palette, inspired by that of Omega v15
       * Added new AOW2-specific MENUDEF
@@ -65,19 +65,19 @@ CHANGELOG
       * It is no longer possible to evade having the full amount of tickets
         being deducted from the pool by ejecting a mech before dying
       * Added a configurable mech purchase cooldown
-	  * Improved FatalError implementation
-	  * Timed C4s will disarm themselves when placed near their own team's
-	    terminals
-	  * Remote C4s will disarm themselves when the player who placed them
-	    disconnects/spectates
-	  * The Intel and Rank backgrounds were removed from the HUD due to scaling
-	    issues
-	  * Added aow_forceteambalance, to manually invoke team balancer
-	  * General bugfixes
-	    * You can no longer identifytarget stealthed players
-		* Stealth weapons are no longer rendered black
-		* Fixed tiny mechs
-		* Fixed skin warnings on startup
+      * Improved FatalError implementation
+      * Timed C4s will disarm themselves when placed near their own team's
+        terminals
+      * Remote C4s will disarm themselves when the player who placed them
+        disconnects/spectates
+      * The Intel and Rank backgrounds were removed from the HUD due to scaling
+        issues
+      * Added aow_forceteambalance, to manually invoke team balancer
+      * General bugfixes
+        * You can no longer identifytarget stealthed players
+        * Stealth weapons are no longer rendered black
+        * Fixed tiny mechs
+        * Fixed skin warnings on startup
       * Maps
         * AOW02
           * Fixed a myriad of texture alignment issues
@@ -86,7 +86,7 @@ CHANGELOG
           * Moved the powerup crate to a platform in the middle of the central
             area
           * Adjusted the slopes on the outskirts of bases
-		  * Fixed the asymmetry of the level; Red base is now equal to Blue
+          * Fixed the asymmetry of the level; Red base is now equal to Blue
         * AOW04
           * Added a back passage to both bases to make it easier to infiltrate
         * AOW06
@@ -96,19 +96,19 @@ CHANGELOG
           * A few minor texture changes
         * AOW09
           * Better quality music
-		* AOW14 
-		  * has been replaced with the version from AOW 2.2
-		* AOW16 
-		  * has been replaced with the version from AOW 2.2
+        * AOW14 
+          * has been replaced with the version from AOW 2.2
+        * AOW16 
+          * has been replaced with the version from AOW 2.2
       * Classes
         * Removed Chrono Archer. It was just bad...
         * Shotgunner: speed 0.8 -> 0.9
         * Technician: cost 200 -> 250
       * Weapons
-	    * Weakened handgun
+        * Weakened handgun
         * Submachine gun now deals a consistent 6 damage
         * Gatling gun now deals a consistent 6 primary fire damage and 20
-		  altfire damage
+          altfire damage
         * Machine gun now deals a consistent 12 damage
         * Laser chaingun now deals a consistent 8 damage
         * Shock rifle now deals a consistent 2 damage
@@ -117,16 +117,16 @@ CHANGELOG
         * Double shotgun now deals a consistent 10 damage
         * Sniper rifle now deals a consistent 50 damage when unzoomed
         * Weak sniper rifle now deals a consistent 34 damage when unzoomed
-		* Heal gun will no longer attempt to heal stealth players or terminals
-		* Improved repair/heal gun altfire behaviour
-		* Missile launcher rockets now home correctly
-		* Laser rifle now works when acquired as a pickup
+        * Heal gun will no longer attempt to heal stealth players or terminals
+        * Improved repair/heal gun altfire behaviour
+        * Missile launcher rockets now home correctly
+        * Laser rifle now works when acquired as a pickup
       * Crates
         * Made Instant Juggernaut crate much rarer
         * Hidden a bunch of crates from Open Deck
       * Mechs
         * The repair facility no longer replenishes Juggernaut nukes
-		* Juggernaut flak cannon now deals a consistent 20 damage
-		* Madcat shock rifle now deals a consistent 20 damage
-		* Orca minigun now deals a consistent 14 damage
-		* Wolverine minigun now deals a consistent 20 damage
+        * Juggernaut flak cannon now deals a consistent 20 damage
+        * Madcat shock rifle now deals a consistent 20 damage
+        * Orca minigun now deals a consistent 14 damage
+        * Wolverine minigun now deals a consistent 20 damage
