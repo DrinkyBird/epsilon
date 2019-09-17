@@ -48,11 +48,11 @@ actor GatlingGun : AOWWeapon 21045 {
 		GATG A 0 A_Light2
 		GATG A 0 A_PlaySound ("minigun/fire2", 5)
 		GATF A 0 A_SpawnItemEx("RifleShellCasing",4,13,32,random(-2,-4),random(2,3),random(0,1),random(45,60),128)
-		GATF A 0 A_FireBullets (9.2, 3.2, 2, 6, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 2048)
+		GATF A 0 A_FireBullets (9.2, 3.2, 2, 4, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 2048)
 		GATF A 1 offset (-17, 10) Bright A_Light1
 		GATG B 0 A_Light2
 		GATF B 0 A_SpawnItemEx("RifleShellCasing",4,13,32,random(-2,-4),random(2,3),random(0,1),random(45,60),128)
-		GATF B 0 A_FireBullets (9.2, 3.2, 2, 6, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 2048)
+		GATF B 0 A_FireBullets (9.2, 3.2, 2, 4, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 2048)
 		GATF B 1 offset (-17, 8) Bright
 		GATG A 1 offset (-19, 8) A_Light1
 		GATG A 0 A_JumpIfNoAmmo ("SpinDown")

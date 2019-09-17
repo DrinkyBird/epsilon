@@ -35,8 +35,12 @@ CHANGELOG
 	    side of the teleporter 
 	  * Remote C4s no longer auto-disarm themselves
 	  * Added usefraggrenade bind
+	  * Can no longer buy addons with insufficient credits
+	  * Fixed enhanced refining
+	  * Fixed credit flow issues
       * Weapons
-	    * Gattling gun now fires 2 bullets instead of 3 
+	    * Gatling gun now fires 2 bullets instead of 3 
+		* Gatling gun now does 4 damage per bullet instead of 6
       * Mechs
         * The repair facility once again replenishes Juggernaut nukes
 	  * Classes
