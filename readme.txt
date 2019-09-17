@@ -27,6 +27,7 @@ MAP LIST
 CHANGELOG
     Latest:
       * Version information includes build and commit date/time
+      * Corrected mini-raven flags: They are no longer pushable, or solid.
       * Maps
         * AOW06
           * Fixed red barracks walls being passable
