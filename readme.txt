@@ -25,7 +25,7 @@ MAP LIST
   * AOW24 - Surface Tension Reloaded
     
 CHANGELOG
-    Latest:
+    r218 (17/09/2019):
       * Bumped max number of razor wires to 40
       * epsilon_cl_menubackground now defaults to false
       * Bumped proxy mine health; can no longer be removed by removergun
@@ -48,6 +48,8 @@ CHANGELOG
       * Classes
         * Minigunner and machinegunner no longer have bulletproof armour
         * Jet trooper no longer has bulletproof armour
+	  * Maps
+	    * Fixed a line that was impassible by mechs
       
     r189 (15/09/2019):
       * A new palette, inspired by that of Omega v15
