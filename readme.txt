@@ -25,6 +25,12 @@ MAP LIST
   * AOW24 - Surface Tension Reloaded
     
 CHANGELOG
+    Latest:
+      * Version information includes build and commit date/time
+      * Maps
+        * AOW06
+          * Fixed red barracks walls being passable
+
     r218 (17/09/2019):
       * Bumped max number of razor wires to 40
       * epsilon_cl_menubackground now defaults to false
@@ -48,8 +54,8 @@ CHANGELOG
       * Classes
         * Minigunner and machinegunner no longer have bulletproof armour
         * Jet trooper no longer has bulletproof armour
-	  * Maps
-	    * Fixed a line that was impassible by mechs
+      * Maps
+        * Fixed a line that was impassible by mechs
       
     r189 (15/09/2019):
       * A new palette, inspired by that of Omega v15
