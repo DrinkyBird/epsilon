@@ -402,7 +402,7 @@ function void InitClasses (void) {
 		ITEM_LASERCHAIN, 0, 0, 0, 0, 0);
 	
 	AddClass (CLASS_JetTrooper, "Jet Trooper", 600, 0.65, DEP_BARRACKS,
-		2, ARMOD_BULLET,
+		2, ARMOD_NOCHANGE,
 		2, 1, false, 0,
 		ITEM_MACHINEGUN, ITEM_RIFLE, ITEM_JETPACK, 0, 0, 0);
 	

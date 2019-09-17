@@ -47,6 +47,7 @@ CHANGELOG
         * The repair facility once again replenishes Juggernaut nukes
       * Classes
         * Minigunner and machinegunner no longer have bulletproof armour
+        * Jet trooper no longer has bulletproof armour
       
     r189 (15/09/2019):
       * A new palette, inspired by that of Omega v15
