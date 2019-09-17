@@ -28,9 +28,13 @@ CHANGELOG
     Latest:
       * Version information includes build and commit date/time
       * Corrected mini-raven flags: They are no longer pushable, or solid.
+      * Beacons will now disarm themselves when placed near their own team's
+        terminals
       * Maps
         * AOW06
           * Fixed red barracks walls being passable
+        * AOW09
+          * Removed the duplicate red obelisk MCT actor in the blue obelisk
         * AOW16
           * Fixed both barracks having one passable wall
 
