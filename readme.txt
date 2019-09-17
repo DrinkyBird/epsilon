@@ -30,6 +30,8 @@ CHANGELOG
       * Maps
         * AOW06
           * Fixed red barracks walls being passable
+        * AOW16
+          * Fixed both barracks having one passable wall
 
     r218 (17/09/2019):
       * Bumped max number of razor wires to 40
