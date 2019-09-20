@@ -31,10 +31,14 @@ CHANGELOG
       * Beacons will now disarm themselves when placed near their own team's
         terminals
       * Maps
+        * AOW02
+          * Fixed building sector tags and MCT line tags
         * AOW06
           * Fixed red barracks walls being passable
         * AOW09
           * Removed the duplicate red obelisk MCT actor in the blue obelisk
+        * AOW15
+          * Fixed broken spawnrooms
         * AOW16
           * Fixed both barracks having one passable wall
 
