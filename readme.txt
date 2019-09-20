@@ -30,6 +30,7 @@ CHANGELOG
       * Corrected mini-raven flags: They are no longer pushable, or solid.
       * Beacons will now disarm themselves when placed near their own team's
         terminals
+      * Fixed addon purchasing not checking discounts correctly
       * Maps
         * AOW02
           * Fixed building sector tags and MCT line tags
@@ -41,6 +42,7 @@ CHANGELOG
           * Fixed broken spawnrooms
         * AOW16
           * Fixed both barracks having one passable wall
+          * Fixed war factory doors kinda
 
     r218 (17/09/2019):
       * Bumped max number of razor wires to 40
