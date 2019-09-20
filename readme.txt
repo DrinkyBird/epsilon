@@ -35,6 +35,7 @@ CHANGELOG
         This means you can no longer use any inventory item to eject a mech;
         but it should prevent a bunch of exploits.
       * Fixed beacons not being given correctly when Sudden Death starts
+      * epsilon_cl_confonthud temporarily disabled due to bugs
       * Maps
         * AOW02
           * Fixed building sector tags and MCT line tags

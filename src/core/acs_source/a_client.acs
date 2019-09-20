@@ -424,8 +424,10 @@ script SC_CL_RADAR (void) NET CLIENTSIDE {
 // ============================================================================
 // [Dusk] Set desired font for HUD display
 function void SetHUDFont (void) {
+/* // Disabled due to bugs
 	if (GetCVar ("epsilon_cl_confonthud"))
 		SetFont ("CONFONT");
 	else
+*/
 		SetFont ("SMALLFONT");
 }
