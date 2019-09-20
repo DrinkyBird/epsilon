@@ -18,6 +18,8 @@ script SC_SuddenDeathCounter OPEN {
 }
 
 script SC_SuddenDeath (void) {
+	int i;
+	
 	SetActivator (-1);
 	SuddenDeath = true;
 	
@@ -58,8 +60,14 @@ script SC_SuddenDeath (void) {
 	Log (s:"=== Sudden Death begins ===");
 	
 	// If not in tournament mode, give everybody beacons
-	if (!TournamentMode)
-		GiveToAll ("BeaconItem", 1);
+	if (!TournamentMode) {
+		for (i = 0; i < MAXPLAYERS; i++) {
+			if (GetPlayerTeam (i) == TEAM_RED)
+				GiveActorInventory (3800 + i, "NuclearStrikeBeacon", 1);
+			else
+				GiveActorInventory (3800 + i, "IonCannonBeacon", 1);
+		}
+	}
 	
 	// Big notice
 	SetFont ("BIGFONT");
@@ -83,7 +91,6 @@ script SC_SuddenDeath (void) {
 	}
 	
 	int ticker = 0;
-	int i;
 	while (1) {
 		if (!(ticker % 60)) {
 			SetFont("SMALLFONT");

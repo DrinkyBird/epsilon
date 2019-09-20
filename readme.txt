@@ -34,6 +34,7 @@ CHANGELOG
       * Added a dumb workaround to prevent ejecting one mech multiple times.
         This means you can no longer use any inventory item to eject a mech;
         but it should prevent a bunch of exploits.
+      * Fixed beacons not being given correctly when Sudden Death starts
       * Maps
         * AOW02
           * Fixed building sector tags and MCT line tags

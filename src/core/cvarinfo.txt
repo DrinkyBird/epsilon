@@ -61,7 +61,7 @@ server int epsilon_tiberium_self = 225;
 server int epsilon_tiberium_other = 75;
 server int epsilon_tiberium_advperc = 300;
 
-server bool epsilon_tournamentmode = true;
+server bool epsilon_tournamentmode = false;
 server bool epsilon_disablemechs = false;
 server int epsilon_surrendermode = 0;
 
