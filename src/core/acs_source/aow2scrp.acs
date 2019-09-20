@@ -158,6 +158,7 @@
 #libdefine SC_TimedC4DisarmCheck		830
 #libdefine SC_BindGrenadeResetWep		831
 #libdefine SC_BindGrenade				832
+#libdefine SC_MechEjectWarning			833
 // [...]
 #libdefine SC_BotEnter					888
 #libdefine SC_BotRespawn				889

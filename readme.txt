@@ -31,6 +31,9 @@ CHANGELOG
       * Beacons will now disarm themselves when placed near their own team's
         terminals
       * Fixed addon purchasing not checking discounts correctly
+      * Added a dumb workaround to prevent ejecting one mech multiple times.
+        This means you can no longer use any inventory item to eject a mech;
+        but it should prevent a bunch of exploits.
       * Maps
         * AOW02
           * Fixed building sector tags and MCT line tags

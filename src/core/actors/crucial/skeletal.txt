@@ -54,7 +54,7 @@ actor InventoryItem : CustomInventory {
 		TNT1 A 0
 		stop
 	Use.Mech:
-		TNT1 A 0 ACS_ExecuteAlways (697, 0)
+		TNT1 A 0 ACS_ExecuteAlways (SC_MechEjectWarning, 0)
 		fail
 	Failure:
 		TNT1 A 0

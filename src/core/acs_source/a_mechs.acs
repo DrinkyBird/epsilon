@@ -126,7 +126,7 @@ script SC_MECHMORPH (int mech) {
 	GiveInventory ("IsMech", 1);
 	GiveInventory (Mechs[mech][MK_MORPH], 1);
 	GiveInventory (Mechs[mech][MK_AMMO], 1);
-	TakeInventory ("DidEjectMech", 1);
+	SetInventory ("DidEjectMech", 0);
 	
 	// [SB] Ensure the correct amount of tickets are deducted in Sudden Death
 	if (mech != MECH_Tortoise && Mechs[mech][MK_WEIGHT] + 1 > CheckInventory("MaxMechWeight"))
@@ -420,6 +420,9 @@ function str MechHudColor (int weapon, str cooldownitem) {
 
 //EJECT MECH
 script 697 (void) {
+	if (!CheckInventory ("IsMech")) terminate;
+	if (CheckInventory ("DidEjectMech")) terminate;
+	
 	int MechType = 1;
 	if (CheckInventory ("OrcaWeapons")) MechType = 0;
 	if (CheckInventory ("RavenWeapons")) MechType = 1;
@@ -513,6 +516,12 @@ script 697 (void) {
 	TakeInventory ("IsInSpawnRoom", 1);
 	SetPlayerProperty (0, false, PROP_FROZEN);
 	SetActorProperty (0, APROP_SPEED, PlayerSpeeds[PlayerNumber()]);
+}
+
+// Dumb workaround: print a warning when attempting to eject a mech using an
+// inventory item that is not the ejection button
+script SC_MechEjectWarning (void) {
+	GenericError ("\cRPlease use the \cFMech Ejection Button\n\cRinventory item to eject mechs");
 }
 
 // Get in Mech animation
