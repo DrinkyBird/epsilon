@@ -36,6 +36,7 @@ CHANGELOG
         but it should prevent a bunch of exploits.
       * Fixed beacons not being given correctly when Sudden Death starts
       * epsilon_cl_confonthud temporarily disabled due to bugs
+	  * Purchasing a class now sets player health to their spawn health
       * Maps
         * AOW02
           * Fixed building sector tags and MCT line tags

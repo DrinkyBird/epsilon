@@ -356,6 +356,9 @@ function int SetClass (int id, int scflags) {
 	// Save the player speed for morph handling
 	PlayerSpeeds[PlayerNumber()] = Classes[id][CK_SPEED];
 	
+	// Set the player's health to their spawn health
+	SetHealth (GetSpawnHealth ());
+	
 	// Inform teammates of the class change
 	TeamMessage (TMSG_NEWCLASS, id, 0);
 	
