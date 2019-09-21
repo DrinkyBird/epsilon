@@ -170,6 +170,12 @@ map aow27 "Reactor" {
 	music = "d_aow07"
 }
 
+map aow28 "Happy Fragging" {
+	next = "aow29"
+	sky1 = "stsky14"
+	music = "d_aow03"
+}
+
 skill Normal {
 	name = "Normal"
 	damagefactor = 1.0

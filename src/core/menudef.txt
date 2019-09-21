@@ -90,7 +90,8 @@ OptionValue "AOWMaps"
     23,             "AOW24 - Surface Tension Reloaded"
     24,             "AOW25 - Renegade"
     25,             "AOW26 - Mir"
-    26,             "AOW26 - Reactor"
+    26,             "AOW27 - Reactor"
+    27,             "AOW28 - Happy Fragging"
 }
 
 OptionMenu "AOWPlayOffline"

@@ -26,6 +26,7 @@ MAP LIST
   * AOW25 - Renegade
   * AOW26 - Mir
   * AOW27 - Reactor
+  * AOW28 - Happy Fragging
     
 CHANGELOG
     Latest:
