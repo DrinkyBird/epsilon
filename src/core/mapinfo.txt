@@ -176,6 +176,13 @@ map aow28 "Happy Fragging" {
 	music = "d_aow03"
 }
 
+map aow29 "Mining Camp 2" {
+	next = "aow30"
+	sky1 = "stsky5"
+	music = "d_aow02"
+}
+
+
 skill Normal {
 	name = "Normal"
 	damagefactor = 1.0

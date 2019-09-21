@@ -92,6 +92,7 @@ OptionValue "AOWMaps"
     25,             "AOW26 - Mir"
     26,             "AOW27 - Reactor"
     27,             "AOW28 - Happy Fragging"
+    28,             "AOW29 - Mining Camp 2"
 }
 
 OptionMenu "AOWPlayOffline"

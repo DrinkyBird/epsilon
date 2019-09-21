@@ -27,6 +27,7 @@ MAP LIST
   * AOW26 - Mir
   * AOW27 - Reactor
   * AOW28 - Happy Fragging
+  * AOW29 - Mining Camp 2
     
 CHANGELOG
     Latest:
