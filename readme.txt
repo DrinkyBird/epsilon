@@ -29,6 +29,7 @@ MAP LIST
   * AOW28 - Happy Fragging
   * AOW29 - Mining Camp 2
   * AOW30 - AOW Zone
+  * AOW31 - Hoth
     
 CHANGELOG
     Latest:

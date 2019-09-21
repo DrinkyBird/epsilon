@@ -183,8 +183,13 @@ map aow29 "Mining Camp 2" {
 }
 
 map aow30 "Aow Zone" {
-	next = "aow01"
+	next = "aow31"
 	sky1 = "skyfog"
+	music = "d_aow23"
+}
+
+map aow31 "Hoth" {
+	next = "aow01"
 	music = "d_aow23"
 }
 

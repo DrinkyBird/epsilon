@@ -94,6 +94,7 @@ OptionValue "AOWMaps"
     27,             "AOW28 - Happy Fragging"
     28,             "AOW29 - Mining Camp 2"
     29,             "AOW30 - AOW Zone"
+    30,             "AOW31 - Hoth"
 }
 
 OptionMenu "AOWPlayOffline"
