@@ -123,7 +123,7 @@ map aow19 "Volcanicity" {
 	music = "d_aow19"
 }
 
-map aow20 "Renegade" {
+map aow20 "Renegade 2030" {
 	next = "aow21"
 	music = "d_aow20"
 	sky1 = "stars"
@@ -142,14 +142,20 @@ map aow22 "Mercury" {
 }
 
 map aow23 "Defunct Commission" {
-	next = "aow26"
+	next = "aow24"
 	sky1 = "skyfog0", 0.1
 	music = "d_aow23"
 }
 
 map aow24 "Surface Tension Reloaded" {
-	next = "aow35"
+	next = "aow25"
 	music = "d_aow21"
+}
+
+map aow25 "Renegade" {
+	next = "aow26"
+	music = "d_aow02"
+	sky1 = "stars"
 }
 
 skill Normal {

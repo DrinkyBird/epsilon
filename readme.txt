@@ -18,11 +18,12 @@ MAP LIST
   * AOW17 - Sand Canyon
   * AOW18 - Mining Site
   * AOW19 - Volcanicity
-  * AOW20 - Renegade
+  * AOW20 - Renegade 2030
   * AOW21 - Renegade 2032
   * AOW22 - Mercury
   * AOW23 - Defunct Commission
   * AOW24 - Surface Tension Reloaded
+  * AOW25 - Renegade
     
 CHANGELOG
     Latest:
@@ -36,7 +37,7 @@ CHANGELOG
         but it should prevent a bunch of exploits.
       * Fixed beacons not being given correctly when Sudden Death starts
       * epsilon_cl_confonthud temporarily disabled due to bugs
-	  * Purchasing a class now sets player health to their spawn health
+      * Purchasing a class now sets player health to their spawn health
       * Maps
         * AOW02
           * Fixed building sector tags and MCT line tags
