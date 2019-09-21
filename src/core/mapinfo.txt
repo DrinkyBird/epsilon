@@ -158,6 +158,12 @@ map aow25 "Renegade" {
 	sky1 = "stars"
 }
 
+map aow26 "Mir" {
+	next = "aow27"
+	sky1 = "stsky5", 0.1
+	music = "d_aow20"
+}
+
 skill Normal {
 	name = "Normal"
 	damagefactor = 1.0

@@ -24,6 +24,7 @@ MAP LIST
   * AOW23 - Defunct Commission
   * AOW24 - Surface Tension Reloaded
   * AOW25 - Renegade
+  * AOW26 - Mir
     
 CHANGELOG
     Latest:
