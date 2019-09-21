@@ -182,6 +182,11 @@ map aow29 "Mining Camp 2" {
 	music = "d_aow02"
 }
 
+map aow30 "Aow Zone" {
+	next = "aow01"
+	sky1 = "skyfog"
+	music = "d_aow23"
+}
 
 skill Normal {
 	name = "Normal"

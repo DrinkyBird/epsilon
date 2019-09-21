@@ -28,6 +28,7 @@ MAP LIST
   * AOW27 - Reactor
   * AOW28 - Happy Fragging
   * AOW29 - Mining Camp 2
+  * AOW30 - AOW Zone
     
 CHANGELOG
     Latest:
