@@ -164,6 +164,12 @@ map aow26 "Mir" {
 	music = "d_aow20"
 }
 
+map aow27 "Reactor" {
+	next = "aow28"
+	sky1 = "stsky5"
+	music = "d_aow07"
+}
+
 skill Normal {
 	name = "Normal"
 	damagefactor = 1.0

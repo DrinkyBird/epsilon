@@ -25,6 +25,7 @@ MAP LIST
   * AOW24 - Surface Tension Reloaded
   * AOW25 - Renegade
   * AOW26 - Mir
+  * AOW27 - Reactor
     
 CHANGELOG
     Latest:
