@@ -376,7 +376,7 @@ function void InitClasses (void) {
 		0, 0, false, (CF_NoPistol | CF_CantPilot | CF_Warning | CF_Support),
 		ITEM_BOMBPACK, 0, 0, 0, 0, 0);
 	
-	AddClass (CLASS_Sniper, "Sniper", 750, 0.675, DEP_CENTRE,
+	AddClass (CLASS_Sniper, "Sniper", 750, 0.675, DEP_BARRACKS,
 		1, ARMOD_NOCHANGE,
 		2, 1, false, CF_IsSniper,
 		ITEM_SNIPER, 0, 0, 0, 0, 0);
