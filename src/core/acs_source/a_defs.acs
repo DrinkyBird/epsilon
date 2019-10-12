@@ -130,111 +130,6 @@ int Researches[NUM_RESEARCHES][NUM_RESEARCH_KEYS] = {
 	}
 };
 
-int Mechs[NUM_MECHS][NUM_MECH_KEYS] = {
-	/*
-		name, cost, morph,
-		ammo, health, weight, flags
-		description
-	*/
-	{
-		"Orca", 900, "OrcaSwitch",
-		"OrcaAmmoPackage", 1000, MECHWEIGHT_LIGHT, 0,
-		"		A light VTOL armed with a machine gun and\n
-		rockets. Designed against infantry but\n
-		loses hard against heavier firepower.\n
-		\n
-		\n
-		\n
-		\n
-		Weapons:\n
-		\t- Machine Gun\n
-		\t- Rocket pods"
-	}, {
-		"Raven", 1200, "RavenSwitch",
-		"RavenAmmoPackage", 2000, MECHWEIGHT_LIGHT, 0,
-		"		A light and \cdFAST\c- land mech, designed\n
-		for scouting and fending off infantry.\n
-		Reports also indicate harvesters using\n
-		Ravens for a safer harvesting trip.\n
-		These mechs can also be built by\n
-		Utility Guys.\n
-		\n
-		Weapons:\n
-		\t- AC-2\n
-		\t- LRM-5"
-	}, {
-		"Wolverine", 1250, "WolverineSwitch",
-		"WolverineAmmoPackage", 3000, MECHWEIGHT_MEDIUM, 0,
-		"		A medium, heavier mechs packed with\n
-		heavier anti-infantry firepower at\n
-		the cost of speed. These mechs can\n
-		also be built by Utility Guys.\n
-		\n
-		\n
-		\n
-		Weapons:\n
-		\t- LRM-10\n
-		\t- Pulse Cannon\n
-		\t- Minigun"
-	}, {
-		"Mad Cat", 1750, "MadCatSwitch",
-		"MadCatAmmoPackage", 4000, MECHWEIGHT_HEAVY, MF_POWER,
-		"		A heavy all-around mech designed to hold\n
-		its own against both infantry and mechs\n
-		and can also hit on buildings. Though,\n
-		its slow speed and its massive chassis\n
-		make it a vulnerable target, especially\n
-		at long range.\n
-		\n
-		Weapons:\n
-		\t- 2x Shock Cannon\n
-		\t- 2x Shock Rifle\n
-		\t- LRM-20"
-	}, {
-		"Titan", 2000, "TitanSwitch",
-		"TitanAmmoPackage", 5000, MECHWEIGHT_HEAVY, MF_POWER,
-		"		A very heavy mech designed for total\n
-		annihilation of buildings, though it\n
-		performs less good at infantry than\n
-		the Mad Cat. However, the 100mm cannon\n
-		has proven its use time and time\n
-		again...\n
-		\n
-		Weapons:\n
-		\t- 100mm Cannon\n
-		\t- 2x Flamer\n
-		\t- LRM-20"
-	}, {
-		"Juggernaut MKII", 3000, "JuggernautSwitch",
-		"JuggernautAmmoPackage", 5000, MECHWEIGHT_HEAVY, MF_POWER,
-		"		Extremely heavy anti-armor walker\n
-		This metal-tearing grinder turns mechs\n
-		to metal bits before they can even spell\n
-		its name. It is also effective on buildings.\n
-		However, its slow speed and anti-armour\n
-		weapons make it a sitting duck for infantry.\n
-		\n
-		\n
-		Weapons:\n
-		\t- 2x Artillery Cannon 80mm\n
-		\t- 2x Anti-Mech SRM-15\n
-		\t- 2x Flak Cannon\n
-		\t- Mini-Nuke Artillery"
-	}, {
-		"Tortoise", 1250, "TortoiseSwitch",
-		"TortoiseAmmoPackage", 3500, MECHWEIGHT_MEDIUM, 0,
-		"		An armoured personnel carrier, the\n
-		Tortoise doesn't sport a powerful engine\n
-		or an impressive arsenal. Instead, it has\n
-		tough armor rivaling that of the Mad Cat\n
-		and the ability to \ckcarry up to five\n
-		\ckinfantry passengers\c- make it a rather\n
-		tactical unit.\n
-		Weapons:\n
-		\t- Plasma Rifle"
-	}
-};
-
 /*============================================================================
  *
  *                       C L A S S E S
@@ -533,38 +428,99 @@ function void InitClasses (void) {
     Researches[RESEARCH_FRAGNADE][RCK_COST] = 200;
     
     // Mechs light
-    Mechs[MECH_ORCA][MK_COST] = 900;
-    Mechs[MECH_ORCA][MK_HEALTH] = 1000;
-    Mechs[MECH_ORCA][MK_WEIGHT] = MECHWEIGHT_LIGHT;
-    Mechs[MECH_ORCA][MK_FLAGS] = 0;
-    
-    Mechs[MECH_RAVEN][MK_COST] = 1200;
-    Mechs[MECH_RAVEN][MK_HEALTH] = 2000;
-    Mechs[MECH_RAVEN][MK_WEIGHT] = MECHWEIGHT_LIGHT;
-    Mechs[MECH_RAVEN][MK_FLAGS] = 0;
-    
-    Mechs[MECH_WOLVERINE][MK_COST] = 1250;
-    Mechs[MECH_WOLVERINE][MK_HEALTH] = 3000;
-    Mechs[MECH_WOLVERINE][MK_WEIGHT] = MECHWEIGHT_MEDIUM;
-    Mechs[MECH_WOLVERINE][MK_FLAGS] = 0;
-    
-    Mechs[MECH_MADCAT][MK_COST] = 1750;
-    Mechs[MECH_MADCAT][MK_HEALTH] = 4000;
-    Mechs[MECH_MADCAT][MK_WEIGHT] = MECHWEIGHT_HEAVY;
-    Mechs[MECH_MADCAT][MK_FLAGS] = MF_POWER;
-    
-    Mechs[MECH_TITAN][MK_COST] = 2000;
-    Mechs[MECH_TITAN][MK_HEALTH] = 5000;
-    Mechs[MECH_TITAN][MK_WEIGHT] = MECHWEIGHT_HEAVY;
-    Mechs[MECH_TITAN][MK_FLAGS] = MF_POWER;
-    
-    Mechs[MECH_JUGGERNAUT][MK_COST] = 3000;
-    Mechs[MECH_JUGGERNAUT][MK_HEALTH] = 5000;
-    Mechs[MECH_JUGGERNAUT][MK_WEIGHT] = MECHWEIGHT_HEAVY;
-    Mechs[MECH_JUGGERNAUT][MK_FLAGS] = MF_POWER;
-    
-    Mechs[MECH_Tortoise][MK_COST] = 1200;
-    Mechs[MECH_Tortoise][MK_HEALTH] = 2000;
-    Mechs[MECH_Tortoise][MK_WEIGHT] = MECHWEIGHT_MEDIUM;
-    Mechs[MECH_Tortoise][MK_FLAGS] = 0;
+	AddMech(MECH_ORCA, "Orca", 900, "OrcaSwitch", "OrcaAmmoPackage", 1000, MECHWEIGHT_LIGHT, 0,
+		"		A light VTOL armed with a machine gun and\n
+		rockets. Designed against infantry but\n
+		loses hard against heavier firepower.\n
+		\n
+		\n
+		\n
+		\n
+		Weapons:\n
+		\t- Machine Gun\n
+		\t- Rocket pods"
+	);
+	
+	AddMech(MECH_RAVEN, "Raven", 1200, "RavenSwitch", "RavenAmmoPackage", 2000, MECHWEIGHT_LIGHT, 0,
+		"		A light and \cdFAST\c- land mech, designed\n
+		for scouting and fending off infantry.\n
+		Reports also indicate harvesters using\n
+		Ravens for a safer harvesting trip.\n
+		These mechs can also be built by\n
+		Utility Guys.\n
+		\n
+		Weapons:\n
+		\t- AC-2\n
+		\t- LRM-5"
+	);
+	
+	AddMech(MECH_WOLVERINE, "Wolverine", 1250, "WolverineSwitch", "WolverineAmmoPackage", 3000, MECHWEIGHT_MEDIUM, 0,
+		"		A medium, heavier mechs packed with\n
+		heavier anti-infantry firepower at\n
+		the cost of speed. These mechs can\n
+		also be built by Utility Guys.\n
+		\n
+		\n
+		\n
+		Weapons:\n
+		\t- LRM-10\n
+		\t- Pulse Cannon\n
+		\t- Minigun"
+	);
+	
+	AddMech(MECH_MADCAT, "Madcat", 1750, "MadCatSwitch", "MadCatAmmoPackage", 4000, MECHWEIGHT_HEAVY, MF_POWER,
+		"		A heavy all-around mech designed to hold\n
+		its own against both infantry and mechs\n
+		and can also hit on buildings. Though,\n
+		its slow speed and its massive chassis\n
+		make it a vulnerable target, especially\n
+		at long range.\n
+		\n
+		Weapons:\n
+		\t- 2x Shock Cannon\n
+		\t- 2x Shock Rifle\n
+		\t- LRM-20"
+	);
+	
+	AddMech(MECH_TITAN, "Titan", 2000, "TitanSwitch", "TitanAmmoPackage", 5000, MECHWEIGHT_HEAVY, MF_POWER,
+		"		A very heavy mech designed for total\n
+		annihilation of buildings, though it\n
+		performs less good at infantry than\n
+		the Mad Cat. However, the 100mm cannon\n
+		has proven its use time and time\n
+		again...\n
+		\n
+		Weapons:\n
+		\t- 100mm Cannon\n
+		\t- 2x Flamer\n
+		\t- LRM-20"
+	);
+	
+	AddMech(MECH_JUGGERNAUT, "Juggernaut MKII", 3000, "JuggernautSwitch", "JuggernautAmmoPackage", 5000, MECHWEIGHT_HEAVY, MF_POWER,
+		"		Extremely heavy anti-armor walker\n
+		This metal-tearing grinder turns mechs\n
+		to metal bits before they can even spell\n
+		its name. It is also effective on buildings.\n
+		However, its slow speed and anti-armour\n
+		weapons make it a sitting duck for infantry.\n
+		\n
+		\n
+		Weapons:\n
+		\t- 2x Artillery Cannon 80mm\n
+		\t- 2x Anti-Mech SRM-15\n
+		\t- 2x Flak Cannon\n
+		\t- Mini-Nuke Artillery"
+	);
+	
+	AddMech(MECH_TORTOISE, "Tortoise", 1250, "TortoiseSwitch", "TortoiseAmmoPackage", 3500, MECHWEIGHT_MEDIUM, 0,
+		"		An armoured personnel carrier, the\n
+		Tortoise doesn't sport a powerful engine\n
+		or an impressive arsenal. Instead, it has\n
+		tough armor rivaling that of the Mad Cat\n
+		and the ability to \ckcarry up to five\n
+		\ckinfantry passengers\c- make it a rather\n
+		tactical unit.\n
+		Weapons:\n
+		\t- Plasma Rifle"
+	);
 }

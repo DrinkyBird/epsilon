@@ -6,6 +6,20 @@
 // due. Please don't be lame and just copy-paste any of this and call it your own. Thanks!
 
 // =============================================================================
+// [SB] Used by a_defs.acs
+function void AddMech(int id, str name, int cost, str morph, str ammo, int health, int weight, int flags, int description)
+{
+	Mechs[id][MK_NAME] = name;
+	Mechs[id][MK_COST] = cost;
+	Mechs[id][MK_MORPH] = morph;
+	Mechs[id][MK_AMMO] = ammo;
+	Mechs[id][MK_HEALTH] = health;
+	Mechs[id][MK_WEIGHT] = weight;
+	Mechs[id][MK_FLAGS] = flags;
+	Mechs[id][MK_DESCRIPTION] = description;
+}
+
+// =============================================================================
 // [Dusk] These functions stash and restore the armor values. PushArmor should be used
 // when a player goes into a mech, PopArmor should be used when the player ejects.
 function void PushArmor (void) {

@@ -103,6 +103,9 @@ int AIMarineCount; // how many AI marines are there overall?
 // [Dusk] Class meta-table
 int Classes[NUMCLASSES][MAX_CLASSKEYS];
 
+// [SB] Mech table
+int Mechs[NUM_MECHS][NUM_MECH_KEYS];
+
 int g_CrateSeed; // [Dusk] Crate logic
 
 // [Dusk] CVars that get synced from server to client
