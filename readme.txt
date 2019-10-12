@@ -44,6 +44,7 @@ CHANGELOG
       * Fixed beacons not being given correctly when Sudden Death starts
       * epsilon_cl_confonthud temporarily disabled due to bugs
       * Purchasing a class now sets player health to their spawn health
+      * Clean up some definitions code
       * Maps
         * AOW02
           * Fixed building sector tags and MCT line tags
@@ -56,6 +57,9 @@ CHANGELOG
         * AOW16
           * Fixed both barracks having one passable wall
           * Fixed war factory doors kinda
+      * Classes
+        * Sniper now depends on Barracks, not the research centre (this moves
+          it into the Combat category in the menu)
 
     r218 (17/09/2019):
       * Bumped max number of razor wires to 40
