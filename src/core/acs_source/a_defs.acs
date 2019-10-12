@@ -65,70 +65,15 @@ function void AddItem(int id, str name, str item0, str item1, str item2, int cou
 #define RESEARCH_FRAGNADE 8
 // ----
 #define NUM_RESEARCHES 9
-int Researches[NUM_RESEARCHES][NUM_RESEARCH_KEYS] = {
-	/* {
-		name, cost, category,
-		description
-	}*/
-	
-	{
-		"Enhanced Refining", 2000, RC_CAT_UPGRADE,
-		"New technology gets more purity\n
-		out of refining Tiberium.\n
-		\n
-		\t--- Increases Harvesting income by $150\n"
-	}, {
-		"Advanced Mechs", 2000, RC_CAT_UPGRADE,
-		"New Mech chassis and hardened metal plating.\n
-		\n
-		\n
-		\t--- Enables construction of larger Mechs.\n"
-	}, {
-		"Health Regenerator", 2250, RC_CAT_EXTENSION,
-		"Implant advanced cell reproduction.\n
-		\n
-		\n
-		\t--- Gives entire team +1 health/s regeneration.\n
-		\t--- Builds a Regen. Health Cache behind the Research Centre.\n"
-	}, {
-		"Ammo Regenerator", 2250, RC_CAT_EXTENSION,
-		"Issue mini-ammo dispensers.\n
-		\n
-		\n
-		\t--- Gives entire team slow Ammo regeneration. Mechs Included.\n
-		\t--- Builds an Ammo Regenerator behind the Research Centre.\n"
-	}, {
-		"+1 Timed C4", 200, RC_CAT_ADDON,
-		"An extra C4 explosive.\n
-		\n
-		\n
-		\t--- Lets you carry an additional timed C4 explosive.\n"
-	}, {
-		"Repair Gun Upgrade", 200, RC_CAT_ADDON,
-		"Applies the latest nanotechnology enhancements to your\n
-		repair gun, allowing it to repair faster.\n
-		\n
-		\t--- Lets you repair faster.\n"
-	}, {
-		"Advanced Turrets", 2000, RC_CAT_UPGRADE,
-		"New turret tech has come in!\n
-		\n
-		\n
-		\t--- Enables use of higher level turrets.\n"
-	}, {
-		"More Turrets", 2000, RC_CAT_UPGRADE,
-		"More generators to power turrets.\n
-		\n
-		\n
-		\t--- Increases turret cap by 5.\n"
-	}, {
-		"+1 Frag Grenade", 200, RC_CAT_ADDON,
-		"Adds an extra frag grenade to your arsenal.\n
-		\n
-		\n
-		\t--- Exactly what it says on the tin.\n"
-	}
-};
+int Researches[NUM_RESEARCHES][NUM_RESEARCH_KEYS];
+
+function void AddResearch(int id, str name, int cost, int category, str description)
+{
+	Researches[id][RCK_NAME] = name;
+	Researches[id][RCK_COST] = cost;
+	Researches[id][RCK_CATEGORY] = category;
+	Researches[id][RCK_DESCRIPTION] = description;
+}
 
 /*============================================================================
  *
@@ -396,38 +341,74 @@ function void InitClasses (void) {
 	AddAddon(i++, "Plasma Cannon", 1500, ITEM_PlasmaCannon);
 	AddAddon(i++, "Superweapon Beacon", 1750, ITEM_Beacon);
         
-    // For some reason, mech and research ints get broken, so we have to define them here
-    // Research upgrades
-    Researches[RESEARCH_ADVANCEDMECHS][RCK_CATEGORY] = RC_CAT_UPGRADE;
-    Researches[RESEARCH_ADVANCEDMECHS][RCK_COST] = 2000;
+    // Researches
+	AddResearch(RESEARCH_ENHANCEDREFINING, "Enhanced Refining", 2000, RC_CAT_UPGRADE,
+		"New technology gets more purity\n
+		out of refining Tiberium.\n
+		\n
+		\t--- Increases Harvesting income by $150\n"
+	);
     
-    Researches[RESEARCH_ENHANCEDREFINING][RCK_CATEGORY] = RC_CAT_UPGRADE;
-    Researches[RESEARCH_ENHANCEDREFINING][RCK_COST] = 2000;
+	AddResearch(RESEARCH_ADVANCEDMECHS, "Advanced Mechs", 2000, RC_CAT_UPGRADE,
+		"New Mech chassis and hardened metal plating.\n
+		\n
+		\n
+		\t--- Enables construction of larger Mechs.\n"
+	);
     
-    Researches[RESEARCH_ADVTURRETS][RCK_CATEGORY] = RC_CAT_UPGRADE;
-    Researches[RESEARCH_ADVTURRETS][RCK_COST] = 2000;
+	AddResearch(RESEARCH_HEALTHREGEN, "Health Regenerator", 2250, RC_CAT_EXTENSION,
+		"Implant advanced cell reproduction.\n
+		\n
+		\n
+		\t--- Gives entire team +1 health/s regeneration.\n
+		\t--- Builds a Regen. Health Cache behind the Research Centre.\n"
+	);
     
-    Researches[RESEARCH_MORETURRETS][RCK_CATEGORY] = RC_CAT_UPGRADE;
-    Researches[RESEARCH_MORETURRETS][RCK_COST] = 2000;
+	AddResearch(RESEARCH_AMMOREGEN, "Ammo Regenerator", 2250, RC_CAT_EXTENSION,
+		"Issue mini-ammo dispensers.\n
+		\n
+		\n
+		\t--- Gives entire team slow Ammo regeneration. Mechs Included.\n
+		\t--- Builds an Ammo Regenerator behind the Research Centre.\n"
+	);
     
-    // Research extensions
-    Researches[RESEARCH_HEALTHREGEN][RCK_CATEGORY] = RC_CAT_EXTENSION;
-    Researches[RESEARCH_HEALTHREGEN][RCK_COST] = 2250;
+	AddResearch(RESEARCH_C4, "+1 Timed C4", 200, RC_CAT_ADDON,
+		"An extra C4 explosive.\n
+		\n
+		\n
+		\t--- Lets you carry an additional timed C4 explosive.\n"
+	);
     
-    Researches[RESEARCH_AMMOREGEN][RCK_CATEGORY] = RC_CAT_EXTENSION;
-    Researches[RESEARCH_AMMOREGEN][RCK_COST] = 2250;
+	AddResearch(RESEARCH_REPAIRUPGRADE, "Repair Gun Upgrade", 200, RC_CAT_ADDON,
+		"Applies the latest nanotechnology enhancements to your\n
+		repair gun, allowing it to repair faster.\n
+		\n
+		\t--- Lets you repair faster.\n"
+	);
     
-    // Research addons
-    Researches[RESEARCH_C4][RCK_CATEGORY] = RC_CAT_ADDON;
-    Researches[RESEARCH_C4][RCK_COST] = 200;
+	AddResearch(RESEARCH_ADVTURRETS, "Advanced Turrets", 2000, RC_CAT_UPGRADE,
+		"New turret tech has come in!\n
+		\n
+		\n
+		\t--- Enables use of higher level turrets.\n"
+
+	);
     
-    Researches[RESEARCH_REPAIRUPGRADE][RCK_CATEGORY] = RC_CAT_ADDON;
-    Researches[RESEARCH_REPAIRUPGRADE][RCK_COST] = 200;
+	AddResearch(RESEARCH_MORETURRETS, "More Turrets", 2000, RC_CAT_UPGRADE,
+		"More generators to power turrets.\n
+		\n
+		\n
+		\t--- Increases turret cap by 5.\n"
+	);
     
-    Researches[RESEARCH_FRAGNADE][RCK_CATEGORY] = RC_CAT_ADDON;
-    Researches[RESEARCH_FRAGNADE][RCK_COST] = 200;
+	AddResearch(RESEARCH_FRAGNADE, "+1 Frag Grenade", 200, RC_CAT_ADDON,
+		"Adds an extra frag grenade to your arsenal.\n
+		\n
+		\n
+		\t--- Exactly what it says on the tin.\n"
+	);
     
-    // Mechs light
+    // Mechs
 	AddMech(MECH_ORCA, "Orca", 900, "OrcaSwitch", "OrcaAmmoPackage", 1000, MECHWEIGHT_LIGHT, 0,
 		"		A light VTOL armed with a machine gun and\n
 		rockets. Designed against infantry but\n
