@@ -45,9 +45,12 @@ CHANGELOG
       * epsilon_cl_confonthud temporarily disabled due to bugs
       * Purchasing a class now sets player health to their spawn health
       * Clean up some definitions code
+      * Destroying the enemy refinery no longer prevents your team's harvesters
+        from returning Tiberium
       * Maps
         * AOW02
           * Fixed building sector tags and MCT line tags
+          * Fixed an incorrect texture on the red base wall
         * AOW06
           * Fixed red barracks walls being passable
         * AOW09
