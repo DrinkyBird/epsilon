@@ -191,10 +191,6 @@ Script 651 (int isHeal) {
 	if (isHeal && !isPlayer)
 		r = 0;
 	
-	// Attempting to repair building in SD
-	if (SuddenDeath && !isPlayer && !isHeal)
-		r = 0;
-	
 	SetResultValue(r);
 }
 

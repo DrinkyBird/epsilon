@@ -33,6 +33,17 @@ MAP LIST
     
 CHANGELOG
     Latest:
+      * Destroying the enemy refinery no longer prevents your team's harvesters
+        from returning Tiberium
+      * Repair guns no longer check if it's Sudden Death
+      * Maps
+        * AOW02
+          * Fixed an incorrect texture on the red base wall
+        * AOW04
+          * Removed the additional back entraces to each base
+          * Fixed some more textures
+
+    r247 (12/10/2019):
       * Version information includes build and commit date/time
       * Corrected mini-raven flags: They are no longer pushable, or solid.
       * Beacons will now disarm themselves when placed near their own team's
@@ -45,8 +56,6 @@ CHANGELOG
       * epsilon_cl_confonthud temporarily disabled due to bugs
       * Purchasing a class now sets player health to their spawn health
       * Clean up some definitions code
-      * Destroying the enemy refinery no longer prevents your team's harvesters
-        from returning Tiberium
       * Maps
         * AOW02
           * Fixed building sector tags and MCT line tags
