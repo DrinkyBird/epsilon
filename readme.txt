@@ -51,6 +51,9 @@ CHANGELOG
         * AOW02
           * Fixed building sector tags and MCT line tags
           * Fixed an incorrect texture on the red base wall
+        * AOW04
+          * Removed the additional back entraces to each base
+          * Fixed some more textures
         * AOW06
           * Fixed red barracks walls being passable
         * AOW09
