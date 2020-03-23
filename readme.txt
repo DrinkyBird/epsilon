@@ -42,6 +42,8 @@ CHANGELOG
         * AOW04
           * Removed the additional back entraces to each base
           * Fixed some more textures
+        * AOW07
+          * Moved Red's tiberium pit closer
 
     r247 (12/10/2019):
       * Version information includes build and commit date/time
@@ -59,10 +61,6 @@ CHANGELOG
       * Maps
         * AOW02
           * Fixed building sector tags and MCT line tags
-          * Fixed an incorrect texture on the red base wall
-        * AOW04
-          * Removed the additional back entraces to each base
-          * Fixed some more textures
         * AOW06
           * Fixed red barracks walls being passable
         * AOW09
