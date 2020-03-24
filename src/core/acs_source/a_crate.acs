@@ -559,10 +559,12 @@ script 309 (int c) {
 		// [Dusk] This crate gives 15% max health and +1 armor to all teammates now.
 		for (int k = 0; k < MAXPLAYERS; k++) {
 			if (PlayerInGame (k) && GetPlayerTeam (k) == PlayerTeam()) {
+				int newHealth = GetActorSpawnHealth (3800+k) + 15;
 				ThingSound (3800+k, "misc/health_pkup", 127);
 				ThingSound (3800+k, "misc/armor_pkup", 127);
-				SetActorSpawnHealth (3800+k, GetActorSpawnHealth (3800+k) + 15);
-				SetActorHealth (3800+k, GetActorSpawnHealth (3800+k));
+				SetActorSpawnHealth (3800+k, newHealth);
+				if (GetActorHealth(3800+k) < newHealth)
+					SetActorHealth (3800+k, newHealth);
 				SetPlayerArmorGrade (k, 1, AGF_ADDITIVE);
 			}
 		}
