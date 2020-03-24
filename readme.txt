@@ -32,10 +32,12 @@ MAP LIST
   * AOW31 - Hoth
     
 CHANGELOG
-    Latest:
+    r255 (24/03/2020):
       * Destroying the enemy refinery no longer prevents your team's harvesters
         from returning Tiberium
       * Repair guns no longer check if it's Sudden Death
+      * Team Boost crate only sets a player's health if it's lower than their
+        spawn health (so Iron Curtain is preserved)
       * Maps
         * AOW02
           * Fixed an incorrect texture on the red base wall
