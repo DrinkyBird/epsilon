@@ -48,6 +48,7 @@ CHANGELOG
       * Weapons
         * Rifle has been nerfed; does less damage and alt attack takes longer
         * Double shotgun has been marginally nerfed
+        * Machine gun has been marginally nerfed
       * Maps
         * Added WEAPTEST for testing weapons
         * AOW02

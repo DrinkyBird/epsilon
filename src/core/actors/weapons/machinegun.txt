@@ -27,17 +27,17 @@ actor MachineGun : AOWWeapon replaces Chaingun 21044 {
 		AK47 A 0 A_JumpIfInventory ("InMenu", 1, "Ready")
 		AK47 D 0 A_Light2
 		AK47 D 0 bright A_SpawnItemEx("RifleShellCasing",4,13,34,random(-2,-4),random(2,3),random(0,1),random(45,60),128)
-		AK47 D 1 BRIGHT A_FireBullets (1.2, 1.2, -1, 5, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 3072)
+		AK47 D 1 BRIGHT A_FireBullets (1.2, 1.2, -1, 4, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 3072)
 		AK47 E 1 BRIGHT A_Light1
 		AK47 A 2 A_Light0
 		AK47 G 0 A_Light2
 		AK47 G 0 bright A_SpawnItemEx("RifleShellCasing",4,13,34,random(-2,-4),random(2,3),random(0,1),random(45,60),128)
-		AK47 G 1 BRIGHT A_FireBullets (1.2, 1.2, -1, 5, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 3072)
+		AK47 G 1 BRIGHT A_FireBullets (1.2, 1.2, -1, 4, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 3072)
 		AK47 H 1 BRIGHT A_Light1
 		AK47 A 2 A_Light0
 		AK47 D 0 A_Light2
 		AK47 D 0 bright A_SpawnItemEx("RifleShellCasing",4,13,34,random(-2,-4),random(2,3),random(0,1),random(45,60),128)
-		AK47 D 1 BRIGHT A_FireBullets (1.2, 1.2, -1, 5, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 3072)
+		AK47 D 1 BRIGHT A_FireBullets (1.2, 1.2, -1, 4, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 3072)
 		AK47 E 1 BRIGHT A_Light1
 		AK47 A 2 A_Light0
 		AK47 B 4 A_ReFire
@@ -49,17 +49,17 @@ actor MachineGun : AOWWeapon replaces Chaingun 21044 {
 		AK47 A 0 A_JumpIfInventory ("MachineGunSwitch", 1, "Hold2")
 		AK47 G 0 A_Light2
 		AK47 G 0 bright A_SpawnItemEx("RifleShellCasing",4,13,34,random(-2,-4),random(2,3),random(0,1),random(45,60),128)
-		AK47 G 1 BRIGHT A_FireBullets (4.5, 4.5, -1, 12, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 3072)
+		AK47 G 1 BRIGHT A_FireBullets (4.5, 4.5, -1, 10, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 3072)
 		AK47 H 1 BRIGHT A_Light1
 		AK47 A 2 A_Light0
 		AK47 D 0 A_Light2
 		AK47 D 0 bright A_SpawnItemEx("RifleShellCasing",4,13,34,random(-2,-4),random(2,3),random(0,1),random(45,60),128)
-		AK47 D 1 BRIGHT A_FireBullets (4.5, 4.5, -1, 12, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 3072)
+		AK47 D 1 BRIGHT A_FireBullets (4.5, 4.5, -1, 10, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 3072)
 		AK47 E 1 BRIGHT A_Light1
 		AK47 A 2 A_Light0
 		AK47 G 0 A_Light2
 		AK47 G 0 bright A_SpawnItemEx("RifleShellCasing",4,13,34,random(-2,-4),random(2,3),random(0,1),random(45,60),128)
-		AK47 G 1 BRIGHT A_FireBullets (4.5, 4.5, -1, 12, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 3072)
+		AK47 G 1 BRIGHT A_FireBullets (4.5, 4.5, -1, 10, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 3072)
 		AK47 H 1 BRIGHT A_Light1
 		AK47 A 2 A_Light0
 		AK47 B 0 A_GiveInventory ("MachineGunSwitch", 1)
@@ -68,17 +68,17 @@ actor MachineGun : AOWWeapon replaces Chaingun 21044 {
 	Hold2:
 		AK47 D 0 A_Light2
 		AK47 D 0 bright A_SpawnItemEx("RifleShellCasing",4,13,34,random(-2,-4),random(2,3),random(0,1),random(45,60),128)
-		AK47 D 1 BRIGHT A_FireBullets (4.5, 4.5, -1, 12, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 3072)
+		AK47 D 1 BRIGHT A_FireBullets (4.5, 4.5, -1, 10, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 3072)
 		AK47 E 1 BRIGHT A_Light1
 		AK47 A 2 A_Light0
 		AK47 G 0 A_Light2
 		AK47 G 0 bright A_SpawnItemEx("RifleShellCasing",4,13,34,random(-2,-4),random(2,3),random(0,1),random(45,60),128)
-		AK47 G 1 BRIGHT A_FireBullets (4.5, 4.5, -1, 12, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 3072)
+		AK47 G 1 BRIGHT A_FireBullets (4.5, 4.5, -1, 10, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 3072)
 		AK47 H 1 BRIGHT A_Light1
 		AK47 A 2 A_Light0
 		AK47 D 0 A_Light2
 		AK47 D 0 bright A_SpawnItemEx("RifleShellCasing",4,13,34,random(-2,-4),random(2,3),random(0,1),random(45,60),128)
-		AK47 D 1 BRIGHT A_FireBullets (4.5, 4.5, -1, 12, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 3072)
+		AK47 D 1 BRIGHT A_FireBullets (4.5, 4.5, -1, 10, "RiflePuff", FBF_USEAMMO|FBF_NORANDOM, 3072)
 		AK47 E 1 BRIGHT A_Light1
 		AK47 A 2 A_Light0
 		AK47 B 0 A_TakeInventory ("MachineGunSwitch", 1)
