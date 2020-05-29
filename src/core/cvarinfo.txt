@@ -93,7 +93,7 @@ server bool epsilon_nospawninvul = false;
 server bool epsilon_nodisconnectdonate = false;
 
 // [Dusk] {11/19/12} How many seconds must the player be in game until they can donate?
-server int epsilon_donatewait = 0;
+server int epsilon_donatewait = 60;
 
 // [Dusk] {1/16/13} How many seconds does a beacon take to detonate?
 server int epsilon_nukecountdown = 60;
