@@ -201,3 +201,8 @@ skill Normal {
 	spawnfilter = easy
 	mustconfirm = "Start an offline game? (y/n)"
 }
+
+//// test map
+map weaptest "Weapons Testing" {
+    sky1 = "stsky2"
+}
