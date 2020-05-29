@@ -32,12 +32,21 @@ MAP LIST
   * AOW31 - Hoth
     
 CHANGELOG
+    Latest:
+      * epsilon_donatewait default has been set to 120
+      * Repair facility no longer steals iron curtain
+      * Maps
+        * AOW28
+          * Fixed an incorrect line action on the blue WF's purchase terminal
+
     r255 (24/03/2020):
       * Destroying the enemy refinery no longer prevents your team's harvesters
         from returning Tiberium
       * Repair guns no longer check if it's Sudden Death
       * Team Boost crate only sets a player's health if it's lower than their
         spawn health (so Iron Curtain is preserved)
+      * Weapons
+        * Rifle has been nerfed; does less damage and alt attack takes longer
       * Maps
         * AOW02
           * Fixed an incorrect texture on the red base wall
