@@ -38,7 +38,6 @@ script 107 (void) {
 			if (GetHealth () <= 0) terminate;
 		}
 		
-		if (GetHealth () > GetSpawnHealth ()) SetHealth (GetSpawnHealth ());
 		TakeInventory("InRepairs",1);
 	} else {
 		while (GetHealth () < GetSpawnHealth () && CheckInventory ("InRepairs")) {
