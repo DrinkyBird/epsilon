@@ -38,6 +38,8 @@ CHANGELOG
 	  * Menu now always opens with the left side selected
 	  * Fire/altfire/use now progress/back out through the menu instead of
 	    selecting/exiting
+      * Weapons
+        * Gatling gun has been nerfed slightly
       * Maps
         * AOW28
           * Fixed an incorrect line action on the blue WF's purchase terminal
