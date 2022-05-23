@@ -253,10 +253,11 @@ script SC_MENU (int player) CLIENTSIDE {
 		}
 		
 		if (buttons & (BT_ATTACK | BT_ALTATTACK | BT_USE) && MenuDelay <= 0) {
-			if ((buttons & (BT_ATTACK | BT_USE)) && !MenuHorPos) {
+			bool action = IsActionCategory(MenuSelection[0]);
+			if (!action && (buttons & (BT_ATTACK | BT_USE)) && !MenuHorPos) {
 				MoveMenuCursorHorizontal (true);
 				delay (5);
-			} else if ((buttons & BT_ALTATTACK) && MenuHorPos) {
+			} else if (!action && (buttons & BT_ALTATTACK) && MenuHorPos) {
 				MoveMenuCursorHorizontal (false);
 				delay (5);
 			} else {
