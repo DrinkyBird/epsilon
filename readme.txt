@@ -38,6 +38,7 @@ CHANGELOG
       * Menu now always opens with the left side selected
       * Fire/altfire/use now progress/back out through the menu instead of
         selecting/exiting
+      * Reduced the amount of XP given for killing someone from 100 to 40
       * Weapons
         * Gatling gun has been nerfed slightly
         * Nerfed the amount of damage done by the chainsaw's thrown ripper

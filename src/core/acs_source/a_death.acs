@@ -98,7 +98,7 @@ script SC_DEATH DEATH {
 			
 			LocalAmbientSound ("game/boink", 127);
 			GiveCredits (CreditFragAward);
-			AddExperience (100);
+			AddExperience (40);
 			
 			delay (5);
 			

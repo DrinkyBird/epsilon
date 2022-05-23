@@ -213,7 +213,7 @@ script SC_MARINE_DEATH (int i) {
 	// Give the killer a bounty if he was an enemy player
 	if (PlayerNumber() != -1 && PlayerTeam() != AITeam) {
 		LocalAmbientSound ("game/boink", 127);
-		AddExperience (100);
+		AddExperience (40);
 		GiveCredits (CreditFragAward);
 		TakeTickets (AITeam, 1);
 		Team_GivePoints (PlayerTeam(), 2, false);
