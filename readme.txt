@@ -35,6 +35,9 @@ CHANGELOG
     Latest:
       * epsilon_donatewait default has been set to 120
       * Repair facility no longer steals iron curtain
+	  * Menu now always opens with the left side selected
+	  * Fire/altfire/use now progress/back out through the menu instead of
+	    selecting/exiting
       * Maps
         * AOW28
           * Fixed an incorrect line action on the blue WF's purchase terminal

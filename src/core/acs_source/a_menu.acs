@@ -97,6 +97,7 @@ function void InitMenu (void) {
 	// Reset the cursor
 	MenuSelection[0] = 0;
 	MenuSelection[1] = 0;
+	MenuHorPos = 0;
 	
 	// Zero the stuff first
 	for (i = 0; i < MAX_MENU_CATEGORIES; i++)
@@ -252,23 +253,31 @@ script SC_MENU (int player) CLIENTSIDE {
 		}
 		
 		if (buttons & (BT_ATTACK | BT_ALTATTACK | BT_USE) && MenuDelay <= 0) {
-			// Send the selection to the server
-			int arg0 = MenuSelection[0];
-			int arg1 = MenuSelection[1];
-			
-			// Allow specific menus to tamper with the arg0 value.
-			if (MenuScripts[MenuID - 1][MSC_Send] != 0) {
-				arg0 = MenuCallback (MSC_Send, MenuSelection[0], MenuSelection[1], 0);
-				arg1 = 0;
+			if ((buttons & (BT_ATTACK | BT_USE)) && !MenuHorPos) {
+				MoveMenuCursorHorizontal (true);
+				delay (5);
+			} else if ((buttons & BT_ALTATTACK) && MenuHorPos) {
+				MoveMenuCursorHorizontal (false);
+				delay (5);
+			} else {
+				// Send the selection to the server
+				int arg0 = MenuSelection[0];
+				int arg1 = MenuSelection[1];
+				
+				// Allow specific menus to tamper with the arg0 value.
+				if (MenuScripts[MenuID - 1][MSC_Send] != 0) {
+					arg0 = MenuCallback (MSC_Send, MenuSelection[0], MenuSelection[1], 0);
+					arg1 = 0;
+				}
+				
+				Puke3 (-SC_MENU_SELECT, arg0, arg1, buttons & (BT_ATTACK | BT_USE));
+				
+				// Tell the user if we used alt-fire to dismiss
+				if (buttons & BT_ALTATTACK)
+					Log (s:"Selection cancelled.");
+				
+				MenuDelay = 25;
 			}
-			
-			Puke3 (-SC_MENU_SELECT, arg0, arg1, buttons & (BT_ATTACK | BT_USE));
-			
-			// Tell the user if we used alt-fire to dismiss
-			if (buttons & BT_ALTATTACK)
-				Log (s:"Selection cancelled.");
-			
-			MenuDelay = 25;
 		}
 	}
 	
@@ -586,7 +595,7 @@ function void DrawMenu (void) {
 	
 	// Draw usage info
 	SetHudFont ();
-	str msg = sprint6f ("Controls: %k %k %k %k\nSelect: %k, dismiss: %k",
+	str msg = sprint6f ("Controls: %k %k %k %k\nSelect: %k, back: %k",
 		"+forward", "+back", "+moveleft", "+moveright", "+attack", "+altattack");
 	HudMessage (s:msg; HUDMSG_PLAIN, MENU_HID + 52, CR_GOLD, MENU_X_Controls, MENU_Y_Controls, 0.0);
 }
