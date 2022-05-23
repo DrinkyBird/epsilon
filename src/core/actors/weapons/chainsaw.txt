@@ -66,7 +66,7 @@ actor ChainsawThrown {
 	speed 40
 	radius 20
 	height 20
-	damage (55)
+	damage (40)
 	scale 0.3
 	damagetype "Fist"
 	obituary "$OB_CHAINSAW_ALT" // "%o was mutilated by %k's flying chainsaw!"

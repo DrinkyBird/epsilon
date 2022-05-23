@@ -40,6 +40,8 @@ CHANGELOG
 	    selecting/exiting
       * Weapons
         * Gatling gun has been nerfed slightly
+        * Nerfed the amount of damage done by the chainsaw's thrown ripper
+          projectile
       * Maps
         * AOW28
           * Fixed an incorrect line action on the blue WF's purchase terminal
