@@ -521,7 +521,7 @@ function void DrawMenu (void) {
     int menuId = CheckInventory("InMenu");
     
     // draw backdrop
-    if (GetCVAR("epsilon_cl_menubackground") && Netstate & NETSTATE_Client)
+    if (GetCVAR("epsilon_cl_menubackground") && (Netstate & NETSTATE_Client))
     {
         int factor = 0.85;
         if (menuId == MENU_Utility || menuId == MENU_OpenDeck)

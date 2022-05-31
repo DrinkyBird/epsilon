@@ -66,15 +66,3 @@ function void FixFuckedUpArrays (void) {
 	
 	// Log (s:"FixFuckedUpArrays: Values in arrays corrected.");
 }
-
-// =========================================================================
-// [Dusk] hud_scale is forced true to get around a missing SBARINFO feature.
-// When Zandronum SBARINFO gets the forcescaled option, be sure to nuke this
-// script from orbit! And make sure nothing is left!
-script 666 OPEN CLIENTSIDE {
-	while (1) {
-		if (!GetCVAR ("hud_scale"))
-			ConsoleCommand ("set hud_scale true");
-		delay (1);
-	}
-}

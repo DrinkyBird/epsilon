@@ -39,6 +39,7 @@ CHANGELOG
       * Fire/altfire/use now progress/back out through the menu instead of
         selecting/exiting
       * Reduced the amount of XP given for killing someone from 100 to 40
+	  * Removed hud_scale enforcement script
       * Weapons
         * Gatling gun has been nerfed slightly
         * Nerfed the amount of damage done by the chainsaw's thrown ripper
